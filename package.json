@@ -27,6 +27,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
     "sass": "^1.76.0",
     "typescript": "^5.2.2",
     "typescript-plugin-css-modules": "^5.1.0",
