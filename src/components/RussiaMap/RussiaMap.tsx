@@ -2,6 +2,7 @@ import React from 'react';
 import RussiaSVG from '../../assets/ru.svg';
 
 const RussiaMap: React.FC = () => {
+  //dfdsddf
   // // 1
   // const mouseEntered = (e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
   //   const target = e.currentTarget;
