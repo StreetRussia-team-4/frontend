@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+commit_msg_file=$1
+
+# Проверяем, что сообщение коммита начинается с заданного префикса
+if ! grep -qE '^(feat|fix|docs|style|refactor|test|chore): ' "$commit_msg_file"; then
+  echo "Ошибка: сообщение коммита должно начинаться с префикса (feat|fix|docs|style|refactor|test|chore):" >&2
+  exit 1
+fi

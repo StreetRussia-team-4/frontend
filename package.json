@@ -48,5 +48,10 @@
     "*.scss": [
       "stylelint"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node .husky/commit-msg"
+    }
   }
 }
