@@ -1,27 +1,30 @@
 import React from 'react';
+import { MouseEventHandler } from 'react';
 import RussiaSVG from '../../assets/ru.svg';
 
 const RussiaMap: React.FC = () => {
-  //dfdsddf
-  // // 1
-  // const mouseEntered = (e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
-  //   const target = e.currentTarget;
-  //   if (target.nodeName === 'path') {
-  //     target.style.opacity = '0.6';
-  //   }
-  // };
+  const mouseEntered: MouseEventHandler<HTMLImageElement> = event => {
+    const target = event.currentTarget;
+    if (target && target.nodeName === 'path') {
+      target.style.opacity = '0.6';
+    }
+  };
 
-  // // 2
-  // const mouseGone = (e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
-  //   const target = e.currentTarget;
-  //   if (target.nodeName === 'path') {
-  //     target.style.opacity = '1';
-  //   }
-  // };
+  const mouseGone: MouseEventHandler<HTMLImageElement> = event => {
+    const target = event.currentTarget;
+    if (target.nodeName === 'path') {
+      target.style.opacity = '1';
+    }
+  };
 
   return (
     <div className="map-container">
-      <img src={RussiaSVG} alt="Russia Map" />
+      <img
+        src={RussiaSVG}
+        alt="Russia Map"
+        onMouseEnter={mouseEntered}
+        onMouseLeave={mouseGone}
+      />
     </div>
   );
 };
