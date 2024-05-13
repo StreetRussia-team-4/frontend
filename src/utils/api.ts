@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 // Функция для отправки GET-запроса без блока try...catch
-function fetchData() {
+export function fetchData() {
   // Отправляем GET-запрос на сервер
   return axios
-    .get('https://jsonplaceholder.typicode.com/posts/1')
+    .get('http://127.0.0.1:8000/api/v1/users/')
     .then(response => {
       // Получаем данные из ответа
       const data = response.data;
@@ -17,14 +17,3 @@ function fetchData() {
       throw error; // Пробрасываем ошибку дальше, чтобы ее можно было обработать в вызывающем коде
     });
 }
-
-// Вызываем функцию для отправки GET-запроса
-fetchData()
-  .then(data => {
-    // Используем полученные данные
-    console.log('Data received:', data);
-  })
-  .catch(error => {
-    // Обрабатываем ошибку, если она возникла при выполнении запроса
-    console.error('Error:', error);
-  });
