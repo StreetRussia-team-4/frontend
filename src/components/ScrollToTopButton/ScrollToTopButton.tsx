@@ -14,7 +14,7 @@ const ScrollToTopButton = () => {
 
   // Определяем, когда кнопка должна отображаться
   const toggleVisibility = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 30) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
