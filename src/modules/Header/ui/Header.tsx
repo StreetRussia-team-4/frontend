@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css';
+import logo from '../../../assets/logo.svg';
 
 export const Header: React.FC = () => {
   return (
     <header>
       <div className="logo">
         {/* Ваш логотип */}
-        <img src="logo.png" alt="Логотип" />
+        <img src={logo} alt="Логотип" />
       </div>
       <nav className="navigation">
         <ul>
