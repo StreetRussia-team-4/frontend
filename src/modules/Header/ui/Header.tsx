@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import styles from './Header.module.scss';
 import logo from '../../../assets/logo.svg';
 
 export const Header: React.FC = () => {
@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
         {/* Ваш логотип */}
         <img src={logo} alt="Логотип" />
       </div>
-      <nav className="navigation">
+      <nav className={styles.navigat_ion}>
         <ul>
           <li>
             <Link to="/about">О нас</Link>

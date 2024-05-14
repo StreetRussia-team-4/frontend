@@ -1,5 +1,5 @@
-// import RussiaMap from './components/RussiaMap/RussiaMap';
-import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
+// import RussiaMap from './elements/RussiaMap/RussiaMap';
+import ScrollToTopButton from './elements/ScrollToTopButton/ScrollToTopButton';
 // import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Header } from './modules/Header/ui/Header';
@@ -20,12 +20,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" />
-          {/* <Route path="/about" component={About} /> //почему не element?
-          <Route path="/departments" component={Departments} />
-          <Route path="/directions" component={Directions} />
-          <Route path="/events" component={Events} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/contacts" component={Contacts} /> */}
+          {/* <Route path="/about" element={About} />
+          <Route path="/departments" element={Departments} />
+          <Route path="/directions" element={Directions} />
+          <Route path="/events" element={Events} />
+          <Route path="/blog" element={Blog} />
+          <Route path="/contacts" element={Contacts} /> */}
         </Routes>
         {/* <RussiaMap /> */}
         <ScrollToTopButton />
