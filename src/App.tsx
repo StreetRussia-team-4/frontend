@@ -22,6 +22,7 @@ function App() {
     <>
       <div className={styles.root}>
         <Header />
+        <WidgetPlayer />
         <Routes>
           <Route path="/" element={<WidgetPlayer />} />
           {/* <Route path="/about" element={About} />
