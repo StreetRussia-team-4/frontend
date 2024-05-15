@@ -1,0 +1,25 @@
+.header {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    max-height: 48px;
+}
+
+.navigation {
+    display: flex
+}
+
+.links {
+    background-color: aqua;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+}

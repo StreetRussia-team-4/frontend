@@ -5,30 +5,42 @@ import logo from '../../../assets/logo.svg';
 
 export const Header: React.FC = () => {
   return (
-    <header>
-      <div className="logo">
+    <header className={styles.header}>
+      <div className={styles.logo}>
         {/* Ваш логотип */}
         <img src={logo} alt="Логотип" />
       </div>
-      <nav className={styles.navigat_ion}>
-        <ul>
+      <nav className={styles.navigation}>
+        <ul className={styles.links}>
           <li>
-            <Link to="/about">О нас</Link>
+            <Link to="/about" className={styles.link}>
+              О нас
+            </Link>
           </li>
           <li>
-            <Link to="/departments">Отделения</Link>
+            <Link to="/departments" className={styles.link}>
+              Отделения
+            </Link>
           </li>
           <li>
-            <Link to="/directions">Направления</Link>
+            <Link to="/directions" className={styles.link}>
+              Направления
+            </Link>
           </li>
           <li>
-            <Link to="/events">События</Link>
+            <Link to="/events" className={styles.link}>
+              События
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Блог</Link>
+            <Link to="/blog" className={styles.link}>
+              Блог
+            </Link>
           </li>
           <li>
-            <Link to="/contacts">Контакты</Link>
+            <Link to="/contacts" className={styles.link}>
+              Контакты
+            </Link>
           </li>
         </ul>
       </nav>
