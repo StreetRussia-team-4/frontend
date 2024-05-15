@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ScrollToTopButton.module.scss';
 
-const ScrollToTopButton = () => {
+export const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Проверяем положение скролла при монтировании компонента и при обновлении
@@ -39,5 +39,3 @@ const ScrollToTopButton = () => {
     </div>
   );
 };
-
-export default ScrollToTopButton;

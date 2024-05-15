@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import styles from './WidjetPlayer.module.scss';
 
 export const WidgetPlayer: React.FC = () => {
   return (
-    <div className="player-wrapper" style={{ position: 'relative' }}>
+    <div className={styles.playerWrapper}>
+      <h1>Player</h1>
       <ReactPlayer
         className="react-player"
         url="https://soundcloud.com/pro100mail/sets/radio-1"
