@@ -1,8 +1,9 @@
 // import RussiaMap from './elements/RussiaMap/RussiaMap';
-import ScrollToTopButton from './elements/ScrollToTopButton/ScrollToTopButton';
+import { ScrollToTopButton } from './components';
+import { WidgetPlayer } from './components';
 // import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './modules/Header/ui/Header';
+import { Header } from './modules/Header';
 // import About from './About';
 // import Departments from './Departments';
 // import Directions from './Directions';
@@ -19,7 +20,7 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/" />
+          <Route path="/" element={<WidgetPlayer />} />
           {/* <Route path="/about" element={About} />
           <Route path="/departments" element={Departments} />
           <Route path="/directions" element={Directions} />
