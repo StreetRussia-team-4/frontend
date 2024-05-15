@@ -1,9 +1,9 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgb(255 255 255 / 87%);
+  color: #0d0b13;
   background-color: #fcfcfc;
   font-synthesis: none;
   text-rendering: optimizelegibility;
@@ -13,14 +13,13 @@
 
 #root {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 2rem;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
+  max-width: 1440px;
   min-width: 320px;
   min-height: 100vh;
 }
