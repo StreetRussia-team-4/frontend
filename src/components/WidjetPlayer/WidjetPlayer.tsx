@@ -1,29 +1,34 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
+import React, { useRef, useEffect } from 'react';
+import ReactPlayer from 'react-player/youtube';
 import styles from './WidjetPlayer.module.scss';
 
 export const WidgetPlayer: React.FC = () => {
+  const playerRef = useRef<ReactPlayer>(null);
+
+  useEffect(() => {
+    if (playerRef.current) {
+      // Как только компонент монтируется, перемотайте видео к 20-й секунде
+      playerRef.current.seekTo(20, 'seconds');
+    }
+  }, []); // Этот эффект выполняется только один раз после монтирования компонента
+
   return (
     <div className={styles.playerWrapper}>
-      <h1>Player</h1>
       <ReactPlayer
-        className="react-player"
-        url="https://soundcloud.com/pro100mail/sets/radio-1"
-        width="1000"
+        className={styles.reactPlayer}
+        ref={playerRef}
+        url="https://www.youtube.com/watch?v=YNbAsl2OUFs"
+        width="1440px"
+        height="735px"
         pip={true}
         stopOnUnmount={false}
         playsinline={false}
-        playing={true} // чтобы видео проигрывалось автоматически
-        muted={true} // чтобы звук был выключен
+        controls={false}
+        playing // чтобы видео проигрывалось автоматически
+        muted // чтобы звук был выключен
         loop={true} // чтобы видео проигрывалось в цикле
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
-        config={{
-          soundcloud: {
-            options: {
-              start_time: 20, // начать с 20-ой секунды
-            },
-          },
-        }}
+        style={{ opacity: '0.6' }}
+        progressInterval={1000}
       />
       <div
         style={{
@@ -31,25 +36,16 @@ export const WidgetPlayer: React.FC = () => {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
+          textAlign: 'left',
           zIndex: 1,
         }}
       >
-        <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '20px' }}>
-          С УЛИЦЫ НАЧИНАЮТСЯ С ТЕБЯ
+        <h1 className={styles.title}>
+          УЛИЦЫ <br />
+          НАЧИНАЮТСЯ
+          <br />С ТЕБЯ
         </h1>
-        <button
-          style={{
-            padding: '10px 20px',
-            fontSize: '1.2em',
-            backgroundColor: 'transparent',
-            color: 'white',
-            border: '2px solid white',
-            borderRadius: '5px',
-          }}
-        >
-          Присоединиться
-        </button>
+        <button className={styles.button}>ПРИСОЕДИНИТЬСЯ</button>
       </div>
     </div>
   );

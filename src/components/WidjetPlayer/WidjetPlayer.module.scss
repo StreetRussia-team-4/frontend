@@ -1,3 +1,32 @@
 .playerWrapper {
   position: relative;
 }
+
+.title {
+  margin: 0 0 38px;
+  padding: 0;
+  font-size: 96px;
+  text-align: left;
+  line-height: 110px;
+}
+
+.reactPlayer:hover .controls {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button {
+  background-color: #b73b34;
+  padding: 25px 40px;
+  border: none;
+  font-family: 'Benzin';
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  align-self: left;
+}
+
+.button:hover {
+  background-color: #df544d;
+  cursor: pointer;
+}
