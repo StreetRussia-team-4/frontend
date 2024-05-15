@@ -29,8 +29,8 @@ function App() {
           <Route path="/departments" element={Departments} />
           <Route path="/directions" element={Directions} />
           <Route path="/events" element={Events} />
-          <Route path="/blog" element={Blog} />
-          <Route path="/contacts" element={Contacts} /> */}
+          <Route path="/projects" element={Projects} />
+          <Route path="/blog" element={Blog} /> */}
         </Routes>
         {/* <RussiaMap /> */}
         <ScrollToTopButton />

@@ -1,7 +1,10 @@
 .header {
-    min-height: 100px;
-    width: 100%;
+    margin: 26px auto;
+    max-width: 1240px;
     display: flex;
+    align-items: center;
+    column-gap: 160px;
+    justify-content: space-between;
 }
 
 .logo {
@@ -9,11 +12,13 @@
 }
 
 .navigation {
-    display: flex
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
 }
 
 .links {
-    background-color: aqua;
+    column-gap: 32px;
     display: flex;
     margin: 0;
     padding: 0;
@@ -22,4 +27,15 @@
 
 .link {
     text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 12px;
+    white-space: nowrap;
+}
+
+.arrow {
+    min-height: 24px;
+    min-width: 24px;
+    background-image: url('../../../assets/arrow.svg');
 }

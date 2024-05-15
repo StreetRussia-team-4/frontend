@@ -10,37 +10,41 @@ export const Header: React.FC = () => {
         {/* Ваш логотип */}
         <img src={logo} alt="Логотип" />
       </div>
-      <nav className={styles.navigation}>
+      <nav>
         <ul className={styles.links}>
-          <li>
+          <li className={styles.navigation}>
             <Link to="/about" className={styles.link}>
-              О нас
+              О НАС
             </Link>
           </li>
-          <li>
+          <li className={styles.navigation}>
             <Link to="/departments" className={styles.link}>
-              Отделения
+              ОТДЕЛЕНИЯ
             </Link>
+            <div className={styles.arrow}></div>
           </li>
-          <li>
+          <li className={styles.navigation}>
             <Link to="/directions" className={styles.link}>
-              Направления
+              НАПРАВЛЕНИЯ
             </Link>
+            <div className={styles.arrow}></div>
           </li>
-          <li>
+          <li className={styles.navigation}>
             <Link to="/events" className={styles.link}>
-              События
+              СОБЫТИЯ
             </Link>
           </li>
-          <li>
+          <li className={styles.navigation}>
+            <Link to="/projects" className={styles.link}>
+              ПРОЕКТЫ
+            </Link>
+            <div className={styles.arrow}></div>
+          </li>
+          <li className={styles.navigation}>
             <Link to="/blog" className={styles.link}>
-              Блог
+              БЛОГ
             </Link>
-          </li>
-          <li>
-            <Link to="/contacts" className={styles.link}>
-              Контакты
-            </Link>
+            <div className={styles.arrow}></div>
           </li>
         </ul>
       </nav>
