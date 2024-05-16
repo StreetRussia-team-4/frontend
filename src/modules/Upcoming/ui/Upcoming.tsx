@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Upcoming.module.scss';
-import image from '../../../assets/image.png';
-import imageTop from '../../../assets/smallImage.png';
-import imageBottom from '../../../assets/smallImage2.png';
+import image from '@image/image.png';
+import imageTop from '@image/smallImage.png';
+import imageBottom from '@image/smallImage2.png';
 
 export const Upcoming: React.FC = () => {
   return (
