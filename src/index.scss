@@ -1,0 +1,21 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+}
+
+:root {
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

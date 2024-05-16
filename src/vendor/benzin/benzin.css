@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Benzin';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url("Benzin-Bold.woff2?v=3.19") format("woff2"),
+         url("Benzin-Bold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'Benzin';
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+    src: url("Benzin-Medium.woff2?v=3.19") format("woff2"),
+         url("Benzin-Medium.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'Benzin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Benzin-Regular.woff2?v=3.19") format("woff2"),
+         url("Benzin-Regular.woff?v=3.19") format("woff");
+}

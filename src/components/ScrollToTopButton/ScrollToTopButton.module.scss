@@ -1,0 +1,18 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+  border: 5px solid gray;
+}
