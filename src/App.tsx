@@ -4,6 +4,8 @@ import { WidgetPlayer } from './components';
 // import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Header } from './modules/Header';
+import { Footer } from './modules/Footer';
+import { Upcoming } from './modules/Upcoming';
 import styles from './App.module.scss';
 import './vendor/benzin/benzin.css'; //не поняла, как будет работать добавленике шрифтов через модули. В модуле Typhoraphy? пока сделала так, чтобы поверстать что-то
 
@@ -23,8 +25,18 @@ function App() {
       <div className={styles.root}>
         <Header />
         <WidgetPlayer />
+        <Upcoming />
+
         <Routes>
-          <Route path="/" element={<WidgetPlayer />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Upcoming />
+                <WidgetPlayer />
+              </>
+            }
+          />
           {/* <Route path="/about" element={About} />
           <Route path="/departments" element={Departments} />
           <Route path="/directions" element={Directions} />
@@ -34,6 +46,7 @@ function App() {
         </Routes>
         {/* <RussiaMap /> */}
         <ScrollToTopButton />
+        <Footer />
       </div>
     </>
   );

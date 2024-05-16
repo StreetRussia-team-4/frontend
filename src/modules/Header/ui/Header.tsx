@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         {/* Ваш логотип */}
-        <img src={logo} alt="Логотип" />
+        <img className={styles.image} src={logo} alt="Логотип" />
       </div>
       <nav>
         <ul className={styles.links}>

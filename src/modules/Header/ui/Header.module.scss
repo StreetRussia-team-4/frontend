@@ -1,14 +1,20 @@
 .header {
-    margin: 26px auto;
-    max-width: 1240px;
+    padding: 26px 0;
+    width: 100%;
     display: flex;
     align-items: center;
     column-gap: 160px;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #FCFCFC;
 }
 
 .logo {
     max-height: 48px;
+}
+
+.image {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navigation {
