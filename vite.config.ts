@@ -11,7 +11,6 @@ const BASE_PROD_PATH = 'https://streetrussia-team-4.github.io/frontend/';
 export default defineConfig({
   plugins: [react()],
   base: isProd ? BASE_PROD_PATH : BASE_DEV_PATH,
-  // assetsInclude: ['**/*.mp4'],
   resolve: {
     alias: [
       {
