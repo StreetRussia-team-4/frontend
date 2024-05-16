@@ -19,18 +19,23 @@
   aspect-ratio: 1.82;
   padding: 0;
   margin: 0;
-  border: red 5px solid;
   width: 100%;
   height: auto;
 }
 
 .container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
   z-index: 1;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .button {
@@ -44,7 +49,29 @@
   align-self: left;
 }
 
+.aboutTeam {
+  font-style: medium;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
 .button:hover {
   background-color: #df544d;
   cursor: pointer;
+}
+
+.playIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  align-self: end;
+  transform: translate(100%);
 }

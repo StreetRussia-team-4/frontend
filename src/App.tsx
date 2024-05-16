@@ -1,5 +1,4 @@
 // import RussiaMap from './elements/RussiaMap/RussiaMap';
-import { ScrollToTopButton } from './components';
 import { WidgetPlayer } from './components';
 // import React from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -29,8 +28,8 @@ function App() {
             path="/"
             element={
               <>
-                <Upcoming />
                 <WidgetPlayer />
+                <Upcoming />
               </>
             }
           />
@@ -42,7 +41,6 @@ function App() {
           <Route path="/blog" element={Blog} /> */}
         </Routes>
         {/* <RussiaMap /> */}
-        <ScrollToTopButton />
         <Footer />
       </div>
     </>
