@@ -1,5 +1,7 @@
 .playerWrapper {
   position: relative;
+  width: 1440px;
+  height: 735px;
 }
 
 .title {
@@ -10,9 +12,25 @@
   line-height: 110px;
 }
 
-.reactPlayer:hover .controls {
-  opacity: 0;
-  pointer-events: none;
+.video {
+  opacity: 0.55;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.82;
+  padding: 0;
+  margin: 0;
+  border: red 5px solid;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 1;
 }
 
 .button {
