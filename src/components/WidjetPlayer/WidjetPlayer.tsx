@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './WidjetPlayer.module.scss';
 import PromoVideo from '@video/main-video.mp4';
+import playIcon from '@icon/play-circle.svg';
+import { Link } from 'react-router-dom';
 
 export const WidgetPlayer: React.FC = () => {
   return (
@@ -15,7 +17,13 @@ export const WidgetPlayer: React.FC = () => {
           НАЧИНАЮТСЯ
           <br />С ТЕБЯ
         </h1>
-        <button className={styles.button}>ПРИСОЕДИНИТЬСЯ</button>
+        <div className={styles.buttonsWrapper}>
+          <button className={styles.button}>ПРИСОЕДИНИТЬСЯ</button>
+          <Link className={styles.link} to="#">
+            <span className={styles.aboutTeam}>О команде</span>
+            <img src={playIcon} alt="Иконка Play" className={styles.playIcon} />
+          </Link>
+        </div>
       </div>
     </div>
   );
