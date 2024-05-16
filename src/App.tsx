@@ -24,9 +24,6 @@ function App() {
     <>
       <div className={styles.root}>
         <Header />
-        <WidgetPlayer />
-        <Upcoming />
-
         <Routes>
           <Route
             path="/"

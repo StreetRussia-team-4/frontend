@@ -1,9 +1,9 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
-import logo from '../../../assets/logoFooter.svg';
-import youtubeIcon from '../../../assets/youtube.svg';
-import vkIcon from '../../../assets/vk.svg';
+import logo from '@assets/icon/logoFooter.svg';
+import youtubeIcon from '@assets/icon/youtube.svg';
+import vkIcon from '@assets/icon/vk.svg';
 
 export const Footer: React.FC = () => {
   return (

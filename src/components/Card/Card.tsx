@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Card.module.scss';
 
-interface CardProps {
+export interface CardData {
+  id: number;
   image: string;
   title: string;
   location: string;
@@ -12,7 +13,7 @@ interface CardProps {
   fundsRaised: number;
 }
 
-export const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardData> = ({
   image,
   title,
   location,
