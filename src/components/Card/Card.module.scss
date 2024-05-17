@@ -5,16 +5,51 @@
   max-width: 396px;
 }
 
+.image {
+  max-width: 396;
+}
+
 .title {
   font-size: 24px;
   line-height: 36px;
+  padding: 0 12px;
+  margin: 42px 0 22px;
 }
 
 .description {
   font-size: 16px;
   line-height: 24px;
+  padding: 0 12px;
 }
 
-.image {
-  max-width: 396;
+.timeframe {
+  padding: 0 12px;
+}
+
+.button {
+  font-family: 'Benzin';
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  background-color: #b73b34;
+  margin: 40px 12px 32px;
+  padding: 25px 40px;
+}
+
+.button:hover {
+  background-color: #df544d;
+  cursor: pointer;
+}
+
+.buttonLearnMore {
+  font-family: 'Benzin';
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin: 0 0 32px;
 }
