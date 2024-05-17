@@ -7,50 +7,17 @@ interface SliderProps {
   cards: CardData[];
 }
 
-const cards = [
-  {
-    id: 1,
-    image: '@image/eventOne.png',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
-    startDate: '24.12.2024',
-    endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
-  },
-  {
-    id: 2,
-    image: '../../../../assets/eventOne.png',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
-    startDate: '24.12.2024',
-    endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
-  },
-  {
-    id: 3,
-    image: '../../../../assets/eventOne.png',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
-    startDate: '24.12.2024',
-    endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
-  },
-];
-
-const Slider: React.FC<SliderProps> = () => {
+export const Slider: React.FC<SliderProps> = ({ cards }) => {
   return (
-    <div className={styles.events}>
-      {cards.map(card => (
-        <Card key={card.id} {...card} />
-      ))}
-    </div>
+    <section className={styles.slider}>
+      <h2 className={styles.title}>
+        НАШИ <br /> ПРОЕКТЫ
+      </h2>
+      <div className={styles.events}>
+        {cards.map(card => (
+          <Card key={card.id} {...card} />
+        ))}
+      </div>
+    </section>
   );
 };
-
-export default Slider;

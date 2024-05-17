@@ -3,7 +3,7 @@ import styles from './Card.module.scss';
 
 export interface CardData {
   id: number;
-  image: string;
+  image: string | HTMLImageElement;
   title: string;
   location: string;
   description: string;
@@ -25,21 +25,23 @@ export const Card: React.FC<CardData> = ({
 }) => {
   return (
     <div className={styles.card}>
-      <img src={image} className={styles.image} alt={title} />
-      <h2 className={styles.title}>{title}</h2>
+      <img
+        src={typeof image === 'string' ? image : image.src}
+        className={styles.image}
+        alt={title}
+      />
+      <p className={styles.title}>{title}</p>
       <p className={styles.description}>{location}</p>
       <p className={styles.description}>{description}</p>
-      <p>
+      <p className={styles.timeframe}>
         Срок установки: {startDate} - {endDate}
       </p>
       <div className="progress">
         <div className="progress-bar" style={{ width: `${progress}%` }}></div>
       </div>
       <p>{fundsRaised}</p>
-      <div className="buttons">
-        <button>ПОДДЕРЖАТЬ</button>
-        <button>Узнать больше</button>
-      </div>
+      <button className={styles.button}>ПОДДЕРЖАТЬ</button>
+      <button className={styles.buttonLearnMore}>Узнать больше</button>
     </div>
   );
 };

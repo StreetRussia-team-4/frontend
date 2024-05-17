@@ -7,7 +7,7 @@ import imageBottom from '@image/smallImage2.png';
 export const Upcoming: React.FC = () => {
   return (
     <section className={styles.upcoming}>
-      <h1 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h1>
+      <h2 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h2>
       <div className={styles.events}>
         <div className={styles.card}>
           <img className={styles.image} src={image} />
