@@ -1,5 +1,18 @@
+.slider {
+  margin: 0 0 100px;
+}
+
 .events {
   display: flex;
   flex-direction: row;
   gap: 24px;
+}
+
+.title {
+  margin: 0 0 120px;
+  padding: 0;
+  font-size: 80px;
+  line-height: 108px;
+  text-align: center;
+  line-height: 110px;
 }
