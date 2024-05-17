@@ -18,6 +18,10 @@ export default defineConfig({
         replacement: fileURLToPath(new URL('./src', import.meta.url)),
       },
       {
+        find: '@modules',
+        replacement: fileURLToPath(new URL('./src/modules', import.meta.url)),
+      },
+      {
         find: '@components',
         replacement: fileURLToPath(
           new URL('./src/components', import.meta.url)

@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Upcoming.module.scss';
-import image from '../../../assets/image.png';
-import imageTop from '../../../assets/smallImage.png';
-import imageBottom from '../../../assets/smallImage2.png';
+import image from '@assets/image.png';
+import imageTop from '@assets/smallImage.png';
+import imageBottom from '@assets/smallImage2.png';
 
-export const Upcoming: React.FC = () => {
+const Upcoming: React.FC = () => {
   return (
     <section className={styles.upcoming}>
       <h2 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h2>
@@ -47,3 +47,5 @@ export const Upcoming: React.FC = () => {
     </section>
   );
 };
+
+export { Upcoming };
