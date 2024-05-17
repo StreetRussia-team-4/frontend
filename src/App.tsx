@@ -1,6 +1,6 @@
-import { WidgetPlayer } from './components';
 import { Header } from './modules/Header';
 import { Footer } from './modules/Footer';
+import { Promo } from './modules/Promo';
 import { Upcoming } from './modules/Upcoming';
 import { Slider } from './modules/Slider';
 import { cards } from './utils/constants';
@@ -13,7 +13,7 @@ function App() {
     <>
       <div className={styles.root}>
         <Header />
-        <WidgetPlayer />
+        <Promo />
         <Upcoming />
         <Slider cards={cards} />
         <Footer />
