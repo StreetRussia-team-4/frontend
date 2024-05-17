@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'url';
 const isProd = process.env.NODE_ENV === 'production';
 
 const BASE_DEV_PATH = '/';
-const BASE_PROD_PATH = 'https://streetrussia-team-4.github.io/frontend/';
+const BASE_PROD_PATH = '/frontend/';
 
 // https://vitejs.dev/config/
 export default defineConfig({
