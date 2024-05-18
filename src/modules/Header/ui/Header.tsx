@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import logo from '@icon/logo.svg';
 
@@ -30,9 +30,9 @@ export const Header: React.FC = () => {
             <div className={styles.arrow}></div>
           </li>
           <li className={styles.navigation}>
-            <Link to="/events" className={styles.link}>
+            <NavLink to="/events" className={styles.link}>
               СОБЫТИЯ
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.navigation}>
             <Link to="/projects" className={styles.link}>

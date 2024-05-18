@@ -2,15 +2,15 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'url';
 
-// const isProd = process.env.NODE_ENV === 'production';
-// const BASE_DEV_PATH = '/';
-// const BASE_PROD_PATH = '/frontend/';
+const isProd = process.env.NODE_ENV === 'production';
+const BASE_DEV_PATH = '/';
+const BASE_PROD_PATH = '/frontend/';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // base: isProd ? BASE_PROD_PATH : BASE_DEV_PATH,
-  base: 'https://streetrussia-team-4.github.io/frontend/',
+  base: isProd ? BASE_PROD_PATH : BASE_DEV_PATH,
+  // base: 'https://streetrussia-team-4.github.io/frontend/',
   resolve: {
     alias: [
       {
