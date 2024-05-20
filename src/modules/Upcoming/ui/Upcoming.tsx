@@ -4,6 +4,25 @@ import image from '@image/image.png';
 import imageTop from '@image/smallImage.png';
 import imageBottom from '@image/smallImage2.png';
 
+// export interface EventData {
+//     id: number;
+//     image: string | HTMLImageElement;
+//     title: string;
+//     description: string;
+//     startDate: string;
+//     endDate: string;
+//     link: string;
+//   }
+
+//   export const Card: React.FC<EventData> = ({
+//     image,
+//     title,
+//     description,
+//     startDate,
+//     endDate,
+//     link,
+//   }) => {}
+
 export const Upcoming: React.FC = () => {
   return (
     <section className={styles.upcoming}>
