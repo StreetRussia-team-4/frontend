@@ -7,6 +7,12 @@
 
 .image {
   max-width: 396;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
 
 .title {
