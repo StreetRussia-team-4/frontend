@@ -9,8 +9,8 @@ export interface CardData {
   description: string;
   startDate: string;
   endDate: string;
-  progress: number;
   fundsRaised: number;
+  goal: number;
 }
 
 export const Card: React.FC<CardData> = ({
@@ -20,9 +20,10 @@ export const Card: React.FC<CardData> = ({
   description,
   startDate,
   endDate,
-  progress,
   fundsRaised,
+  goal,
 }) => {
+  const progress = (fundsRaised / goal) * 100;
   return (
     <div className={styles.card}>
       <img
@@ -31,15 +32,23 @@ export const Card: React.FC<CardData> = ({
         alt={title}
       />
       <p className={styles.title}>{title}</p>
-      <p className={styles.description}>{location}</p>
+      <p className={styles.location}>{location}</p>
       <p className={styles.description}>{description}</p>
       <p className={styles.timeframe}>
         Срок установки: {startDate} - {endDate}
       </p>
-      <div className="progress">
-        <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+      <div className={styles.progressContainer}>
+        <div className={styles.progress}>
+          <div
+            className={styles.progressBar}
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+        <div className={styles.numbersContainer}>
+          <span className={styles.progressText}>{fundsRaised}</span>
+          <span className={styles.progressText}>{goal}</span>
+        </div>
       </div>
-      <p>{fundsRaised}</p>
       <button className={styles.button}>ПОДДЕРЖАТЬ</button>
       <button className={styles.buttonLearnMore}>Узнать больше</button>
     </div>

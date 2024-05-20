@@ -1,1 +1,1 @@
-export { Slider } from './ui/Slider';
+export { SliderEvents } from './ui/Slider';

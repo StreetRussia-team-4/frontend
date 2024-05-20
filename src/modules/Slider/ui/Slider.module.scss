@@ -6,6 +6,13 @@
   display: flex;
   flex-direction: row;
   gap: 24px;
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-slide {
+    padding: 0 10px;
+  }
 }
 
 .title {
@@ -15,4 +22,24 @@
   line-height: 108px;
   text-align: center;
   line-height: 110px;
+}
+
+.arrowLeft,
+.arrowRight {
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrowLeft {
+  left: -35px;
+}
+
+.arrowRight {
+  right: -35px;
 }

@@ -31,10 +31,9 @@
       "@video/*": ["./src/assets/video/*"],
       "@image/*": ["./src/assets/image/*"],
       "@components/*": ["./src/components/*"],
+      "@modules/*": ["./src/modules"],
     }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
-
- 
 }
