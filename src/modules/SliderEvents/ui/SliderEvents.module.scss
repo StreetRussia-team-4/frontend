@@ -1,0 +1,61 @@
+.slider {
+  margin: 0 0 100px;
+}
+
+.events {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  .slick-list {
+    overflow: visible;
+  }
+}
+
+.title {
+  margin: 0 0 120px;
+  padding: 0;
+  font-size: 80px;
+  line-height: 108px;
+  text-align: center;
+  line-height: 110px;
+}
+
+.courouselleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  max-height: 76px;
+  margin: 0 auto 80px;
+}
+
+.subTitle {
+  font-family: 'Benzin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 68px;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+}
+
+.arrowLeft,
+.arrowRight {
+  width: 48px;
+  height: 48px;
+  border: none;
+}
+
+.arrowLeft {
+  background: url('../../../assets/icon/arrow-slider-left.svg') no-repeat center;
+}
+
+.arrowRight {
+  background: url('../../../assets/icon/arrow-slider-right.svg') no-repeat
+    center;
+}

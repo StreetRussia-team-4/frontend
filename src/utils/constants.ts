@@ -36,4 +36,15 @@ export const cards = [
     progress: 60,
     fundsRaised: 6,
   },
+  {
+    id: 4,
+    image: imageThree,
+    title: 'SCATEBOARDING ПЛОЩАДКА',
+    location: 'РЯЗАНСКАЯ ОБЛ.',
+    description: 'Планируем поставить рампы, разгонки и перила.',
+    startDate: '24.12.2024',
+    endDate: '24.03.2025',
+    progress: 60,
+    fundsRaised: 6,
+  },
 ];
