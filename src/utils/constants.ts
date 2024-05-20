@@ -11,8 +11,8 @@ export const cards = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
+    fundsRaised: 6000,
+    goal: 38000,
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ export const cards = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
+    fundsRaised: 16000,
+    goal: 100000,
   },
   {
     id: 3,
@@ -33,8 +33,8 @@ export const cards = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
+    fundsRaised: 20000,
+    goal: 50400,
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ export const cards = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    progress: 60,
-    fundsRaised: 6,
+    fundsRaised: 40000,
+    goal: 50500,
   },
 ];
