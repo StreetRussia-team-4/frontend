@@ -2,13 +2,13 @@ import React from 'react';
 import Slider from 'react-slick';
 import type { CardData } from '@components/index';
 import { Card } from '@components/index';
-import styles from './SliderEvents.module.scss';
+import styles from './SliderProjects.module.scss';
 
 interface SliderProps {
   cards: CardData[];
 }
 
-export const SliderEvents: React.FC<SliderProps> = ({ cards }) => {
+export const SliderProjects: React.FC<SliderProps> = ({ cards }) => {
   const slider = React.useRef<Slider | null>(null);
   const settings = {
     dots: false,

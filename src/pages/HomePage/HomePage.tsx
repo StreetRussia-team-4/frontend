@@ -1,6 +1,6 @@
 import React from 'react';
 import { Promo } from '@/modules/Promo';
-import { Upcoming, SliderEvents } from '@/modules';
+import { Upcoming, SliderProjects } from '@/modules';
 import { cards } from '../../utils/constants';
 
 export const HomePage: React.FC = () => {
@@ -8,7 +8,7 @@ export const HomePage: React.FC = () => {
     <main className="main-page">
       <Promo />
       <Upcoming />
-      <SliderEvents cards={cards} />
+      <SliderProjects cards={cards} />
     </main>
   );
 };
