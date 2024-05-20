@@ -8,3 +8,6 @@ if ! grep -qE '^(feat|fix|docs|style|refactor|test|chore): ' "$commit_msg_file";
   echo "Ошибка: сообщение коммита должно начинаться с префикса (feat|fix|docs|style|refactor|test|chore):" >&2
   exit 1
 fi
+
+# Выполняем pull без проверки хуков
+git pull --no-verify origin main

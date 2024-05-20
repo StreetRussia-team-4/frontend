@@ -1,0 +1,21 @@
+.projects {
+  padding: 0 170px;
+  margin: 0 0 200px;
+}
+
+.subTitle {
+  font-family: 'Benzin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 68px;
+  margin: 0 0 80px;
+}
+
+.cardList {
+  display: flex;
+  gap: 32px;
+}
+
+.cardList div {
+  max-width: 500px;
+}
