@@ -4,7 +4,7 @@ import image from '@image/image.png';
 import imageTop from '@image/smallImage.png';
 import imageBottom from '@image/smallImage2.png';
 
-export const Upcoming: React.FC = () => {
+const Upcoming: React.FC = () => {
   return (
     <section className={styles.upcoming}>
       <h2 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h2>
@@ -47,3 +47,5 @@ export const Upcoming: React.FC = () => {
     </section>
   );
 };
+
+export { Upcoming };

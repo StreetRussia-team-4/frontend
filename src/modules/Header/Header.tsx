@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import logo from '@icon/logo.svg';
 
@@ -13,11 +13,16 @@ export const Header: React.FC = () => {
       <nav>
         <ul className={styles.links}>
           <li className={styles.navigation}>
-            <Link to="/about" className={styles.link}>
+            <NavLink to="/" className={styles.link}>
               О НАС
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.navigation}>
+            <NavLink to="/contacts" className={styles.link}>
+              контакты
+            </NavLink>
+          </li>
+          {/* <li className={styles.navigation}>
             <Link to="/departments" className={styles.link}>
               ОТДЕЛЕНИЯ
             </Link>
@@ -30,9 +35,9 @@ export const Header: React.FC = () => {
             <div className={styles.arrow}></div>
           </li>
           <li className={styles.navigation}>
-            <NavLink to="/events" className={styles.link}>
+            <Link to="/events" className={styles.link}>
               СОБЫТИЯ
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.navigation}>
             <Link to="/projects" className={styles.link}>
@@ -43,9 +48,9 @@ export const Header: React.FC = () => {
           <li className={styles.navigation}>
             <Link to="/blog" className={styles.link}>
               БЛОГ
-            </Link>
-            <div className={styles.arrow}></div>
-          </li>
+            </Link> */}
+          {/* <div className={styles.arrow}></div>
+          </li> */}
         </ul>
       </nav>
     </header>

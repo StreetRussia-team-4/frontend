@@ -6,7 +6,14 @@
 }
 
 .image {
+  padding: 0;
   max-width: 396;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
 
 .title {
@@ -16,6 +23,11 @@
   margin: 42px 0 22px;
 }
 
+.location {
+  padding: 0 12px;
+  margin: 12px 0 28px;
+}
+
 .description {
   font-size: 16px;
   line-height: 24px;
@@ -23,7 +35,36 @@
 }
 
 .timeframe {
+  font-size: 12px;
+  line-height: 18px;
   padding: 0 12px;
+  margin: 12px 0;
+}
+
+.progressContainer {
+  padding: 0 12px;
+  margin: 24px 0;
+}
+
+.progress {
+  background-color: #6a6b63;
+  border-radius: 8px;
+  height: 8px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.progressBar {
+  background-color: #1f5b9c;
+  border-radius: 8px;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.numbersContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .button {

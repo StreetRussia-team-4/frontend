@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './WidjetPlayer.module.scss';
-import PromoVideo from '@video/main-video.mp4';
+import styles from './Promo.module.scss';
+import PromoVideo from '@video/promo-video.mp4';
 import playIcon from '@icon/play-circle.svg';
 import { Link } from 'react-router-dom';
 
-export const WidgetPlayer: React.FC = () => {
+export const Promo: React.FC = () => {
   return (
     <div className={styles.playerWrapper}>
       <video autoPlay loop muted controls={false} className={styles.video}>
