@@ -1,0 +1,78 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.amountContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.amountButton {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.selected {
+  background: #000;
+  color: #fff;
+}
+
+.inputField {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkboxContainer input {
+  margin-right: 10px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
