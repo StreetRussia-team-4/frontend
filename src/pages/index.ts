@@ -1,5 +1,6 @@
 export { HomePage } from './HomePage/HomePage';
 export { EventsPage } from './EventsPage/EventsPage';
+export { DirectionsPage } from './DirectionsPage/DirectionsPage';
 export { ProjectsPage } from './ProjectsPage/ProjectsPage';
 export { BlogPage } from './BlogPage/BlogPage';
 export { AboutUsPage } from './AboutUsPage/AboutUsPage';
