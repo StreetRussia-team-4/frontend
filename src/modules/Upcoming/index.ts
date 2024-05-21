@@ -1,1 +1,1 @@
-export * from './ui/Upcoming';
+export { Upcoming } from './ui/Upcoming';
