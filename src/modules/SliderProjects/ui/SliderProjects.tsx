@@ -8,14 +8,14 @@ interface SliderProjectsProps {
   cards: CardData[];
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
-  setIsModalOpen: (isModalOpen: boolean) => void;
+  setIsDonModalOpen: (isDonModalOpen: boolean) => void;
 }
 
 export const SliderProjects: React.FC<SliderProjectsProps> = ({
   cards,
   showProgressContainer,
   showSupportButton,
-  setIsModalOpen,
+  setIsDonModalOpen,
 }) => {
   const slider = React.useRef<Slider | null>(null);
   const settings = {
@@ -52,7 +52,7 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
               data={card}
               showProgressContainer={showProgressContainer}
               showSupportButton={showSupportButton}
-              setIsModalOpen={setIsModalOpen}
+              setIsModalOpen={setIsDonModalOpen}
             />
           ))}
         </Slider>
