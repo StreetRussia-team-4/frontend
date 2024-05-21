@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Modal } from '@components/index';
+import React from 'react';
 import styles from './Card.module.scss';
 
 export interface CardProps {
   data: CardData;
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
+  setIsModalOpen?: (isModalOpen: boolean) => void;
 }
 
 export interface CardData {
@@ -24,6 +24,7 @@ export const Card: React.FC<CardProps> = ({
   data,
   showProgressContainer,
   showSupportButton,
+  setIsModalOpen,
 }) => {
   const {
     image,
@@ -35,16 +36,15 @@ export const Card: React.FC<CardProps> = ({
     fundsRaised,
     goal,
   } = data;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
 
   const handleSupportClick = () => {
-    setIsModalOpen(true);
+    if (setIsModalOpen) {
+      setIsModalOpen(true);
+    }
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
   return (
     <div className={styles.card}>
       <img
@@ -78,7 +78,6 @@ export const Card: React.FC<CardProps> = ({
         </button>
       )}
       <button className={styles.buttonLearnMore}>Узнать больше</button>
-      {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );
 };

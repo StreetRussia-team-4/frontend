@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
+  isModalOpen: boolean;
   onClose: () => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({ onClose }) => {
+export const Modal: React.FC<ModalProps> = ({ onClose, isModalOpen }) => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(1000);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -19,6 +20,8 @@ export const Modal: React.FC<ModalProps> = ({ onClose }) => {
     event.preventDefault();
     // handle form submission
   };
+
+  if (!isModalOpen) return null;
 
   return (
     <div className={styles.modalOverlay}>
@@ -74,8 +77,8 @@ export const Modal: React.FC<ModalProps> = ({ onClose }) => {
               Я принимаю <a href="#">договор-оферту</a>
             </label>
           </div>
-          <button type="submit" className={styles.submitButton}>
-            Поддержать организацию
+          <button type="submit" className={styles.button}>
+            ПОДДЕРЖАТЬ
           </button>
         </form>
       </div>
