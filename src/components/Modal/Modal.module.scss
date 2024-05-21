@@ -11,12 +11,12 @@
 }
 
 .modal {
-  background: #f0f0f0;
-  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  background: #d9d9d9;
+  padding: 80px 100px;
   border-radius: 10px;
   position: relative;
-  width: 400px;
-  max-width: 90%;
 }
 
 .closeButton {
@@ -67,12 +67,19 @@
   margin-right: 10px;
 }
 
-.submitButton {
-  width: 100%;
-  padding: 10px;
-  background: #000;
-  color: #fff;
+.button {
+  font-family: 'Benzin';
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  outline: none;
   border: none;
-  border-radius: 5px;
+  background-color: #df544d;
+  margin: 40px 12px 32px;
+  padding: 25px 40px;
+}
+
+.button:hover {
+  background-color: #b73b34;
   cursor: pointer;
 }
