@@ -1,50 +1,108 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import logo from '@icon/logo.svg';
 
 export const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <NavLink to="/" className={styles.logo}>
         {/* Ваш логотип */}
         <img className={styles.image} src={logo} alt="Логотип" />
-      </div>
+      </NavLink>
       <nav>
         <ul className={styles.links}>
           <li className={styles.navigation}>
-            <Link to="/about" className={styles.link}>
+            <NavLink to="/about-us" className={styles.link}>
               О НАС
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.navigation}>
-            <Link to="/departments" className={styles.link}>
+            <NavLink to="/departments" className={styles.link}>
               ОТДЕЛЕНИЯ
-            </Link>
+            </NavLink>
             <div className={styles.arrow}></div>
+            <ul className={styles.sublinks}>
+              <li className={styles.sublink}>
+                <NavLink to="/departments/federal" className={styles.link}>
+                  ФЕДЕРАЛЬНЫЕ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/departments/regional" className={styles.link}>
+                  РЕГИОНАЛЬНЫЕ
+                </NavLink>
+              </li>
+            </ul>
           </li>
           <li className={styles.navigation}>
-            <Link to="/directions" className={styles.link}>
+            <NavLink to="/directions" className={styles.link}>
               НАПРАВЛЕНИЯ
-            </Link>
-            <div className={styles.arrow}></div>
+            </NavLink>
           </li>
           <li className={styles.navigation}>
             <NavLink to="/events" className={styles.link}>
               СОБЫТИЯ
             </NavLink>
+            <div className={styles.arrow}></div>
+            <ul className={styles.sublinks}>
+              <li className={styles.sublink}>
+                <NavLink to="/events" className={styles.link}>
+                  СКОРО
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/events/archive" className={styles.link}>
+                  АРХИВ
+                </NavLink>
+              </li>
+            </ul>
           </li>
           <li className={styles.navigation}>
-            <Link to="/projects" className={styles.link}>
+            <NavLink to="/projects" className={styles.link}>
               ПРОЕКТЫ
-            </Link>
+            </NavLink>
             <div className={styles.arrow}></div>
+            <ul className={styles.sublinks}>
+              <li className={styles.sublink}>
+                <NavLink to="/projects/current" className={styles.link}>
+                  ТЕКУЩИЕ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/projects/upcoming" className={styles.link}>
+                  ПРЕДСТОЯЩИЕ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/projects/done" className={styles.link}>
+                  ВЫПОЛНЕННЫЕ
+                </NavLink>
+              </li>
+            </ul>
           </li>
           <li className={styles.navigation}>
-            <Link to="/blog" className={styles.link}>
+            <NavLink to="/blog" className={styles.link}>
               БЛОГ
-            </Link>
+            </NavLink>
             <div className={styles.arrow}></div>
+            <ul className={styles.sublinks}>
+              <li className={styles.sublink}>
+                <NavLink to="/blog/articles" className={styles.link}>
+                  СТАТЬИ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/blog/interview" className={styles.link}>
+                  ИНТЕРВЬЮ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
+                <NavLink to="/blog/advice" className={styles.link}>
+                  СОВЕТЫ
+                </NavLink>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>

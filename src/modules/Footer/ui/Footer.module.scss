@@ -2,7 +2,7 @@
     padding: 100px 0 120px;
     background-color: black;
     display: flex;
-    column-gap: 88px;
+    column-gap: 24px;
     font-weight: 400;
     color: white;
     width: 100%;
@@ -11,7 +11,7 @@
 
 .columns {
     display: flex;
-    column-gap: 88px;
+    column-gap: 24px;
     padding: 0;
     margin: 0;
     font-weight: 400;
@@ -29,7 +29,6 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    min-width: 332px;
     row-gap: 32px;
 }
 
@@ -39,11 +38,13 @@
 
 .text {
     font-size: 16px;
+    padding: 8px 12px;
 }
 
 .mail {
     font-size: 16px;
     color: white;
+    padding: 8px 12px;
 }
 
 .list {
@@ -71,12 +72,16 @@
 
 .title {
     margin: 0;
+    font-size: 16px;
     font-weight: 400;
+    padding: 8px 12px;
 }
 
 .subtitle {
     margin: 0 0 12px;
+    font-size: 16px;
     font-weight: 400;
+    padding: 8px 12px;
 }
 
 .links {
@@ -95,4 +100,25 @@
     min-height: 40px;
     object-fit: cover;
     margin: auto 0;
+}
+
+.docs {
+    list-style-type: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+}
+
+.doc {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
 }

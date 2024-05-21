@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.scss';
 import logo from '@icon/logoFooter.svg';
 import youtubeIcon from '@icon/youtube.svg';
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           <ul className={styles.list}>
             <li>
               <h3 className={styles.subtitle}>Юридический</h3>
-              <p>
+              <p className={styles.text}>
                 355006, Ставропольский
                 <br />
                 край, г. Ставрополь,
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             </li>
             <li>
               <h3 className={styles.subtitle}>Фактический</h3>
-              <p>
+              <p className={styles.text}>
                 355006, Ставропольский
                 <br />
                 край, г. Ставрополь,
@@ -51,9 +51,35 @@ export const Footer: React.FC = () => {
           </ul>
         </li>
         <li className={styles.column}>
+          <h2 className={styles.title}>ДОКУМЕНТЫ</h2>
+          <ul className={styles.docs}>
+            <li>
+              <NavLink to="/documents" className={styles.doc}>
+                Все документы
+              </NavLink>
+              {/* или сделать a href="#"? */}
+            </li>
+            <li>
+              <NavLink to="/documents" className={styles.doc}>
+                Официальные документы
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/documents" className={styles.doc}>
+                Внутренние документы
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/documents" className={styles.doc}>
+                Внешние документы
+              </NavLink>
+            </li>
+          </ul>
+        </li>
+        <li className={styles.column}>
           <h2 className={styles.title}>КОНТАКТЫ</h2>
           <ul className={styles.list}>
-            <li>
+            <li className={styles.element}>
               <h3 className={styles.subtitle}>EMAIL</h3>
               <a
                 className={styles.mail}
@@ -70,7 +96,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <a
                     className={styles.link}
-                    href="#"
+                    href="https://vk.com/streetrf"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -80,7 +106,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <a
                     className={styles.link}
-                    href="#"
+                    href="https://www.youtube.com/channel/UCse4y0X9dK0utXKtjwlZ1dg"
                     target="_blank"
                     rel="noreferrer"
                   >
