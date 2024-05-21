@@ -2,13 +2,21 @@ import React from 'react';
 import Slider from 'react-slick';
 import type { CardData } from '@components/index';
 import { Card } from '@components/index';
-import styles from './SliderEvents.module.scss';
+import styles from './SliderProjects.module.scss';
 
-interface SliderProps {
+interface SliderProjectsProps {
   cards: CardData[];
+  showProgressContainer?: boolean;
+  showSupportButton?: boolean;
+  setIsModalOpen: (isModalOpen: boolean) => void;
 }
 
-export const SliderEvents: React.FC<SliderProps> = ({ cards }) => {
+export const SliderProjects: React.FC<SliderProjectsProps> = ({
+  cards,
+  showProgressContainer,
+  showSupportButton,
+  setIsModalOpen,
+}) => {
   const slider = React.useRef<Slider | null>(null);
   const settings = {
     dots: false,
@@ -39,7 +47,13 @@ export const SliderEvents: React.FC<SliderProps> = ({ cards }) => {
         </div>
         <Slider ref={slider} {...settings} className={styles.events}>
           {cards.map(card => (
-            <Card key={card.id} {...card} />
+            <Card
+              key={card.id}
+              data={card}
+              showProgressContainer={showProgressContainer}
+              showSupportButton={showSupportButton}
+              setIsModalOpen={setIsModalOpen}
+            />
           ))}
         </Slider>
       </div>
