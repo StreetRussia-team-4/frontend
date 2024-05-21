@@ -117,6 +117,7 @@
     min-height: 40px;
     object-fit: cover;
     margin: auto 0;
+    cursor: pointer;
     opacity: 1;
     transition: opacity 0.4s;
 }
@@ -139,6 +140,7 @@
     color: white;
     text-decoration: none;
     padding: 8px 12px;
+    cursor: pointer;
     opacity: 1;
     transition: opacity 0.4s;
 }

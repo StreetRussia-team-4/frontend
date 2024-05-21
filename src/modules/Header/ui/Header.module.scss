@@ -49,6 +49,11 @@
     font-weight: 400;
     line-height: 12px;
     white-space: nowrap;
+    transition: font-weight 0.4s;
+}
+
+.link:hover {
+    font-weight: 500;
 }
 
 .sublinks {
