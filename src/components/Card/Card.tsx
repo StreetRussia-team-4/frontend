@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Modal } from '@components/index';
 import styles from './Card.module.scss';
 
 export interface CardProps {
@@ -34,7 +35,16 @@ export const Card: React.FC<CardProps> = ({
     fundsRaised,
     goal,
   } = data;
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
+
+  const handleSupportClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className={styles.card}>
       <img
@@ -63,9 +73,12 @@ export const Card: React.FC<CardProps> = ({
         </div>
       )}
       {showSupportButton && (
-        <button className={styles.button}>ПОДДЕРЖАТЬ</button>
+        <button className={styles.button} onClick={handleSupportClick}>
+          ПОДДЕРЖАТЬ
+        </button>
       )}
       <button className={styles.buttonLearnMore}>Узнать больше</button>
+      {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );
 };
