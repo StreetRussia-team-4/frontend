@@ -3,13 +3,17 @@ import styles from './Promo.module.scss';
 import PromoVideo from '@video/promo-video.mp4';
 import playIcon from '@icon/play-circle.svg';
 import { Link } from 'react-router-dom';
+import { Button } from '@/ui';
 
-export const Promo: React.FC = () => {
+interface PromoProps {
+  setRegModalOpen: (isModalOpen: boolean) => void;
+}
+
+export const Promo: React.FC<PromoProps> = ({ setRegModalOpen }) => {
   return (
     <div className={styles.playerWrapper}>
       <video autoPlay loop muted controls={false} className={styles.video}>
         <source src={PromoVideo} type="video/mp4" />
-        Ваш браузер не поддерживает тег video
       </video>
       <div className={styles.container}>
         <h1 className={styles.title}>
@@ -18,7 +22,11 @@ export const Promo: React.FC = () => {
           <br />С ТЕБЯ
         </h1>
         <div className={styles.buttonsWrapper}>
-          <button className={styles.button}>ПРИСОЕДИНИТЬСЯ</button>
+          <Button
+            text="ПРИСОЕДИНИТЬСЯ"
+            type="button"
+            onClick={() => setRegModalOpen(true)}
+          />
           <Link className={styles.link} to="#">
             <span className={styles.aboutTeam}>О команде</span>
             <img src={playIcon} alt="Иконка Play" className={styles.playIcon} />
