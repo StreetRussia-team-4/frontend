@@ -10,7 +10,7 @@ export interface CardProps {
 
 export interface CardData {
   id: number;
-  image: string | HTMLImageElement;
+  image: string | HTMLImageElement; //почему?
   title: string;
   location: string;
   description: string;

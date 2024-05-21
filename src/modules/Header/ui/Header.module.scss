@@ -10,6 +10,12 @@
 
 .logo {
     max-height: 48px;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.logo:hover {
+    opacity: 0.6;
 }
 
 .image {
@@ -22,6 +28,10 @@
     align-items: center;
     column-gap: 4px;
     position: relative;
+}
+
+.navigation:hover > .sublinks {
+    visibility: visible;
 }
 
 .links {
@@ -52,6 +62,7 @@
     top: 43px;
     z-index: 10;
     visibility: hidden;
+    transition: visibility 0.4s;
 }
 
 .sublink {
