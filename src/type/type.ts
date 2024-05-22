@@ -1,6 +1,3 @@
-import axios from 'axios';
-import { API_URL } from '@/utils/constants';
-
 export interface Partner {
   id: number;
   name: string;
@@ -30,13 +27,3 @@ export interface Project {
   funds_raised: number;
   goal: number;
 }
-
-export const fetchProjects = async (): Promise<Project[]> => {
-  try {
-    const response = await axios.get(`${API_URL}/projects`);
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching projects:', error);
-    throw error;
-  }
-};
