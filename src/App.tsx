@@ -103,7 +103,10 @@ function App() {
                 />
               }
             />
-            <Route path="/events" element={<EventsPage />} />
+            <Route
+              path="/events"
+              element={<EventsPage eventsToRender={eventsToRender} />}
+            />
             <Route path="/directions" element={<DirectionsPage />} />
             <Route
               path="/projects"

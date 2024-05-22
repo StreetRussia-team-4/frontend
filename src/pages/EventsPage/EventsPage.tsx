@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './EventsPage.module.scss';
+import { CardEventData } from '@/components';
+import { CardEvent } from '@components/index';
 
-export const EventsPage: React.FC = () => {
+interface EventsProps {
+  eventsToRender: CardEventData[];
+}
+
+export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   return (
-    <section className={styles.events}>
+    <main className={styles.events}>
       <h2 className={styles.title}>СОБЫТИЯ</h2>
       <ul className={styles.list}>
         <li className={styles.item}>
@@ -25,7 +31,11 @@ export const EventsPage: React.FC = () => {
           </button>
         </li>
       </ul>
-      <ul className={styles.cards}></ul>
-    </section>
+      <ul className={styles.cards}>
+        {eventsToRender.map(card => (
+          <CardEvent key={card.id} data={card} pageEvents={true} />
+        ))}
+      </ul>
+    </main>
   );
 };
