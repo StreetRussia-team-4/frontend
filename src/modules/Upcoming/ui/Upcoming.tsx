@@ -4,16 +4,19 @@ import type { CardEventData } from '@components/index';
 import { CardEvent } from '@components/index';
 
 interface CardsEventsProps {
-  cards: CardEventData[];
+  eventsToRender: CardEventData[];
   pageEvents: boolean;
 }
 
-export const Upcoming: React.FC<CardsEventsProps> = ({ cards, pageEvents }) => {
+export const Upcoming: React.FC<CardsEventsProps> = ({
+  eventsToRender,
+  pageEvents,
+}) => {
   return (
     <section className={styles.upcoming}>
       <h2 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h2>
       <div className={styles.events}>
-        {cards.slice(0, 1).map(card => (
+        {eventsToRender.slice(0, 1).map(card => (
           <CardEvent
             key={card.id}
             data={card}
@@ -22,7 +25,7 @@ export const Upcoming: React.FC<CardsEventsProps> = ({ cards, pageEvents }) => {
           />
         ))}
         <ul className={styles.list}>
-          {cards.slice(1, 3).map(card => (
+          {eventsToRender.slice(1, 3).map(card => (
             <CardEvent
               key={card.id}
               data={card}

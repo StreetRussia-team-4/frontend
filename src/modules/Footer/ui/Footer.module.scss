@@ -81,10 +81,12 @@
 .button:hover {
     color: white;
     background-color: black;
+    border: solid 2px white;
 }
 
 .button:active {
     font-weight: 700;
+    border: solid 2px white;
 }
 
 .title {

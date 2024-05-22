@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { Promo } from '@/modules/Promo';
 import { Upcoming, SliderProjects, UpcomingProjects } from '@/modules';
-import { cardsForEvents } from '../../utils/constants';
-import { CardData, RegistrationModal } from '@/components';
+import { CardData, CardEventData, RegistrationModal } from '@/components';
 
 interface HomePageProps {
   setIsDonModalOpen: (isDonModalOpen: boolean) => void;
   projectsToRender: CardData[];
+  eventsToRender: CardEventData[];
 }
 
 export const HomePage: React.FC<HomePageProps> = ({
   setIsDonModalOpen,
   projectsToRender,
+  eventsToRender,
 }) => {
   const [isRegModalOpen, setRegModalOpen] = useState(false);
   return (
     <main className="main-page">
       <Promo setRegModalOpen={setRegModalOpen} />
-      <Upcoming cards={cardsForEvents} pageEvents={false} />
+      <Upcoming eventsToRender={eventsToRender} pageEvents={false} />
       <SliderProjects
         projectsToRender={projectsToRender}
         showProgressContainer={true}
