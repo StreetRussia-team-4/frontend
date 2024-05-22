@@ -3,6 +3,9 @@ import imageTwo from '@image/eventTwo.png';
 import imageThree from '@image/eventThree.png';
 import imageProject from '@image/image-project.png';
 import imageProjectTwo from '@image/image-project2.png';
+import imageEvent from '@image/image.png';
+import imageEventTwo from '@image/smallImage.png';
+import imageEventThree from '@image/smallImage2.png';
 
 // export const API_HOST = import.meta.env.VITE_API_HOST;
 // export const API_ROUTE = import.meta.env.VITE_API_ROUTE;
@@ -95,5 +98,38 @@ export const cardsForProjects = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
+  },
+];
+
+export const cardsForEvents = [
+  {
+    id: 1,
+    image: imageEvent,
+    title: 'BLACK MOVES VOL.19',
+    location: 'РЯЗАНСКАЯ ОБЛ.',
+    description:
+      'На территории спортивного комплекса "Знамя"  пройдет первое крупнейшее соревнование в России среди скейтеров.  Участниками соревнований станут подростки и молодые люди, которые не так давно стартанули в данных направлениях экстремального спорта.',
+    startDate: '24.06.2024',
+    endDate: '25.06.2024',
+  },
+  {
+    id: 2,
+    image: imageEventTwo,
+    title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
+    location: 'МОСКВА',
+    description:
+      'Молодёжный Центр проводит в Электростали открытый фестиваль граффити #FлакON. Будут учавствовать художники восточного Подмосковья, которые украсят 12 полотен подготовленных конструктивах.',
+    startDate: '14.08.2024',
+    endDate: '04.09.2024',
+  },
+  {
+    id: 3,
+    image: imageEventThree,
+    title: 'ФЕСТИВАЛЬ Паркур_fest',
+    location: 'ТУЛЬСКАЯ ОБЛ.',
+    description:
+      'В эту субботу своим двери откроет площадка «Экстрим» в Тульской обл. К открытию Фестиваля в зоне «Экстрим» будет выстроена полноценная полоса препятствий, ведь именно здесь два дня подряд будут соревноваться лучшие трейсеры нашей страны.',
+    startDate: '02.07.2024',
+    endDate: '04.07.2024',
   },
 ];

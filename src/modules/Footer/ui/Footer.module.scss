@@ -45,6 +45,12 @@
     font-size: 16px;
     color: white;
     padding: 8px 12px;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.mail:hover {
+    opacity: 0.6;
 }
 
 .list {
@@ -68,6 +74,17 @@
     padding: 0;
     margin-top: 32px;
     background-color: white;
+    cursor: pointer;
+    transition: background-color 0.6s, color 0.4s, font-weight 0.4s;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+.button:active {
+    font-weight: 700;
 }
 
 .title {
@@ -100,6 +117,13 @@
     min-height: 40px;
     object-fit: cover;
     margin: auto 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.link:hover {
+    opacity: 0.6;
 }
 
 .docs {
@@ -116,6 +140,13 @@
     color: white;
     text-decoration: none;
     padding: 8px 12px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.doc:hover {
+    opacity: 0.6;
 }
 
 .element {

@@ -88,6 +88,11 @@ export const Header: React.FC = () => {
             <div className={styles.arrow}></div>
             <ul className={styles.sublinks}>
               <li className={styles.sublink}>
+                <NavLink to="/blog/news" className={styles.link}>
+                  НОВОСТИ
+                </NavLink>
+              </li>
+              <li className={styles.sublink}>
                 <NavLink to="/blog/articles" className={styles.link}>
                   СТАТЬИ
                 </NavLink>
