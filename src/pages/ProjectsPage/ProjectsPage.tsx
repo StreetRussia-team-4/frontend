@@ -1,9 +1,14 @@
 import React from 'react';
+// import { SliderProjects } from '@/modules';
 
 export const ProjectsPage: React.FC = () => {
   return (
     <section className="projects">
-      <h2>НАШИ ПРОЕКТЫ</h2>
+      {/* <SliderProjects
+        showProgressContainer={true}
+        showSupportButton={true}
+        setIsDonModalOpen={setIsDonModalOpen}
+      /> */}
     </section>
   );
 };

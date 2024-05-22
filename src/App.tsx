@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
@@ -13,15 +14,22 @@ import { DocumentsPage } from './pages';
 import styles from './App.module.scss';
 import './vendor/benzin/benzin.css';
 import './index.scss';
+import { DonationModal, QuestionModal } from './components';
 
 function App() {
+  const [isDonModalOpen, setIsDonModalOpen] = useState(false);
+  const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
+
   return (
     <>
       <div className={styles.root}>
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/"
+              element={<HomePage setIsDonModalOpen={setIsDonModalOpen} />}
+            />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/directions" element={<DirectionsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
@@ -32,6 +40,14 @@ function App() {
             <Route path="/documents" element={<DocumentsPage />} />
           </Routes>
           <Footer />
+          <DonationModal
+            isDonModalOpen={isDonModalOpen}
+            onClose={() => setIsDonModalOpen(false)}
+          />
+          <QuestionModal
+            onClose={() => setQuestionModalOpen(false)}
+            isQuestionModalOpen={isQuestionModalOpen}
+          />
         </Router>
       </div>
     </>
