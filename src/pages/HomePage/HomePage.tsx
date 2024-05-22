@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { Promo } from '@/modules/Promo';
 import { Upcoming, SliderProjects, UpcomingProjects } from '@/modules';
-import { cardsForSlider, cardsForProjects } from '../../utils/constants';
-import { DonationModal, RegistrationModal } from '@/components';
+import { cardsForProjects } from '../../utils/constants';
+import { RegistrationModal } from '@/components';
 
-export const HomePage: React.FC = () => {
-  const [isDonModalOpen, setIsDonModalOpen] = useState(false);
+interface HomePageProps {
+  setIsDonModalOpen: (isDonModalOpen: boolean) => void;
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ setIsDonModalOpen }) => {
   const [isRegModalOpen, setRegModalOpen] = useState(false);
   return (
     <main className="main-page">
       <Promo setRegModalOpen={setRegModalOpen} />
       <Upcoming />
       <SliderProjects
-        cards={cardsForSlider}
         showProgressContainer={true}
         showSupportButton={true}
         setIsDonModalOpen={setIsDonModalOpen}
@@ -21,10 +23,6 @@ export const HomePage: React.FC = () => {
       <RegistrationModal
         isRegModalOpen={isRegModalOpen}
         onClose={() => setRegModalOpen(false)}
-      />
-      <DonationModal
-        isDonModalOpen={isDonModalOpen}
-        onClose={() => setIsDonModalOpen(false)}
       />
     </main>
   );
