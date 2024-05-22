@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Promo } from '@/modules/Promo';
 import { Upcoming, SliderProjects, UpcomingProjects } from '@/modules';
+import { cardsForEvents } from '../../utils/constants';
 import { CardData, RegistrationModal } from '@/components';
 
 interface HomePageProps {
@@ -16,7 +17,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <main className="main-page">
       <Promo setRegModalOpen={setRegModalOpen} />
-      <Upcoming />
+      <Upcoming cards={cardsForEvents} pageEvents={false} />
       <SliderProjects
         projectsToRender={projectsToRender}
         showProgressContainer={true}

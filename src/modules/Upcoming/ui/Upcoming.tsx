@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Upcoming.module.scss';
-import image from '@image/image.png';
-import imageTop from '@image/smallImage.png';
-import imageBottom from '@image/smallImage2.png';
+import type { CardEventData } from '@components/index';
+import { CardEvent } from '@components/index';
 
 // export interface EventData {
 //     id: number;
@@ -23,12 +22,17 @@ import imageBottom from '@image/smallImage2.png';
 //     link,
 //   }) => {}
 
-export const Upcoming: React.FC = () => {
+interface CardsEventsProps {
+  cards: CardEventData[];
+  pageEvents: boolean;
+}
+
+export const Upcoming: React.FC<CardsEventsProps> = ({ cards, pageEvents }) => {
   return (
     <section className={styles.upcoming}>
       <h2 className={styles.title}>БЛИЖАЙШИЕ СОБЫТИЯ</h2>
       <div className={styles.events}>
-        <div className={styles.card}>
+        {/* <div className={styles.card}>
           <img className={styles.image} src={image} />
           <div className={styles.description}>
             <p className={styles.date}>24.06.2024 - 25.06.2024</p>
@@ -41,9 +45,17 @@ export const Upcoming: React.FC = () => {
               ПОДРОБНЕЕ
             </a>
           </div>
-        </div>
+        </div> */}
+        {cards.slice(0, 1).map(card => (
+          <CardEvent
+            key={card.id}
+            data={card}
+            size={'big'}
+            pageEvents={pageEvents}
+          />
+        ))}
         <ul className={styles.list}>
-          <li className={styles.el}>
+          {/* <li className={styles.el}>
             <img className={styles.image_small} src={imageTop} />
             <p className={styles.date}>14.08.2024 - 04.09.2024</p>
             <h2 className={styles.subtitle_small}>
@@ -60,7 +72,15 @@ export const Upcoming: React.FC = () => {
             <a className={styles.link} href="#">
               ПОДРОБНЕЕ
             </a>
-          </li>
+          </li> */}
+          {cards.slice(1, 3).map(card => (
+            <CardEvent
+              key={card.id}
+              data={card}
+              size={'small'}
+              pageEvents={pageEvents}
+            />
+          ))}
         </ul>
       </div>
     </section>
