@@ -1,14 +1,21 @@
 import React from 'react';
-// import { SliderProjects } from '@/modules';
+import { SliderProjects, UpcomingProjects } from '@/modules';
 
-export const ProjectsPage: React.FC = () => {
+interface ProjectsPageProps {
+  setIsDonModalOpen: (isDonModalOpen: boolean) => void;
+}
+
+export const ProjectsPage: React.FC<ProjectsPageProps> = ({
+  setIsDonModalOpen,
+}) => {
   return (
     <section className="projects">
-      {/* <SliderProjects
+      <SliderProjects
         showProgressContainer={true}
         showSupportButton={true}
         setIsDonModalOpen={setIsDonModalOpen}
-      /> */}
+      />
+      <UpcomingProjects title="ПРЕДСТОЯЩИЕ" />
     </section>
   );
 };
