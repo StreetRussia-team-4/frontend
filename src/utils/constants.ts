@@ -7,6 +7,14 @@ import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
 
+// export const API_HOST = import.meta.env.VITE_API_HOST;
+// export const API_ROUTE = import.meta.env.VITE_API_ROUTE;
+// export const API_URL = `${API_HOST}${API_ROUTE}`;
+
+export const API_HOST = 'http://213.189.221.212';
+export const API_ROUTE = '/api/v1';
+export const API_URL = `${API_HOST}${API_ROUTE}`;
+
 export const cardsForSlider = [
   {
     id: 1,
@@ -100,7 +108,7 @@ export const cardsForEvents = [
     title: 'BLACK MOVES VOL.19',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description:
-      'На территории спортивного комплекса "Знамя"  пройдет первое крупнейшее соревнование в России среди скейтеров.  Участниками соревнований станут подростки и молодые люди, которые не так давно стартанули в данных направлениях экстремального спорта.',
+      'На территории спортивного комплекса "Знамя"  пройдет первое крупнейшее соревнование в России среди скейтеров. Участниками соревнований станут подростки и молодые люди, которые не так давно стартанули в данных направлениях экстремального спорта.',
     startDate: '24.06.2024',
     endDate: '25.06.2024',
   },

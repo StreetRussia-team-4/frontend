@@ -15,7 +15,6 @@
   max-width: 900px;
   background: #d9d9d9;
   padding: 80px 100px;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -60,31 +59,43 @@
 }
 
 .inputField {
+  font-family: 'Benzin';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0d0b13;
   width: calc(100% - 20px);
   min-height: 89px;
   margin-bottom: 20px;
   border: 1px solid #0d0b13;
 }
 
-.checkboxContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+.inputField::placeholder {
+  font-family: 'Benzin';
+  font-style: normal;
+  padding: 38px 12px;
+  color: #0d0b13;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .button {
-  font-family: 'Benzin';
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  background-color: #df544d;
-  margin: 40px 12px 32px;
-  padding: 25px 40px;
+  width: 400px;
 }
 
-.button:hover {
-  background-color: #b73b34;
-  cursor: pointer;
+.agreement,
+.link {
+  font-family: 'Benzin';
+  font-style: normal;
+  color: #6a6b63;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.link {
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
 }

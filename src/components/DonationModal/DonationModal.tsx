@@ -14,7 +14,6 @@ export const DonationModal: React.FC<DonationModalProps> = ({
   const [selectedAmount, setSelectedAmount] = useState<number | null>(1000);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [isAgreed, setIsAgreed] = useState(false);
 
   const handleAmountClick = (amount: number) => {
     setSelectedAmount(amount);
@@ -46,7 +45,9 @@ export const DonationModal: React.FC<DonationModalProps> = ({
             </button>
           ))}
           <button
-            className={`${styles.amountButton} ${styles.otherAmount}`}
+            className={`${styles.amountButton} ${styles.otherAmount} ${
+              selectedAmount === null ? styles.selected : ''
+            }`}
             onClick={() => setSelectedAmount(null)}
           >
             другая сумма
@@ -69,23 +70,18 @@ export const DonationModal: React.FC<DonationModalProps> = ({
             required
             className={styles.inputField}
           />
-          <div className={styles.checkboxContainer}>
-            <input
-              type="checkbox"
-              id="agreement"
-              checked={isAgreed}
-              onChange={() => setIsAgreed(!isAgreed)}
-              required
-            />
-            <label htmlFor="agreement">
-              Я принимаю <a href="#">договор-оферту</a>
-            </label>
-          </div>
           <Button
             type="submit"
             onClick={() => handleSubmit}
             text="ПОДДЕРЖАТЬ"
+            className={styles.button}
           />
+          <div className={styles.agreement}>
+            Заполнив эту форму, вы принимаете
+          </div>
+          <a className={styles.link} href="#">
+            договор-оферту
+          </a>
         </form>
       </div>
     </div>

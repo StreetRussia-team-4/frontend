@@ -1,22 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import type { CardData } from '@components/index';
 import { Card } from '@components/index';
+import { fetchProjects, Project } from '../api/api';
 import styles from './SliderProjects.module.scss';
+import { cardsForSlider } from '@/utils/constants';
 
 interface SliderProjectsProps {
-  cards: CardData[];
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
   setIsDonModalOpen: (isDonModalOpen: boolean) => void;
 }
 
 export const SliderProjects: React.FC<SliderProjectsProps> = ({
-  cards,
   showProgressContainer,
   showSupportButton,
   setIsDonModalOpen,
 }) => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const projectsData = await fetchProjects();
+        setProjects(projectsData);
+        console.log('projects: ', projects);
+      } catch (error) {
+        setError('Failed to fetch projects');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const slider = React.useRef<Slider | null>(null);
   const settings = {
     dots: false,
@@ -25,6 +46,29 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
     slidesToShow: 3,
     slidesToScroll: 1,
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  const cardsToRender: CardData[] =
+    projects.length > 0
+      ? projects.map(project => ({
+          id: project.id,
+          image: project.preview,
+          title: project.name,
+          location: project.region.name,
+          description: project.description,
+          startDate: project.start_date,
+          endDate: project.end_date,
+          fundsRaised: project.funds_raised,
+          goal: project.goal,
+        }))
+      : cardsForSlider;
 
   return (
     <section className={styles.slider}>
@@ -46,7 +90,7 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
           </div>
         </div>
         <Slider ref={slider} {...settings} className={styles.events}>
-          {cards.map(card => (
+          {cardsToRender.map(card => (
             <Card
               key={card.id}
               data={card}
