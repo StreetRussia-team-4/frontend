@@ -37,6 +37,8 @@ function App() {
           fetchProjects(),
           fetchEvents(),
         ]);
+        console.log('projects:', projectsData);
+        console.log('events:', eventsData);
         setProjects(projectsData);
         setEvents(eventsData);
       } catch (error) {
@@ -46,7 +48,6 @@ function App() {
       }
     };
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const projectsToRender: CardData[] =
