@@ -4,7 +4,7 @@ const baseUrl = 'https://streetrussia-team-4.github.io/frontend/#/events/';
 
 export interface CardEventProps {
   data: CardEventData;
-  size: string;
+  size?: string;
   pageEvents: boolean;
 }
 
@@ -24,28 +24,6 @@ export const CardEvent: React.FC<CardEventProps> = ({
   pageEvents,
 }) => {
   const { id, image, title, location, description, startDate, endDate } = data;
-
-  // return size === small ? (
-  //   <li className={styles.el}>
-  //     <img className={styles.image_small} src={typeof image === 'string' ? image : image.src} />
-  //     <p className={styles.date}>{`${startDate} ${endDate ? `- ${endDate}` : ""}`}</p>
-  //     <h2 className={styles.subtitle_small}>{title}</h2>
-  //     <a className={styles.link} href={`${baseUrl}${id}`}>
-  //       ПОДРОБНЕЕ
-  //     </a>
-  //   </li>) : (
-  //   <div className={styles.card}>
-  //     <img className={styles.image} src={typeof image === 'string' ? image : image.src} />
-  //     <div className={styles.description}>
-  //       <p className={styles.date}>{`${startDate} ${endDate ? `- ${endDate}` : ""}`}</p>
-  //       <h2 className={styles.subtitle}>{title}</h2>
-  //       <p className={styles.text}>{description}</p>
-  //       <a className={styles.link} href={`${baseUrl}${id}`}>
-  //         ПОДРОБНЕЕ
-  //       </a>
-  //     </div>
-  //   </div>
-  // )
 
   return pageEvents ? (
     <div className={styles.item}>
