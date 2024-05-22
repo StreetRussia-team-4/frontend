@@ -4,6 +4,14 @@ import imageThree from '@image/eventThree.png';
 import imageProject from '@image/image-project.png';
 import imageProjectTwo from '@image/image-project2.png';
 
+// export const API_HOST = import.meta.env.VITE_API_HOST;
+// export const API_ROUTE = import.meta.env.VITE_API_ROUTE;
+// export const API_URL = `${API_HOST}${API_ROUTE}`;
+
+export const API_HOST = 'http://213.189.221.212';
+export const API_ROUTE = '/api/v1';
+export const API_URL = `${API_HOST}${API_ROUTE}`;
+
 export const cardsForSlider = [
   {
     id: 1,

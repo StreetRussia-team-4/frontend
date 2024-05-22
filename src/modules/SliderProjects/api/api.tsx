@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_URL = 'http://213.189.221.212/api/v1/projects/';
+import { API_URL } from '@/utils/constants';
 
 export interface Partner {
   id: number;
@@ -34,7 +33,7 @@ export interface Project {
 
 export const fetchProjects = async (): Promise<Project[]> => {
   try {
-    const response = await axios.get(API_URL);
+    const response = await axios.get(`${API_URL}/projects`);
     return response.data;
   } catch (error) {
     console.error('Error fetching projects:', error);
