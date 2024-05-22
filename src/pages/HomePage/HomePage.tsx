@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Promo } from '@/modules/Promo';
 import { Upcoming, SliderProjects, UpcomingProjects } from '@/modules';
-import { cardsForSlider, cardsForProjects } from '../../utils/constants';
+import {
+  cardsForSlider,
+  cardsForProjects,
+  cardsForEvents,
+} from '../../utils/constants';
 import { DonationModal, RegistrationModal } from '@/components';
 
 export const HomePage: React.FC = () => {
@@ -10,7 +14,7 @@ export const HomePage: React.FC = () => {
   return (
     <main className="main-page">
       <Promo setRegModalOpen={setRegModalOpen} />
-      <Upcoming />
+      <Upcoming cards={cardsForEvents} pageEvents={false} />
       <SliderProjects
         cards={cardsForSlider}
         showProgressContainer={true}
