@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Promo } from '@/modules/Promo';
 import { Upcoming, SliderProjects, UpcomingProjects } from '@/modules';
-import { cardsForProjects } from '../../utils/constants';
-import { cardsForEvents } from '../../utils/constants';
+import { cardsForProjects, cardsForEvents } from '../../utils/constants';
 import { RegistrationModal } from '@/components';
 
 interface HomePageProps {
