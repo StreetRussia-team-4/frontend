@@ -73,12 +73,10 @@ function App() {
         }))
       : cardsForSlider;
 
-
   console.log('projectsToRender: ', projectsToRender);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const eventsToRender: CardEventData[] =
-
     events.length > 0
       ? events.map(event => ({
           id: event.id,
@@ -90,7 +88,6 @@ function App() {
           endDate: event.end_date,
           fundsRaised: event.funds_raised,
           goal: event.goal,
-
         }))
       : cardsForEvents;
 
@@ -125,8 +122,8 @@ function App() {
                   setIsDonModalOpen={setIsDonModalOpen}
                   projectsToRender={projectsToRender}
                 />
-               }
-             />
+              }
+            />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/addresses" element={<AddressesPage />} />
