@@ -1,5 +1,6 @@
 @import '/node_modules/slick-carousel/slick/slick.css';
 @import '/node_modules/slick-carousel/slick/slick-theme.css';
+@import './ui//Typography/typographyMixins';
 
 #root {
   max-width: 1440px;
@@ -21,4 +22,12 @@ body {
 p {
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  @include H2-responsive();
+}
+
+h3 {
+  @include H3-responsive();
 }

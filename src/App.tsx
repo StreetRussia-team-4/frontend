@@ -3,9 +3,10 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import styles from './App.module.scss';
 import './vendor/benzin/benzin.css';
-import './index.scss';
 
-import { Project } from './type/type';
+import './global.scss';
+
+import { Project, Event } from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
@@ -18,12 +19,14 @@ import { AboutUsPage } from './pages';
 import { AddressesPage } from './pages';
 import { DepartmentsPage } from './pages';
 import { DocumentsPage } from './pages';
+
 import {
   CardData,
   CardEventData,
   DonationModal,
   QuestionModal,
 } from './components';
+
 import { fetchProjects, fetchEvents } from './utils/api';
 import { cardsForEvents, cardsForSlider } from './utils/constants';
 
@@ -31,7 +34,7 @@ function App() {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
   const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
-  const [events, setEvents] = useState<Project[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -70,7 +73,8 @@ function App() {
         }))
       : cardsForSlider;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  console.log('projectsToRender: ', projectsToRender);
+
   const eventsToRender: CardEventData[] =
     events.length > 0
       ? events.map(event => ({
@@ -81,6 +85,7 @@ function App() {
           description: event.description,
           startDate: event.start_date,
           endDate: event.end_date,
+          direction: event.direction,
         }))
       : cardsForEvents;
 
@@ -110,7 +115,12 @@ function App() {
             <Route path="/directions" element={<DirectionsPage />} />
             <Route
               path="/projects"
-              element={<ProjectsPage setIsDonModalOpen={setIsDonModalOpen} />}
+              element={
+                <ProjectsPage
+                  setIsDonModalOpen={setIsDonModalOpen}
+                  projectsToRender={projectsToRender}
+                />
+              }
             />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />

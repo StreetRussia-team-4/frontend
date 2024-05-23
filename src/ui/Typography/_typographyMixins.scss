@@ -1,0 +1,65 @@
+@mixin font-benzin-bold($size) {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 700;
+  font-size: $size;
+}
+
+@mixin font-benzin-medium($size) {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 500;
+  font-size: $size;
+}
+
+@mixin font-benzin-regular($size) {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
+
+@mixin H3-desktop {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 400;
+  font-size: 68px;
+}
+
+@mixin H3-mobile {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@mixin H3-responsive {
+  @include H3-desktop();
+
+  @media (max-width: 767px) {
+    @include H3-mobile();
+  }
+}
+
+@mixin H2-desktop {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 108px;
+  text-align: center;
+  margin: 84px auto 120px;
+}
+
+@mixin H2-mobile {
+  font-family: 'Benzin', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+@mixin H2-responsive {
+  @include H2-desktop();
+
+  @media (max-width: 767px) {
+    @include H2-mobile();
+  }
+}
+
+@mixin font-benzin-medium-underline($size) {
+  @include font-benzin-medium($size);
+  text-decoration: underline;
+}
