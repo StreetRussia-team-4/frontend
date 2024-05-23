@@ -48,6 +48,10 @@
 }
 
 .cards {
+  list-style-type: none;
+  margin: 64px auto 200px;
+  display: grid;
+  padding: 0 100px;
   column-gap: 24px;
   row-gap: 84px;
   grid-template-columns: repeat(3, 1fr);
