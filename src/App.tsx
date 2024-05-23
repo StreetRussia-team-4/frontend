@@ -75,7 +75,6 @@ function App() {
 
   console.log('projectsToRender: ', projectsToRender);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const eventsToRender: CardEventData[] =
     events.length > 0
       ? events.map(event => ({
