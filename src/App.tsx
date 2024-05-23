@@ -125,9 +125,8 @@ function App() {
                   setIsDonModalOpen={setIsDonModalOpen}
                   projectsToRender={projectsToRender}
                 />
-              }
-              element={<ProjectsPage setIsDonModalOpen={setIsDonModalOpen} />}
-            />
+               }
+             />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/addresses" element={<AddressesPage />} />
