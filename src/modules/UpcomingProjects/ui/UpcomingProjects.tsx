@@ -18,9 +18,9 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
     <Card key={card.id} data={card} />
   ));
   return (
-    <div className={styles.projects}>
+    <>
       {isHomePage ? (
-        <div>
+        <div className={styles.upcomingProjects}>
           <h3>Предстоящие</h3>
           <div className={styles.cardListHomePage}>
             {displayedCards.map(card => (
@@ -36,6 +36,6 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
           />
         </div>
       )}
-    </div>
+    </>
   );
 };
