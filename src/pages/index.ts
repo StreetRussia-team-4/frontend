@@ -1,9 +1,11 @@
 export { HomePage } from './HomePage/HomePage';
 export { EventsPage } from './EventsPage/EventsPage';
 export { DirectionsPage } from './DirectionsPage/DirectionsPage';
-export { ProjectsPage } from './ProjectsPage/ProjectsPage';
 export { BlogPage } from './BlogPage/BlogPage';
 export { AboutUsPage } from './AboutUsPage/AboutUsPage';
 export { AddressesPage } from './AddressesPage/AddressesPage';
 export { DepartmentsPage } from './DepartmentsPage/DepartmentsPage';
 export { DocumentsPage } from './DocumentsPage/DocumentsPage';
+export { ProjectDetailPage } from './ProjectDetailPage/ProjectDetailPage';
+export { ProjectsPage } from './ProjectsPage/ProjectsPage';
+export { CurrentProjectsPage } from './CurrentProjectsPage/CurrentProjectsPage';
