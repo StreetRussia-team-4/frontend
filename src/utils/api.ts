@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API_URL } from '@/utils/constants';
-import { Project } from '../type/type';
+import { Project, Event } from '../type/type';
 
 export const fetchProjects = async (): Promise<Project[]> => {
   try {
@@ -12,7 +12,7 @@ export const fetchProjects = async (): Promise<Project[]> => {
   }
 };
 
-export const fetchEvents = async (): Promise<Project[]> => {
+export const fetchEvents = async (): Promise<Event[]> => {
   try {
     const response = await axios.get(`${API_URL}/regional-offices/events/`);
     return response.data;

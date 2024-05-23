@@ -6,7 +6,7 @@ import './vendor/benzin/benzin.css';
 
 import './global.scss';
 
-import { Project } from './type/type';
+import { Project, Event } from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
@@ -34,7 +34,7 @@ function App() {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
   const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
-  const [events, setEvents] = useState<Project[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -85,8 +85,7 @@ function App() {
           description: event.description,
           startDate: event.start_date,
           endDate: event.end_date,
-          fundsRaised: event.funds_raised,
-          goal: event.goal,
+          direction: event.direction,
         }))
       : cardsForEvents;
 
