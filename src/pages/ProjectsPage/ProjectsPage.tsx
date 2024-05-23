@@ -14,7 +14,6 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 }) => {
   return (
     <section className={styles.projectsPage}>
-      <h2></h2>
       <SliderProjects
         projectsToRender={projectsToRender}
         showProgressContainer={true}
