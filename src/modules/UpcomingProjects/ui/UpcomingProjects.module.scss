@@ -1,4 +1,6 @@
 .projects {
+  display: flex;
+  justify-content: center;
   max-width: 1280px;
   padding: 0 170px;
   margin: 0 0 200px;
@@ -15,4 +17,14 @@
 .cardList {
   display: flex;
   gap: 24px;
+}
+
+.cardListHomePage {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.cardListHomePage div {
+  max-width: 500px;
 }

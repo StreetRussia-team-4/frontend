@@ -7,3 +7,5 @@ export { AboutUsPage } from './AboutUsPage/AboutUsPage';
 export { AddressesPage } from './AddressesPage/AddressesPage';
 export { DepartmentsPage } from './DepartmentsPage/DepartmentsPage';
 export { DocumentsPage } from './DocumentsPage/DocumentsPage';
+export { ProjectDetailPage } from './ProjectDetailPage/ProjectDetailPage';
+export { CurrentProjectsPage } from './CurrentProjectsPage/CurrentProjectsPage';

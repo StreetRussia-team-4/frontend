@@ -5,14 +5,14 @@ import styles from './UpcomingProjects.module.scss';
 
 interface UpcomingProjectsProps {
   projectsToRender: CardData[];
-  title: string;
   isHomePage?: boolean;
+  onTitleClick: () => void;
 }
 
 export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
-  title,
   projectsToRender,
   isHomePage,
+  onTitleClick,
 }) => {
   const displayedCards = projectsToRender.slice(0, 2);
   const items = projectsToRender.map(card => (
@@ -23,7 +23,7 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
       {isHomePage ? (
         <div>
           <h3>Предстоящие</h3>
-          <div className={styles.cardList}>
+          <div className={styles.cardListHomePage}>
             {displayedCards.map(card => (
               <Card key={card.id} data={card} />
             ))}
@@ -31,7 +31,11 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
         </div>
       ) : (
         <div className={styles.cardList}>
-          <CustomSlider items={items} title={title} />
+          <CustomSlider
+            items={items}
+            title="Предстоящие"
+            onTitleClick={onTitleClick}
+          />
         </div>
       )}
     </div>

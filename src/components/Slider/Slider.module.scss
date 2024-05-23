@@ -1,5 +1,10 @@
 .slider {
   margin: 0 0 100px;
+  .carousel {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 
 .courouselleHeader {
@@ -37,4 +42,17 @@
 
 .arrowRight {
   background: url('../../assets/icon/arrow-slider-right.svg') no-repeat center;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
 }

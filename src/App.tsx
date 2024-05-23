@@ -19,6 +19,7 @@ import { AboutUsPage } from './pages';
 import { AddressesPage } from './pages';
 import { DepartmentsPage } from './pages';
 import { DocumentsPage } from './pages';
+import { ProjectDetailPage } from './pages';
 
 import {
   CardData,
@@ -123,6 +124,7 @@ function App() {
                 />
               }
             />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/addresses" element={<AddressesPage />} />

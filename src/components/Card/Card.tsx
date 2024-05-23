@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Card.module.scss';
 
 export interface CardProps {
@@ -27,6 +28,7 @@ export const Card: React.FC<CardProps> = ({
   setIsModalOpen,
 }) => {
   const {
+    id,
     image,
     title,
     location,
@@ -38,11 +40,16 @@ export const Card: React.FC<CardProps> = ({
   } = data;
 
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
+  const navigate = useNavigate();
 
   const handleSupportClick = () => {
     if (setIsModalOpen) {
       setIsModalOpen(true);
     }
+  };
+
+  const handleLearnMore = () => {
+    navigate(`/projects/${id}`);
   };
 
   return (
@@ -77,7 +84,9 @@ export const Card: React.FC<CardProps> = ({
           ПОДДЕРЖАТЬ
         </button>
       )}
-      <button className={styles.buttonLearnMore}>Узнать больше</button>
+      <button className={styles.buttonLearnMore} onClick={handleLearnMore}>
+        Узнать больше
+      </button>
     </div>
   );
 };

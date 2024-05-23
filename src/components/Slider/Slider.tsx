@@ -5,10 +5,16 @@ import styles from './Slider.module.scss';
 interface CustomSliderProps {
   items: React.ReactNode[];
   title?: string;
+  onTitleClick?: () => void;
 }
 
-export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
+export const CustomSlider: React.FC<CustomSliderProps> = ({
+  items,
+  title,
+  onTitleClick,
+}) => {
   const slider = React.useRef<Slider | null>(null);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -21,7 +27,11 @@ export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
     <div className={styles.slider}>
       <div className={styles.carousel}>
         <div className={styles.courouselleHeader}>
-          {title && <h3 className={styles.title}>{title}</h3>}
+          {title && (
+            <h3 className={styles.title} onClick={onTitleClick}>
+              {title}
+            </h3>
+          )}
           <div className={styles.buttonsContainer}>
             <button
               onClick={() => slider.current?.slickPrev()}
