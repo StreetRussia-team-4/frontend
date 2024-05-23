@@ -1,3 +1,83 @@
+.item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 777px;
+  background-color: white;
+  border: solid 1px black;
+  position: relative;
+}
+
+.linkEvents {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 397px;
+}
+
+.linkEvents:hover .more {
+  text-decoration: underline;
+}
+
+.linkEvents:active .more {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.linkEvents:disabled .more {
+  color: #6A6B63;
+}
+
+.image {
+  object-position: center;
+  object-fit: cover;
+  height: 254px;
+  margin-bottom: 36px;
+}
+
+.dateEvents {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  padding: 10px 20px;
+  margin: 0 0 12px;
+}
+
+.location {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  margin-bottom: 28px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 20px;
+  max-height: 228px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.more {
+  font-size: 20px;
+  line-height: 15px;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
 .upcoming {
     max-width: 1240px;
     margin: 200px auto;

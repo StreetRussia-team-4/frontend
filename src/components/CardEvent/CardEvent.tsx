@@ -26,21 +26,21 @@ export const CardEvent: React.FC<CardEventProps> = ({
   const { id, image, title, location, description, startDate, endDate } = data;
 
   return pageEvents ? (
-    <div className={styles.item}>
-      <img
-        className={styles.image}
-        src={typeof image === 'string' ? image : image.src}
-      />
-      <p
-        className={styles.dateEvents}
-      >{`${startDate} ${endDate ? `- ${endDate}` : ''}`}</p>
-      <h2 className={styles.subtitle}>{title}</h2>
-      <p className={styles.location}>{location}</p>
-      <p className={styles.text}>{description}</p>
+    <li className={styles.item}>
       <a className={styles.linkEvents} href={`${baseUrl}${id}`}>
-        ПОДРОБНЕЕ
+        <img
+          className={styles.image}
+          src={typeof image === 'string' ? image : image.src}
+        />
+        <p
+          className={styles.dateEvents}
+        >{`${startDate} ${endDate ? `- ${endDate}` : ''}`}</p>
+        <h2 className={styles.subtitle}>{title}</h2>
+        <p className={styles.location}>{location}</p>
+        <p className={styles.text}>{description}</p>
+        <p className={styles.more}>Подробнее</p>
       </a>
-    </div>
+    </li>
   ) : size === 'small' ? (
     <li className={styles.el}>
       <img
