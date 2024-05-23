@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import styles from './App.module.scss';
 import './vendor/benzin/benzin.css';
-import './index.scss';
+import './global.scss';
 
 import { Project } from './type/type';
 
@@ -65,6 +65,8 @@ function App() {
         }))
       : cardsForSlider;
 
+  console.log('projectsToRender: ', projectsToRender);
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const eventsToRender: CardData[] =
     events.length > 0
@@ -103,7 +105,12 @@ function App() {
             <Route path="/directions" element={<DirectionsPage />} />
             <Route
               path="/projects"
-              element={<ProjectsPage setIsDonModalOpen={setIsDonModalOpen} />}
+              element={
+                <ProjectsPage
+                  setIsDonModalOpen={setIsDonModalOpen}
+                  projectsToRender={projectsToRender}
+                />
+              }
             />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
