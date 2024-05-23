@@ -11,12 +11,15 @@
   min-height: 100vh;
   min-width: 320px;
   margin: 0 auto;
-  box-sizing: border-box;
   background-color: #fff;
   color: #000;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {

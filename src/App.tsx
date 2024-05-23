@@ -86,7 +86,9 @@ function App() {
       : cardsForEvents;
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (error) {
+    console.error('Ошибка загрузки данных:', error);
+  }
 
   return (
     <>
