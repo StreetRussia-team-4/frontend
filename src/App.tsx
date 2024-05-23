@@ -18,7 +18,12 @@ import { AboutUsPage } from './pages';
 import { AddressesPage } from './pages';
 import { DepartmentsPage } from './pages';
 import { DocumentsPage } from './pages';
-import { CardData, DonationModal, QuestionModal } from './components';
+import {
+  CardData,
+  CardEventData,
+  DonationModal,
+  QuestionModal,
+} from './components';
 import { fetchProjects, fetchEvents } from './utils/api';
 import { cardsForEvents, cardsForSlider } from './utils/constants';
 
@@ -68,7 +73,7 @@ function App() {
   console.log('projectsToRender: ', projectsToRender);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const eventsToRender: CardData[] =
+  const eventsToRender: CardEventData[] =
     events.length > 0
       ? events.map(event => ({
           id: event.id,
@@ -78,8 +83,6 @@ function App() {
           description: event.description,
           startDate: event.start_date,
           endDate: event.end_date,
-          fundsRaised: event.funds_raised,
-          goal: event.goal,
         }))
       : cardsForEvents;
 
@@ -96,12 +99,16 @@ function App() {
               path="/"
               element={
                 <HomePage
+                  eventsToRender={eventsToRender}
                   projectsToRender={projectsToRender}
                   setIsDonModalOpen={setIsDonModalOpen}
                 />
               }
             />
-            <Route path="/events" element={<EventsPage />} />
+            <Route
+              path="/events"
+              element={<EventsPage eventsToRender={eventsToRender} />}
+            />
             <Route path="/directions" element={<DirectionsPage />} />
             <Route
               path="/projects"
