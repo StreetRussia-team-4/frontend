@@ -49,7 +49,7 @@ export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
             ></button>
           </div>
         </div>
-        <Slider ref={slider} {...settings} className={styles.events}>
+        <Slider ref={slider} {...settings} className={styles.slickSlider}>
           {items}
         </Slider>
       </div>
