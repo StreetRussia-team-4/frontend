@@ -1,8 +1,11 @@
-export { ProtectedRoute } from './ProtectedRoute';
 export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
 export { Card } from './Card/Card';
 export { DonationModal } from './DonationModal/DonationModal';
 export { RegistrationModal } from './RegistrationModal/RegistrationModal';
 export { QuestionModal } from './QuestionModal/QuestionModal';
+export { CustomSlider } from './Slider/Slider';
 export type { CardData } from './Card/Card';
 export type { CardProps } from './Card/Card';
+export { CardEvent } from './CardEvent/CardEvent';
+export type { CardEventData } from './CardEvent/CardEvent';
+export type { CardEventProps } from './CardEvent/CardEvent';

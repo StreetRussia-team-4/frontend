@@ -1,0 +1,54 @@
+.events {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  margin: 0 0 32px;
+  padding: 0;
+  font-size: 80px;
+  line-height: 108px;
+  text-align: center;
+}
+
+.list {
+  margin: 0 0 0 100px;
+  padding: 0;
+  display: flex;
+  column-gap: 40px;
+  list-style-type: none;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+  margin: 0;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: 'Benzin';
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('../../assets/icon/arrowBlack.svg');
+  transition: transform 0.4s ease-in-out;
+}
+
+.cards {
+  column-gap: 24px;
+  row-gap: 84px;
+  grid-template-columns: repeat(3, 1fr);
+}

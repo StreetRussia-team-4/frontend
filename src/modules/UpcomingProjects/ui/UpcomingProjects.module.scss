@@ -1,4 +1,5 @@
 .projects {
+  max-width: 1280px;
   padding: 0 170px;
   margin: 0 0 200px;
 }
@@ -13,9 +14,5 @@
 
 .cardList {
   display: flex;
-  gap: 32px;
-}
-
-.cardList div {
-  max-width: 500px;
+  gap: 24px;
 }
