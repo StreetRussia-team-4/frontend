@@ -16,21 +16,24 @@ export const HomePage: React.FC<HomePageProps> = ({
   eventsToRender,
 }) => {
   const [isRegModalOpen, setRegModalOpen] = useState(false);
+  const currentProjects = projectsToRender.filter(
+    project => project.current_status === 'current'
+  );
+
+  const upcomingProjects = projectsToRender.filter(
+    project => project.current_status === 'future'
+  );
   return (
     <main className={styles.homePage}>
       <Promo setRegModalOpen={setRegModalOpen} />
       <Upcoming eventsToRender={eventsToRender} pageEvents={false} />
       <SliderProjects
-        projectsToRender={projectsToRender}
+        projectsToRender={currentProjects}
         showProgressContainer={true}
         showSupportButton={true}
         setIsDonModalOpen={setIsDonModalOpen}
       />
-      <UpcomingProjects
-        title="ПРЕДСТОЯЩИЕ"
-        projectsToRender={projectsToRender}
-        isHomePage={true}
-      />
+      <UpcomingProjects projectsToRender={upcomingProjects} isHomePage={true} />
       <RegistrationModal
         isRegModalOpen={isRegModalOpen}
         onClose={() => setRegModalOpen(false)}

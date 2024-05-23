@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import type { CardData } from '@/type/type';
 import styles from './Card.module.scss';
 
 export interface CardProps {
@@ -7,18 +8,6 @@ export interface CardProps {
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
   setIsModalOpen?: (isModalOpen: boolean) => void;
-}
-
-export interface CardData {
-  id: number;
-  image: string | HTMLImageElement;
-  title: string;
-  location: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-  fundsRaised?: number;
-  goal?: number;
 }
 
 export const Card: React.FC<CardProps> = ({

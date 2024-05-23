@@ -6,13 +6,12 @@ import styles from './UpcomingProjects.module.scss';
 interface UpcomingProjectsProps {
   projectsToRender: CardData[];
   isHomePage?: boolean;
-  onTitleClick: () => void;
+  onTitleClick?: () => void;
 }
 
 export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
   projectsToRender,
   isHomePage,
-  onTitleClick,
 }) => {
   const displayedCards = projectsToRender.slice(0, 2);
   const items = projectsToRender.map(card => (
@@ -33,8 +32,7 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
         <div className={styles.cardList}>
           <CustomSlider
             items={items}
-            title="Предстоящие"
-            onTitleClick={onTitleClick}
+            title={{ text: 'Предстоящие', url: '/' }}
           />
         </div>
       )}

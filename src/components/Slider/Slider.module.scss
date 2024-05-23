@@ -1,19 +1,9 @@
-.slider {
-  margin: 0 0 100px;
-  .carousel {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
-.courouselleHeader {
+.carouselHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
   max-height: 76px;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
 }
 
 .title {

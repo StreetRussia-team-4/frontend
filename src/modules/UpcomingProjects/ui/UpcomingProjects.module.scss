@@ -1,9 +1,5 @@
 .projects {
-  display: flex;
   justify-content: center;
-  max-width: 1280px;
-  padding: 0 170px;
-  margin: 0 0 200px;
 }
 
 .subTitle {
@@ -15,8 +11,7 @@
 }
 
 .cardList {
-  display: flex;
-  gap: 24px;
+  margin: 100px 0;
 }
 
 .cardListHomePage {

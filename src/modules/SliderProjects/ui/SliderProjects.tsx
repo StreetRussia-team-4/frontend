@@ -8,7 +8,6 @@ interface SliderProjectsProps {
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
   setIsDonModalOpen: (isDonModalOpen: boolean) => void;
-  onTitleClick: () => void;
 }
 
 export const SliderProjects: React.FC<SliderProjectsProps> = ({
@@ -16,7 +15,6 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
   showProgressContainer,
   showSupportButton,
   setIsDonModalOpen,
-  onTitleClick,
 }) => {
   const items = projectsToRender.map(card => (
     <Card
@@ -34,7 +32,10 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
         НАШИ <br />
         ПРОЕКТЫ
       </h2>
-      <CustomSlider items={items} title="Текущие" onTitleClick={onTitleClick} />
+      <CustomSlider
+        items={items}
+        title={{ text: 'Текущие', url: '/projects/current' }}
+      />
     </div>
   );
 };
