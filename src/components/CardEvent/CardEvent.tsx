@@ -37,7 +37,7 @@ export const CardEvent: React.FC<CardEventProps> = ({
         <p
           className={styles.dateEvents}
         >{`${startDate} ${endDate ? `- ${endDate}` : ''}`}</p>
-        <h2 className={styles.subtitle}>{title}</h2>
+        <h4 className={styles.subtitle}>{title}</h4>
         <p className={styles.location}>{location}</p>
         <p className={styles.text}>{description}</p>
         <p className={styles.more}>Подробнее</p>
@@ -67,7 +67,7 @@ export const CardEvent: React.FC<CardEventProps> = ({
         <p
           className={styles.date}
         >{`${startDate} ${endDate ? `- ${endDate}` : ''}`}</p>
-        <h2 className={styles.subtitleBig}>{title}</h2>
+        <h4 className={styles.subtitleBig}>{title}</h4>
         <p className={styles.textBig}>{description}</p>
         <a className={styles.link} href={`${baseUrl}${id}`}>
           ПОДРОБНЕЕ
