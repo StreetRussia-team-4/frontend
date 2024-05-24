@@ -1,14 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import styles from './Slider.module.scss';
 
 interface CustomSliderProps {
   items: React.ReactNode[];
-  title?: string;
+  title?: {
+    text: string;
+    url: string;
+  };
 }
 
 export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
   const slider = React.useRef<Slider | null>(null);
+  const navigate = useNavigate();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -17,11 +23,21 @@ export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
     slidesToScroll: 1,
   };
 
+  const handleTitleClick = () => {
+    if (title && title.url) {
+      navigate(title.url);
+    }
+  };
+
   return (
     <div className={styles.slider}>
       <div className={styles.carousel}>
-        <div className={styles.courouselleHeader}>
-          {title && <h3 className={styles.title}>{title}</h3>}
+        <div className={styles.carouselHeader}>
+          {title && (
+            <h3 className={styles.title} onClick={handleTitleClick}>
+              {title.text}
+            </h3>
+          )}
           <div className={styles.buttonsContainer}>
             <button
               onClick={() => slider.current?.slickPrev()}
@@ -33,7 +49,7 @@ export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
             ></button>
           </div>
         </div>
-        <Slider ref={slider} {...settings} className={styles.events}>
+        <Slider ref={slider} {...settings} className={styles.slickSlider}>
           {items}
         </Slider>
       </div>

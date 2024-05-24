@@ -1,3 +1,16 @@
+export interface CardData {
+  id: number;
+  image: string | HTMLImageElement;
+  current_status: string;
+  title: string;
+  location: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  fundsRaised?: number;
+  goal?: number;
+}
+
 export interface Partner {
   id: number;
   name: string;
@@ -16,7 +29,7 @@ export interface Region {
 
 export interface Project {
   id: number;
-  status: string;
+  current_status: string;
   name: string;
   description: string;
   region: Region;

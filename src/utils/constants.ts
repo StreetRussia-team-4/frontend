@@ -15,14 +15,15 @@ export const API_HOST = 'http://213.189.221.212';
 export const API_ROUTE = '/api/v1';
 export const API_URL = `${API_HOST}${API_ROUTE}`;
 
-export const cardsForSlider = [
+export const cardsForProjets = [
   {
     id: 1,
     image: imageOne,
+    current_status: 'current',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
-    startDate: '24.12.2024',
+    startDate: '24.01.2024',
     endDate: '24.03.2025',
     fundsRaised: 6000,
     goal: 38000,
@@ -30,6 +31,7 @@ export const cardsForSlider = [
   {
     id: 2,
     image: imageTwo,
+    current_status: 'current',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
@@ -41,6 +43,7 @@ export const cardsForSlider = [
   {
     id: 3,
     image: imageThree,
+    current_status: 'current',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
@@ -52,6 +55,7 @@ export const cardsForSlider = [
   {
     id: 4,
     image: imageThree,
+    current_status: 'current',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
@@ -60,12 +64,10 @@ export const cardsForSlider = [
     fundsRaised: 40000,
     goal: 50500,
   },
-];
-
-export const cardsForProjects = [
   {
-    id: 1,
+    id: 5,
     image: imageProject,
+    current_status: 'future',
     title: 'СКЕЙТПАРК',
     location: 'ПЕРМСКИЙ КРАЙ',
     description: 'Будем устанавливать рампы, фанбоксы, разгонки, рейлы.',
@@ -73,8 +75,9 @@ export const cardsForProjects = [
     endDate: '24.03.2025',
   },
   {
-    id: 2,
+    id: 6,
     image: imageProjectTwo,
+    current_status: 'future',
     title: 'WORK OUT ПЛОЩАДКА',
     location: 'ТВЕРСКАЯ ОБЛ.',
     description: 'Планируем поставить змейку, брусья, турники, перекладины.',
@@ -82,8 +85,9 @@ export const cardsForProjects = [
     endDate: '24.03.2025',
   },
   {
-    id: 3,
+    id: 7,
     image: imageProject,
+    current_status: 'future',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
@@ -91,8 +95,9 @@ export const cardsForProjects = [
     endDate: '24.03.2025',
   },
   {
-    id: 4,
+    id: 8,
     image: imageProjectTwo,
+    current_status: 'future',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
@@ -156,5 +161,25 @@ export const cardsForEvents = [
     startDate: '02.07.2024',
     endDate: '04.07.2024',
     direction: 'PARKOUR',
+  },
+  {
+    id: 4,
+    image: imageEventTwo,
+    title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
+    location: 'МОСКВА',
+    description:
+      'Молодёжный Центр проводит в Электростали открытый фестиваль граффити #FлакON. Будут учавствовать художники восточного Подмосковья, которые украсят 12 полотен подготовленных конструктивах.',
+    startDate: '14.08.2024',
+    endDate: '04.09.2024',
+  },
+  {
+    id: 5,
+    image: imageEventThree,
+    title: 'ФЕСТИВАЛЬ Паркур_fest',
+    location: 'ТУЛЬСКАЯ ОБЛ.',
+    description:
+      'В эту субботу своим двери откроет площадка «Экстрим» в Тульской обл. К открытию Фестиваля в зоне «Экстрим» будет выстроена полноценная полоса препятствий, ведь именно здесь два дня подряд будут соревноваться лучшие трейсеры нашей страны.',
+    startDate: '02.07.2024',
+    endDate: '04.07.2024',
   },
 ];

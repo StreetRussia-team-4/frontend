@@ -12,18 +12,23 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
   projectsToRender,
   setIsDonModalOpen,
 }) => {
+  console.log('projectsToRender: ', projectsToRender);
+  const currentProjects = projectsToRender.filter(
+    project => project.current_status === 'current'
+  );
+
+  const upcomingProjects = projectsToRender.filter(
+    project => project.current_status === 'future'
+  );
   return (
     <section className={styles.projectsPage}>
       <SliderProjects
-        projectsToRender={projectsToRender}
+        projectsToRender={currentProjects}
         showProgressContainer={true}
         showSupportButton={true}
         setIsDonModalOpen={setIsDonModalOpen}
       />
-      <UpcomingProjects
-        title="ПРЕДСТОЯЩИЕ"
-        projectsToRender={projectsToRender}
-      />
+      <UpcomingProjects projectsToRender={upcomingProjects} />
     </section>
   );
 };

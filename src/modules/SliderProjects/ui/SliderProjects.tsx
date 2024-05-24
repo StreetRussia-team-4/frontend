@@ -32,7 +32,10 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
         НАШИ <br />
         ПРОЕКТЫ
       </h2>
-      <CustomSlider items={items} title="Текущие" />
+      <CustomSlider
+        items={items}
+        title={{ text: 'Текущие', url: '/projects/current' }}
+      />
     </div>
   );
 };
