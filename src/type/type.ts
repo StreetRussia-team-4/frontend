@@ -40,3 +40,16 @@ export interface Project {
   funds_raised: number;
   goal: number;
 }
+
+export interface Event {
+  id: number;
+  status: string;
+  name: string;
+  description: string;
+  region: Region;
+  partners: Partner[];
+  preview: string;
+  start_date: string;
+  end_date: string;
+  direction: string; //добавила для фильтра событий
+}
