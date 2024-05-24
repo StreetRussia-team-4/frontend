@@ -9,9 +9,14 @@ interface CustomSliderProps {
     text: string;
     url: string;
   };
+  slidesToShow: number;
 }
 
-export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
+export const CustomSlider: React.FC<CustomSliderProps> = ({
+  items,
+  title,
+  slidesToShow,
+}) => {
   const slider = React.useRef<Slider | null>(null);
   const navigate = useNavigate();
 
@@ -19,7 +24,7 @@ export const CustomSlider: React.FC<CustomSliderProps> = ({ items, title }) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
   };
 

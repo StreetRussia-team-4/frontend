@@ -1,0 +1,62 @@
+@import '../../ui/Typography/typographyMixins';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px 200px;
+}
+
+.image {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.image:hover {
+  filter: grayscale(0%);
+}
+
+.region {
+  @include font-benzin-regular(24px);
+  line-height: 36px;
+  margin: 0 0 90px;
+}
+
+.wrapper {
+  max-height: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsContainer {
+  align-self: flex-end;
+  margin-top: 28px;
+}
+
+.arrowLeft,
+.arrowRight {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border: none;
+}
+
+.arrowLeft {
+  background: url('../../assets/icon/arrow-slider-left.svg') no-repeat center;
+  margin-right: 16px;
+}
+
+.arrowRight {
+  background: url('../../assets/icon/arrow-slider-right.svg') no-repeat center;
+}
+
+.description {
+  @include font-benzin-medium(20px);
+  line-height: 32px;
+  max-height: 400px;
+  margin: 100px 0 80px;
+}
+
+.button {
+  align-self: center;
+}

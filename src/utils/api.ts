@@ -12,6 +12,16 @@ export const fetchProjects = async (): Promise<Project[]> => {
   }
 };
 
+export const fetchProjectById = async (id: number): Promise<Project[]> => {
+  try {
+    const response = await axios.get(`${API_URL}/projects/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+    throw error;
+  }
+};
+
 export const fetchEvents = async (): Promise<Event[]> => {
   try {
     const response = await axios.get(`${API_URL}/regional-offices/events/`);

@@ -102,7 +102,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   <option value="" disabled>
                     Область
                   </option>
-                  {/* добавить регионы*/}
+                  <option value="region1">Region 1</option>
+                  <option value="region2">Region 2</option>
+                  <option value="region3">Region 3</option>
+                  {/* Add more regions as needed */}
                 </select>
               </fieldset>
             </div>
@@ -135,10 +138,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               </fieldset>
             </div>
           </div>
-          <div className={styles.fieldSets}>
-            <div className={styles.passportBlock}>
-              <label>Паспорт</label>
-              <fieldset className={styles.passportFieldset}>
+          <div className={styles.passportContainer}>
+            <label>Паспорт</label>
+            <fieldset className={styles.passportFieldset}>
+              <div className={styles.passportBlock}>
                 <input
                   className={styles.serie}
                   type="text"
@@ -166,11 +169,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   onChange={handleChange}
                   required
                 />
-              </fieldset>
-            </div>
-            <div className={styles.buttonBlock}>
-              <label>{''}</label>
-              <fieldset className={styles.buttonFieldset}>
+              </div>
+              <div className={styles.buttonBlock}>
                 <input
                   type="text"
                   name="passportIssuedBy"
@@ -188,8 +188,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   Заполняя эту форму, вы соглашаетесь с правами и обязанностями
                   участника ООО УКС Улицы России
                 </span>
-              </fieldset>
-            </div>
+              </div>
+            </fieldset>
           </div>
         </form>
       </div>

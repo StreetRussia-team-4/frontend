@@ -50,10 +50,17 @@
 
 .passportBlock {
   width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-content: flex-start;
 }
 
 .buttonBlock {
   width: 50%;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
 }
 
 .dataGrid {
@@ -114,7 +121,6 @@
   padding: 0;
   display: flex;
   gap: 18px;
-  flex-wrap: wrap;
 }
 
 .serie {
@@ -150,7 +156,7 @@ input {
 }
 
 .region {
-  max-height: 89px;
+  min-height: 48px;
   font-family: 'Benzin';
   font-size: 16px;
   font-weight: 400;
@@ -166,9 +172,4 @@ input {
   text-align: left;
   color: #000;
   opacity: 0.5;
-}
-
-.gridLeft {
-  display: flex;
-  flex-wrap: wrap;
 }
