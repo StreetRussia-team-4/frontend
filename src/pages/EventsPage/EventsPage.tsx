@@ -16,17 +16,51 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const uniqueDirections = [...new Set(directions)];
 
   const [showFilterLocation, setShowFilterLocation] = useState<boolean>(false);
-  // const [isFilterLocationOn, setIsFilterLocationOn] = useState(false);
+  const [isFilterLocationOn, setIsFilterLocationOn] = useState<boolean>(false);
+  // const [filteredLocationCards, setFilteredLocationCards] = useState([]);
   const [showFilterDirection, setShowFilterDirection] =
     useState<boolean>(false);
-  // const [isFilterDirection, setIsFilterDirection] = useState(false);
+  // const [isFilterDirection, setIsFilterDirection] = useState<boolean>(false);
+
+  const [cardsForRender, setCardsForRender] = useState(eventsToRender);
 
   const handleFilterLocationClick = () => {
+    setShowFilterDirection(false);
     setShowFilterLocation(!showFilterLocation);
   };
 
   const handleFilterDirectionClick = () => {
+    setShowFilterLocation(false);
     setShowFilterDirection(!showFilterDirection);
+  };
+
+  //фильтр по региону
+  const handleLocationFiltering = (
+    cards: CardEventData[],
+    isFilterLocationOn: boolean,
+    buttonLocation: string | null
+  ) => {
+    if (isFilterLocationOn) {
+      const result = cards.filter(card => card.location === buttonLocation);
+      return result;
+    } else {
+      return cards;
+    }
+  };
+  // useEffect(() => {
+  // добавить сюда ф-ию
+  // }, [])
+  const handleLocationClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const buttonId = (event.target as HTMLButtonElement).textContent;
+    setIsFilterLocationOn(true);
+    const filtered = handleLocationFiltering(
+      eventsToRender,
+      isFilterLocationOn,
+      buttonId
+    );
+    setCardsForRender(filtered);
   };
 
   return (
@@ -58,8 +92,14 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
       {showFilterLocation ? (
         <ul className={styles.filter}>
           {uniqueLocations.map(location => (
-            <li key={uniqueLocations.indexOf(location)}>
-              <button className={styles.filterButton}>{location}</button>
+            <li key={locations.indexOf(location)}>
+              <button
+                name={location}
+                className={styles.filterButton}
+                onClick={handleLocationClick}
+              >
+                {location}
+              </button>
             </li>
           ))}
         </ul>
@@ -69,7 +109,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
       {showFilterDirection ? (
         <ul className={styles.filter}>
           {uniqueDirections.map(direction => (
-            <li key={uniqueLocations.indexOf(direction)}>
+            <li key={directions.indexOf(direction)}>
               <button className={styles.filterButton}>{direction}</button>
             </li>
           ))}
@@ -78,7 +118,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <></>
       )}
       <ul className={styles.cards}>
-        {eventsToRender.map(card => (
+        {cardsForRender.map(card => (
           <CardEvent key={card.id} data={card} pageEvents={true} />
         ))}
       </ul>
