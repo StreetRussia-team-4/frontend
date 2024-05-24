@@ -11,6 +11,7 @@
 }
 
 .title {
+  cursor: pointer;
   font-family: 'Benzin';
   font-style: normal;
   font-weight: 400;
@@ -25,6 +26,7 @@
 
 .arrowLeft,
 .arrowRight {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   border: none;
@@ -36,17 +38,4 @@
 
 .arrowRight {
   background: url('../../assets/icon/arrow-slider-right.svg') no-repeat center;
-}
-
-.slick-list {
-  margin: 0 -10px;
-}
-
-.slick-slide {
-  padding: 0 10px;
-}
-
-.slick-track {
-  display: flex;
-  align-items: center;
 }

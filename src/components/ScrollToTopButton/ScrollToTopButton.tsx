@@ -7,7 +7,7 @@ export const ScrollToTopButton: React.FC = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
