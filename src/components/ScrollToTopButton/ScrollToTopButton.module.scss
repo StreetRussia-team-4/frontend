@@ -1,18 +1,28 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 100px;
+  right: 80px;
+  z-index: 1000;
 }
 
 .button {
-  border: none;
-  border-radius: 5px;
-  background-color: transparent;
-  color: black;
-  font-size: 20px;
-  text-align: center;
+  background-color: #fcfcfc;
+  border: #0d0b13 solid 1px;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  outline: none;
-  border: 5px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.arrowUp {
+  width: 24px;
+  height: 24px;
+  fill: #0d0b13;
 }

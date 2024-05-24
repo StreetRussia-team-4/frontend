@@ -3,14 +3,9 @@
   padding: 0 100px;
 }
 
-.currentProjectsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.currentProjectsContainer > div {
-  flex: 1 1 calc(33% - 24px);
-  max-width: calc(33% - 24px);
-  margin-bottom: 80px;
+.currentProjectsGrid {
+  display: grid;
+  column-gap: 24px;
+  row-gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
 }

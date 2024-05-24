@@ -25,7 +25,7 @@ export const CurrentProjectsPage: React.FC<CurrentProjectsProps> = ({
         ПРОЕКТЫ
       </h2>
       <h3>Текущие</h3>
-      <div className={styles.currentProjectsContainer}>
+      <div className={styles.currentProjectsGrid}>
         {currentProjects.map(card => (
           <Card
             key={card.id}
