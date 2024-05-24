@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import arrowUp from '@icon/arrow-up.svg';
 import styles from './ScrollToTopButton.module.scss';
 
 export const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Проверяем положение скролла при монтировании компонента и при обновлении
   useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
     window.addEventListener('scroll', toggleVisibility);
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
 
-  // Определяем, когда кнопка должна отображаться
-  const toggleVisibility = () => {
-    if (window.scrollY > 30) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  // Прокрутка страницы вверх
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -33,7 +31,11 @@ export const ScrollToTopButton: React.FC = () => {
     <div className={styles['scroll-to-top']}>
       {isVisible && (
         <button className={styles.button} onClick={scrollToTop} title="Наверх">
-          Вверх
+          <img
+            src={arrowUp}
+            alt="Наверх экрана"
+            className={styles.arrowUp}
+          ></img>
         </button>
       )}
     </div>

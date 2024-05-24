@@ -5,7 +5,7 @@ import './vendor/benzin/benzin.css';
 
 import './global.scss';
 
-import { CardData, Event } from './type/type';
+import { CardData, Event, Project } from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
@@ -20,7 +20,12 @@ import { DepartmentsPage } from './pages';
 import { DocumentsPage } from './pages';
 import { ProjectDetailPage } from './pages';
 
-import { CardEventData, DonationModal, QuestionModal } from './components';
+import {
+  CardEventData,
+  DonationModal,
+  QuestionModal,
+  ScrollToTopButton,
+} from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
 import { cardsForEvents, cardsForProjets } from './utils/constants';
@@ -142,6 +147,7 @@ function App() {
           onClose={() => setQuestionModalOpen(false)}
           isQuestionModalOpen={isQuestionModalOpen}
         />
+        <ScrollToTopButton />
       </Router>
     </>
   );

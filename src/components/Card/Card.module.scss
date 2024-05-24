@@ -5,6 +5,11 @@
   max-width: 396px;
 }
 
+.navLink {
+  text-decoration: none;
+  color: #0d0b13;
+}
+
 .image {
   padding: 0;
   max-width: 396;
@@ -61,22 +66,28 @@
   width: 0;
   transition: width 0.3s ease;
 }
+.progressText {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 12px 0 0;
+}
 
 .numbersContainer {
   display: flex;
   justify-content: space-between;
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-top: auto;
+}
+
 .button {
-  font-family: 'Benzin';
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  background-color: #df544d;
-  margin: 40px 12px 32px;
-  padding: 25px 40px;
+  margin: 0 12px;
 }
 
 .button:hover {
@@ -85,12 +96,13 @@
 }
 
 .buttonLearnMore {
+  text-decoration: none;
+  color: #0d0b13;
   font-family: 'Benzin';
   font-size: 20px;
   line-height: 32px;
   font-weight: 500;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  margin: 0 0 32px;
+  margin: 32px 0 32px;
+  cursor: pointer;
+  text-align: center;
 }

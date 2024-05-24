@@ -26,10 +26,10 @@ export const Footer: React.FC = () => {
       </div>
       <ul className={styles.columns}>
         <li className={styles.column}>
-          <h2 className={styles.title}>НАШИ АДРЕСА</h2>
+          <h4 className={styles.title}>НАШИ АДРЕСА</h4>
           <ul className={styles.list}>
             <li>
-              <h3 className={styles.subtitle}>Юридический</h3>
+              <h5 className={styles.subtitle}>Юридический</h5>
               <p className={styles.text}>
                 355006, Ставропольский
                 <br />
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
               </p>
             </li>
             <li>
-              <h3 className={styles.subtitle}>Фактический</h3>
+              <h5 className={styles.subtitle}>Фактический</h5>
               <p className={styles.text}>
                 355006, Ставропольский
                 <br />
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
           </ul>
         </li>
         <li className={styles.column}>
-          <h2 className={styles.title}>ДОКУМЕНТЫ</h2>
+          <h4 className={styles.title}>ДОКУМЕНТЫ</h4>
           <ul className={styles.docs}>
             <li>
               <NavLink to="/documents" className={styles.doc}>
@@ -77,10 +77,10 @@ export const Footer: React.FC = () => {
           </ul>
         </li>
         <li className={styles.column}>
-          <h2 className={styles.title}>КОНТАКТЫ</h2>
+          <h4 className={styles.title}>КОНТАКТЫ</h4>
           <ul className={styles.list}>
             <li className={styles.element}>
-              <h3 className={styles.subtitle}>EMAIL</h3>
+              <h5 className={styles.subtitle}>EMAIL</h5>
               <a
                 className={styles.mail}
                 href="mailto:info@streetrussia.ru"
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <h3 className={styles.subtitle}>СОЦ. СЕТИ</h3>
+              <h5 className={styles.subtitle}>СОЦ. СЕТИ</h5>
               <ul className={styles.links}>
                 <li>
                   <a

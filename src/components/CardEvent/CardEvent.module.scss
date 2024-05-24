@@ -35,6 +35,12 @@
   object-fit: cover;
   height: 254px;
   margin-bottom: 36px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.image:hover {
+  filter: grayscale(0%);
 }
 
 .dateEvents {
@@ -107,16 +113,28 @@
     max-height: 638px;
   }
 
+  .imageBig:hover {
+    filter: grayscale(0%);
+  }
+
   .imageBig {
     object-fit: cover;
     max-width: 394px;
     height: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
   }
 
   .imageSmall {
     object-fit: cover;
     max-width: 291px;
     min-height: 126px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .imageSmall:hover {
+    filter: grayscale(0%);
   }
 
   .descriptionBig {
@@ -150,6 +168,10 @@
   .text {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .textBig {
+    padding: 10px;
   }
 
   .link {
