@@ -73,16 +73,16 @@
   justify-content: space-between;
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-top: auto;
+}
+
 .button {
-  font-family: 'Benzin';
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  background-color: #df544d;
-  margin: 40px 12px 32px;
-  padding: 25px 40px;
+  margin: 0 12px;
 }
 
 .button:hover {
@@ -98,5 +98,5 @@
   background-color: transparent;
   outline: none;
   border: none;
-  margin: 0 0 32px;
+  margin: 32px 0 32px;
 }
