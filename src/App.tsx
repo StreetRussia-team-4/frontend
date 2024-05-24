@@ -5,7 +5,7 @@ import './vendor/benzin/benzin.css';
 
 import './global.scss';
 
-import { CardData, Event } from './type/type';
+import { CardData, Event, Project } from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
