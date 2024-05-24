@@ -52,7 +52,7 @@ export const CardEvent: React.FC<CardEventProps> = ({
       <p
         className={styles.date}
       >{`${startDate} ${endDate ? `- ${endDate}` : ''}`}</p>
-      <h2 className={styles.subtitleSmall}>{title}</h2>
+      <h4 className={styles.subtitleSmall}>{title}</h4>
       <a className={styles.link} href={`${baseUrl}${id}`}>
         ПОДРОБНЕЕ
       </a>

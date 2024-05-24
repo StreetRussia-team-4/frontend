@@ -64,18 +64,18 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
           &#x2715;
         </button>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.fieldGroupColumn}>
-            <div className={styles.fieldGroupColumn}>
-              <label>Ваши данные</label>
-              <input
-                placeholder="ФИО"
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-              />
-              <div className={styles.fieldGroupRow}>
+          <div className={styles.fieldSets}>
+            <div className={styles.personalDataBlock}>
+              <label className={styles.label}>Ваши данные</label>
+              <fieldset className={styles.dataGrid}>
+                <input
+                  placeholder="ФИО"
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                />
                 <input
                   placeholder="Дата рождения"
                   type="date"
@@ -92,24 +92,55 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   onChange={handleChange}
                   required
                 />
-              </div>
-              <select
-                name="region"
-                value={formData.region}
-                onChange={handleChange}
-                required
-                className={styles.region}
-              >
-                <option value="" disabled>
-                  Область
-                </option>
-                {/* Add region options here */}
-              </select>
+                <select
+                  name="region"
+                  value={formData.region}
+                  onChange={handleChange}
+                  required
+                  className={styles.region}
+                >
+                  <option value="" disabled>
+                    Область
+                  </option>
+                  {/* добавить регионы*/}
+                </select>
+              </fieldset>
             </div>
-            <div className={styles.fieldGroupColumn}>
-              <label>Паспорт</label>
-              <div>
+            <div className={styles.contactBlock}>
+              <label>Связь</label>
+              <fieldset className={styles.contactFlex}>
                 <input
+                  placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  placeholder="е-mail"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  placeholder="социальная сеть для связи"
+                  type="text"
+                  name="socialMedia"
+                  value={formData.socialMedia}
+                  onChange={handleChange}
+                />
+              </fieldset>
+            </div>
+          </div>
+          <div className={styles.fieldSets}>
+            <div className={styles.passportBlock}>
+              <label>Паспорт</label>
+              <fieldset className={styles.passportFieldset}>
+                <input
+                  className={styles.serie}
                   type="text"
                   name="passportSeries"
                   placeholder="Серия"
@@ -118,6 +149,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   required
                 />
                 <input
+                  className={styles.number}
                   type="text"
                   name="passportNumber"
                   placeholder="Номер"
@@ -125,61 +157,38 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   onChange={handleChange}
                   required
                 />
-              </div>
-              <input
-                type="date"
-                name="passportIssueDate"
-                placeholder="Дата выдачи"
-                value={formData.passportIssueDate}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className={styles.date}
+                  type="date"
+                  name="passportIssueDate"
+                  placeholder="Дата выдачи"
+                  value={formData.passportIssueDate}
+                  onChange={handleChange}
+                  required
+                />
+              </fieldset>
             </div>
-          </div>
-          <div className={styles.fieldGroupRow}>
-            <div className={styles.fieldGroupColumn}>
-              <label>Связь</label>
-              <input
-                placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _"
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-              <input
-                placeholder="е-mail"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <input
-                placeholder="социальная сеть для связи"
-                type="text"
-                name="socialMedia"
-                value={formData.socialMedia}
-                onChange={handleChange}
-              />
-              <label></label>
-              <input
-                type="text"
-                name="passportIssuedBy"
-                placeholder="Кем выдан"
-                value={formData.passportIssuedBy}
-                onChange={handleChange}
-                required
-              />
-              <Button
-                text="ПРИСОЕДИНИТЬСЯ"
-                type="submit"
-                className={styles.button}
-              />
-              <span className={styles.disclaimer}>
-                Заполняя эту форму, вы соглашаетесь с правами и обязанностями
-                участника ООО УКС Улицы России
-              </span>
+            <div className={styles.buttonBlock}>
+              <label>{''}</label>
+              <fieldset className={styles.buttonFieldset}>
+                <input
+                  type="text"
+                  name="passportIssuedBy"
+                  placeholder="Кем выдан"
+                  value={formData.passportIssuedBy}
+                  onChange={handleChange}
+                  required
+                />
+                <Button
+                  text="ПРИСОЕДИНИТЬСЯ"
+                  type="submit"
+                  className={styles.button}
+                />
+                <span className={styles.disclaimer}>
+                  Заполняя эту форму, вы соглашаетесь с правами и обязанностями
+                  участника ООО УКС Улицы России
+                </span>
+              </fieldset>
             </div>
           </div>
         </form>
