@@ -1,11 +1,11 @@
 .events {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 0 100px;
 }
 
 .title {
-  margin: 0 0 32px;
+  margin-bottom: 32px;
   padding: 0;
   font-size: 80px;
   line-height: 108px;
@@ -13,7 +13,7 @@
 }
 
 .list {
-  margin: 0 0 0 100px;
+  margin: 0;
   padding: 0;
   display: flex;
   column-gap: 40px;
@@ -48,22 +48,22 @@
 }
 
 .button:hover .arrow {
-  background-image: url('../../assets/icon/arrowWhite.svg');
+  background-image: url('@icon/arrowWhite.svg');
   rotate: 180deg;
 }
 
-.button:active {
+.activeButton {
   font-weight: 700;
 }
 
-.button:active .arrow {
+.activeArrow {
   rotate: 0deg;
 }
 
 .arrow {
   min-height: 24px;
   min-width: 24px;
-  background-image: url('../../assets/icon/arrowBlack.svg');
+  background-image: url('@icon/arrowBlack.svg');
   transition: background-image 0.4s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -71,24 +71,24 @@
   list-style-type: none;
   margin: 64px auto 200px;
   display: grid;
-  padding: 0 100px;
+  padding: 0;
   column-gap: 24px;
   row-gap: 84px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .filter {
-  margin: 28px 100px 16px;
+  margin: 28px 0 16px;
   padding: 32px 27px;
   list-style-type: none;
   display: flex;
-  column-gap: 37px;
-  row-gap: 30px;
+  column-gap: 36px;
+  row-gap: 28px;
   background-color: #E8E3E3;
 }
 
 .filterButton {
-  padding: 10px;
+  padding: 16px 40px;
   background-color: inherit;
   border: none;
   color: black;
@@ -100,6 +100,15 @@
   transition: font-weight 0.2s ease-in-out ;
 }
 
-.filterButton:active {
+.filterButton:hover {
   font-weight: 500;
+}
+
+.filterButtonActive {
+  padding: 13px 40px;
+  background-color: black;
+  color: white;
+  line-height: 18px;
+  font-size: 24px;
+  font-weight: 700;
 }

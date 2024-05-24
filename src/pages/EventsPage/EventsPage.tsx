@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './EventsPage.module.scss';
 import { CardEventData } from '@/components';
 import { CardEvent } from '@components/index';
@@ -20,9 +20,14 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   // const [filteredLocationCards, setFilteredLocationCards] = useState([]);
   const [showFilterDirection, setShowFilterDirection] =
     useState<boolean>(false);
-  // const [isFilterDirection, setIsFilterDirection] = useState<boolean>(false);
+  const [isFilterDirectionOn, setIsFilterDirectionOn] =
+    useState<boolean>(false);
 
   const [cardsForRender, setCardsForRender] = useState(eventsToRender);
+
+  useEffect(() => {
+    setCardsForRender(eventsToRender);
+  }, []);
 
   const handleFilterLocationClick = () => {
     setShowFilterDirection(false);
@@ -47,9 +52,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
       return cards;
     }
   };
-  // useEffect(() => {
-  // добавить сюда ф-ию
-  // }, [])
+
   const handleLocationClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -63,29 +66,61 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     setCardsForRender(filtered);
   };
 
+  //фильтр по направлению
+  const handleDirectionFiltering = (
+    cards: CardEventData[],
+    isFilterDirectionOn: boolean,
+    buttonDirection: string | null
+  ) => {
+    if (isFilterDirectionOn) {
+      const result = cards.filter(card => card.direction === buttonDirection);
+      return result;
+    } else {
+      return cards;
+    }
+  };
+
+  const handleDirectionClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const buttonId = (event.target as HTMLButtonElement).textContent;
+    setIsFilterDirectionOn(true);
+    const filtered = handleDirectionFiltering(
+      eventsToRender,
+      isFilterDirectionOn,
+      buttonId
+    );
+    setCardsForRender(filtered);
+  };
+
   return (
     <main className={styles.events}>
       <h2 className={styles.title}>СОБЫТИЯ</h2>
       <ul className={styles.list}>
         <li className={styles.item}>
-          <button className={styles.button}>
+          <button id="date" className={styles.button}>
             Дата
-            <div className={styles.arrow} />
+            <div id="arrowDate" className={styles.arrow} />
           </button>
         </li>
         <li className={styles.item}>
           <button
+            id="directions"
             className={styles.button}
             onClick={handleFilterDirectionClick}
           >
             Направления
-            <div className={styles.arrow} />
+            <div id="arrowDirection" className={styles.arrow} />
           </button>
         </li>
         <li className={styles.item}>
-          <button className={styles.button} onClick={handleFilterLocationClick}>
+          <button
+            id="locations"
+            className={styles.button}
+            onClick={handleFilterLocationClick}
+          >
             Регион
-            <div className={styles.arrow} />
+            <div id="arrowLocation" className={styles.arrow} />
           </button>
         </li>
       </ul>
@@ -94,7 +129,6 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
           {uniqueLocations.map(location => (
             <li key={locations.indexOf(location)}>
               <button
-                name={location}
                 className={styles.filterButton}
                 onClick={handleLocationClick}
               >
@@ -110,7 +144,12 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <ul className={styles.filter}>
           {uniqueDirections.map(direction => (
             <li key={directions.indexOf(direction)}>
-              <button className={styles.filterButton}>{direction}</button>
+              <button
+                className={styles.filterButton}
+                onClick={handleDirectionClick}
+              >
+                {direction}
+              </button>
             </li>
           ))}
         </ul>

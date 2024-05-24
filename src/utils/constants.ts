@@ -225,7 +225,7 @@ export const cardsForEvents = [
     direction: 'PARKOUR',
   },
   {
-    id: 4,
+    id: 6,
     image: imageEventTwo,
     title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
     location: 'МОСКВА',
@@ -236,7 +236,7 @@ export const cardsForEvents = [
     direction: 'PARKOUR',
   },
   {
-    id: 5,
+    id: 7,
     image: imageEventThree,
     title: 'ФЕСТИВАЛЬ Паркур_fest',
     location: 'ТУЛЬСКАЯ ОБЛ.',
