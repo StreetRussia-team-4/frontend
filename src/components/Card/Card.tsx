@@ -30,6 +30,8 @@ export const Card: React.FC<CardProps> = ({
 
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
   const navigate = useNavigate();
+  const fundsRaisedFormatted = (data.fundsRaised ?? 0).toLocaleString('ru-RU');
+  const goalFormatted = (data.goal ?? 0).toLocaleString('ru-RU');
 
   const handleSupportClick = () => {
     if (setIsModalOpen) {
@@ -63,8 +65,8 @@ export const Card: React.FC<CardProps> = ({
             ></div>
           </div>
           <div className={styles.numbersContainer}>
-            <span className={styles.progressText}>{fundsRaised}</span>
-            <span className={styles.progressText}>{goal}</span>
+            <span className={styles.progressText}>{fundsRaisedFormatted}</span>
+            <span className={styles.progressText}>{goalFormatted}</span>
           </div>
         </div>
       )}

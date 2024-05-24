@@ -17,7 +17,7 @@ export interface CardEventData {
   description: string;
   startDate: string;
   endDate?: string;
-  direction: string;
+  direction?: string;
 }
 
 export const CardEvent: React.FC<CardEventProps> = ({
