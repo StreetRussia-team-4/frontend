@@ -1,7 +1,8 @@
-.projects {
-  max-width: 1280px;
-  padding: 0 170px;
-  margin: 0 0 200px;
+.upcomingProjects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .subTitle {
@@ -13,6 +14,15 @@
 }
 
 .cardList {
+  margin: 100px 0;
+}
+
+.cardListHomePage {
   display: flex;
   gap: 24px;
+  justify-content: center;
+}
+
+.cardListHomePage div {
+  max-width: 500px;
 }

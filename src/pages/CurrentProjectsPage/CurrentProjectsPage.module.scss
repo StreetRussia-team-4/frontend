@@ -1,0 +1,11 @@
+.currentProjects {
+  width: 100%;
+  padding: 0 100px;
+}
+
+.currentProjectsGrid {
+  display: grid;
+  column-gap: 24px;
+  row-gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
+}

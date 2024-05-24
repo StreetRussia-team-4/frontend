@@ -1,23 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import type { CardData } from '@/type/type';
 import styles from './Card.module.scss';
+import { Button } from '@/ui';
 
 export interface CardProps {
   data: CardData;
   showProgressContainer?: boolean;
   showSupportButton?: boolean;
   setIsModalOpen?: (isModalOpen: boolean) => void;
-}
-
-export interface CardData {
-  id: number;
-  image: string | HTMLImageElement;
-  title: string;
-  location: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-  fundsRaised?: number;
-  goal?: number;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -27,6 +18,7 @@ export const Card: React.FC<CardProps> = ({
   setIsModalOpen,
 }) => {
   const {
+    id,
     image,
     title,
     location,
@@ -38,6 +30,8 @@ export const Card: React.FC<CardProps> = ({
   } = data;
 
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
+  const fundsRaisedFormatted = (data.fundsRaised ?? 0).toLocaleString('ru-RU');
+  const goalFormatted = (data.goal ?? 0).toLocaleString('ru-RU');
 
   const handleSupportClick = () => {
     if (setIsModalOpen) {
@@ -47,37 +41,48 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <div className={styles.card}>
-      <img
-        src={typeof image === 'string' ? image : image.src}
-        className={styles.image}
-        alt={title}
-      />
-      <p className={styles.title}>{title}</p>
-      <p className={styles.location}>{location}</p>
-      <p className={styles.description}>{description}</p>
-      <p className={styles.timeframe}>
-        Срок установки: {startDate} - {endDate}
-      </p>
-      {showProgressContainer && (
-        <div className={styles.progressContainer}>
-          <div className={styles.progress}>
-            <div
-              className={styles.progressBar}
-              style={{ width: `${progress}%` }}
-            ></div>
+      <NavLink to={`/projects/${id}`} className={styles.navLink}>
+        <img
+          src={typeof image === 'string' ? image : image.src}
+          className={styles.image}
+          alt={title}
+        />
+        <p className={styles.title}>{title}</p>
+        <p className={styles.location}>{location}</p>
+        <p className={styles.description}>{description}</p>
+        <p className={styles.timeframe}>
+          Срок установки: {startDate} - {endDate}
+        </p>
+        {showProgressContainer && (
+          <div className={styles.progressContainer}>
+            <div className={styles.progress}>
+              <div
+                className={styles.progressBar}
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+            <div className={styles.numbersContainer}>
+              <span className={styles.progressText}>
+                {fundsRaisedFormatted}
+              </span>
+              <span className={styles.progressText}>{goalFormatted}</span>
+            </div>
           </div>
-          <div className={styles.numbersContainer}>
-            <span className={styles.progressText}>{fundsRaised}</span>
-            <span className={styles.progressText}>{goal}</span>
-          </div>
-        </div>
-      )}
-      {showSupportButton && (
-        <button className={styles.button} onClick={handleSupportClick}>
-          ПОДДЕРЖАТЬ
-        </button>
-      )}
-      <button className={styles.buttonLearnMore}>Узнать больше</button>
+        )}
+      </NavLink>
+      <div className={styles.buttonContainer}>
+        {showSupportButton && (
+          <Button
+            type="button"
+            text="ПОДДЕРЖАТЬ"
+            className={styles.button}
+            onClick={handleSupportClick}
+          ></Button>
+        )}
+        <NavLink to={`/projects/${id}`} className={styles.buttonLearnMore}>
+          Узнать больше
+        </NavLink>
+      </div>
     </div>
   );
 };

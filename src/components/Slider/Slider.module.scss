@@ -1,17 +1,17 @@
-.slider {
-  margin: 0 0 100px;
+.slickSlider {
+  padding: 10px;
 }
 
-.courouselleHeader {
+.carouselHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
   max-height: 76px;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
 }
 
 .title {
+  cursor: pointer;
   font-family: 'Benzin';
   font-style: normal;
   font-weight: 400;
@@ -26,6 +26,7 @@
 
 .arrowLeft,
 .arrowRight {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   border: none;

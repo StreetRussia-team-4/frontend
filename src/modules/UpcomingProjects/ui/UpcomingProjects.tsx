@@ -5,12 +5,11 @@ import styles from './UpcomingProjects.module.scss';
 
 interface UpcomingProjectsProps {
   projectsToRender: CardData[];
-  title: string;
   isHomePage?: boolean;
+  onTitleClick?: () => void;
 }
 
 export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
-  title,
   projectsToRender,
   isHomePage,
 }) => {
@@ -19,11 +18,11 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
     <Card key={card.id} data={card} />
   ));
   return (
-    <div className={styles.projects}>
+    <>
       {isHomePage ? (
-        <div>
+        <div className={styles.upcomingProjects}>
           <h3>Предстоящие</h3>
-          <div className={styles.cardList}>
+          <div className={styles.cardListHomePage}>
             {displayedCards.map(card => (
               <Card key={card.id} data={card} />
             ))}
@@ -31,9 +30,12 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
         </div>
       ) : (
         <div className={styles.cardList}>
-          <CustomSlider items={items} title={title} />
+          <CustomSlider
+            items={items}
+            title={{ text: 'Предстоящие', url: '/' }}
+          />
         </div>
       )}
-    </div>
+    </>
   );
 };
