@@ -33,7 +33,7 @@ export const UpcomingProjects: React.FC<UpcomingProjectsProps> = ({
           <CustomSlider
             items={items}
             title={{ text: 'Предстоящие', url: '/' }}
-            slidesToShow={3}
+            slidesToShow={2}
           />
         </div>
       )}
