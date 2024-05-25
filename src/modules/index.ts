@@ -5,3 +5,5 @@ export { Upcoming } from './Upcoming';
 export { SliderProjects } from './SliderProjects';
 export { UpcomingProjects } from './UpcomingProjects';
 export { AboutUsAddress } from './AboutUsAddress';
+export { History } from './History';
+export { Team } from './Team';
