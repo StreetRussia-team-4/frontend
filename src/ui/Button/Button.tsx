@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
   type,
-  fontSize = 2,
+  fontSize = 1.5,
 }) => {
   const buttonStyle: React.CSSProperties = {
     fontSize: `${fontSize}rem`,

@@ -1,0 +1,98 @@
+@import '../../ui/Typography/typographyMixins';
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 100%;
+  max-width: 1000px;
+  background: #d9d9d9;
+  padding: 80px 100px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  gap: 24px;
+}
+
+.title {
+  @include font-benzin-bold(1.6rem);
+  padding: 0.5rem 1rem;
+}
+
+.subtitle {
+  @include font-benzin-regular(0.9rem);
+  padding: 0.3rem 0.7rem;
+}
+
+.textWrapper {
+  width: 50%;
+}
+
+.inputsWrapper {
+  width: 50%;
+}
+
+.inputsGrid {
+  display: grid;
+  grid-template-areas:
+    'message message'
+    'message message'
+    'firstName surname'
+    'email email';
+  column-gap: 18px;
+  row-gap: 13px;
+  padding: 0;
+  margin: 0 0 20px;
+  border: none;
+  width: 100%;
+}
+
+.inputsGrid input[name='message'] {
+  grid-area: message;
+}
+
+.inputsGrid input[name='firstName'] {
+  grid-area: firstName;
+}
+
+.inputsGrid input[name='surname'] {
+  grid-area: surname;
+}
+
+.inputsGrid input[name='email'] {
+  grid-area: email;
+}
+
+.inputMessage {
+  height: 100px;
+  text-align: left;
+  padding-left: 5px; /* Отступ слева для удобства */
+  box-sizing: border-box; /* Включить паддинг в высоту и ширину элемента */
+  display: block;
+}
+
+::placeholder {
+  @include font-benzin-regular(0.8rem);
+  text-align: left;
+}

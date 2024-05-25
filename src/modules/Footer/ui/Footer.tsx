@@ -5,7 +5,16 @@ import logo from '@icon/logoFooter.svg';
 import youtubeIcon from '@icon/youtube.svg';
 import vkIcon from '@icon/vk.svg';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ setIsModalOpen }) => {
+  const openQuestionModal = () => {
+    if (setIsModalOpen) {
+      setIsModalOpen(true);
+    }
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.questions}>
@@ -21,7 +30,9 @@ export const Footer: React.FC = () => {
             <br />
             форму по кнопке ниже.
           </p>
-          <button className={styles.button}>ЗАДАТЬ ВОПРОС</button>
+          <button className={styles.button} onClick={openQuestionModal}>
+            ЗАДАТЬ ВОПРОС
+          </button>
         </div>
       </div>
       <ul className={styles.columns}>
