@@ -131,7 +131,10 @@ function App() {
               />
             }
           />
-          <Route path="/projects/:id" element={<ProjectDetailPage />} />
+          <Route
+            path="/projects/:id"
+            element={<ProjectDetailPage setModalopen={setIsDonModalOpen} />}
+          />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/addresses" element={<AddressesPage />} />
