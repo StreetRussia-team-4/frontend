@@ -10,6 +10,13 @@ import imageDetailProject from '@image/project-detail-pic.png';
 import completedProjectOne from '@image/completed-one.png';
 import completedProjectTwo from '@image/completed-two.png';
 import completedProjectThree from '@image/completed-three.png';
+import managerOne from '@image/manager.png';
+import managerTwo from '@image/manager2.png';
+// import managerThree from '@image/manager3.png';
+// import managerFour from '@image/manager4.png';
+// import managerFive from '@image/manager5.png';
+// import managerSix from '@image/manager6.png';
+
 import { Project } from '@/type/type';
 
 // export const API_HOST = import.meta.env.VITE_API_HOST;
@@ -299,5 +306,20 @@ export const cardsForEvents = [
     startDate: '02.07.2024',
     endDate: '04.07.2024',
     direction: 'PARKOUR',
+  },
+];
+
+export const cardsForTeam = [
+  {
+    id: 1,
+    image: managerOne,
+    name: 'Валентин Работенко',
+    description: 'Председатель',
+  },
+  {
+    id: 2,
+    image: managerTwo,
+    name: 'Вячеслав Груднев',
+    description: 'Заместитель Председателя',
   },
 ];
