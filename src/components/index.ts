@@ -9,3 +9,6 @@ export type { CardProps } from './Card/Card';
 export { CardEvent } from './CardEvent/CardEvent';
 export type { CardEventData } from './CardEvent/CardEvent';
 export type { CardEventProps } from './CardEvent/CardEvent';
+export { CardTeam } from './CardTeam/CardTeam';
+export type { CardTeamData } from './CardTeam/CardTeam';
+export type { CardTeamProps } from './CardTeam/CardTeam';
