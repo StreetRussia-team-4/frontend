@@ -20,6 +20,8 @@ export const API_HOST = 'http://213.189.221.212';
 export const API_ROUTE = '/api/v1';
 export const API_URL = `${API_HOST}${API_ROUTE}`;
 
+export const teamVideo_URL = 'https://youtu.be/Ks0eHBSNFwA?si=CipNTAfpXajOKZw0';
+
 export const projectDetail: Project = {
   id: 0,
   current_status: 'current',
