@@ -49,26 +49,60 @@
   color: white;
 }
 
-.button:hover .arrow {
-  background-image: url('@icon/arrowWhite.svg');
-  rotate: 180deg;
-}
-
-.activeButton {
-  font-weight: 700;
-}
-
-.activeArrow {
-  rotate: 0deg;
+.buttonActive {
+  background-color: black;
+  color: white;
 }
 
 .arrow {
   min-height: 24px;
   min-width: 24px;
   background-image: url('@icon/arrowBlack.svg');
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button {
+  display: flex;
+  column-gap: 5px;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 1px black;
+  align-items: center;
+  color: black;
+  font-family: 'Benzin';
+  line-height: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
   transition:
-    background-image 0.4s ease-in-out,
-    transform 0.2s ease-in-out;
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.buttonActive {
+  background-color: black;
+  color: white;
+}
+
+.arrow {
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('@icon/arrowBlack.svg');
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button:hover .arrow {
+  background: url('@icon/arrow-down-filter-white.svg') no-repeat center;
+}
+
+.buttonActive .arrow {
+  background: url('@icon/arrow-up-filter.svg') no-repeat center;
 }
 
 .cards {
@@ -106,13 +140,4 @@
 
 .filterButton:hover {
   font-weight: 500;
-}
-
-.active {
-  padding: 13px 40px;
-  background-color: black;
-  color: white;
-  line-height: 18px;
-  font-size: 24px;
-  font-weight: 700;
 }

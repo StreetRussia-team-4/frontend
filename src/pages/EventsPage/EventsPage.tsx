@@ -30,11 +30,15 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   }, [eventsToRender]);
 
   const handleFilterLocationClick = () => {
+    setIsFilterLocationOn(!isFilterLocationOn);
+    setIsFilterDirectionOn(false);
     setShowFilterDirection(false);
     setShowFilterLocation(!showFilterLocation);
   };
 
   const handleFilterDirectionClick = () => {
+    setIsFilterDirectionOn(!isFilterDirectionOn);
+    setIsFilterLocationOn(false);
     setShowFilterLocation(false);
     setShowFilterDirection(!showFilterDirection);
   };
@@ -57,6 +61,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     const buttonId = (event.target as HTMLButtonElement).textContent;
+    console.log('allooo: ', buttonId);
     // Обновляем состояние для фильтрации по региону
     setIsFilterLocationOn(true);
     setIsFilterDirectionOn(false); // Сбрасываем состояние для фильтрации по направлению
@@ -96,6 +101,8 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     setCardsForRender(filtered);
   };
 
+  console.log('isFilterLocationOn: ', isFilterLocationOn);
+
   return (
     <main className={styles.events}>
       <h2 className={styles.title}>СОБЫТИЯ</h2>
@@ -109,21 +116,27 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <li className={styles.item}>
           <button
             id="directions"
-            className={`${styles.button} ${isFilterDirectionOn ? styles.active : ''}`}
+            className={`${styles.button} ${isFilterDirectionOn ? styles.buttonActive : ''}`}
             onClick={handleFilterDirectionClick}
           >
             Направления
-            <div id="arrowDirection" className={styles.arrow} />
+            <div
+              id="arrowDirection"
+              className={`${styles.arrow} ${isFilterDirectionOn ? styles.arrowActive : ''}`}
+            />
           </button>
         </li>
         <li className={styles.item}>
           <button
             id="locations"
-            className={`${styles.button} ${isFilterLocationOn ? styles.active : ''}`}
+            className={`${styles.button} ${isFilterLocationOn ? styles.buttonActive : ''}`}
             onClick={handleFilterLocationClick}
           >
             Регион
-            <div id="arrowLocation" className={styles.arrow} />
+            <div
+              id="arrowLocation"
+              className={`${styles.arrow} ${isFilterLocationOn ? styles.arrowActive : ''}`}
+            />
           </button>
         </li>
       </ul>
