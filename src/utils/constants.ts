@@ -7,6 +7,9 @@ import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
 import imageDetailProject from '@image/project-detail-pic.png';
+import completedProjectOne from '@image/completed-one.png';
+import completedProjectTwo from '@image/completed-two.png';
+import completedProjectThree from '@image/completed-three.png';
 import { Project } from '@/type/type';
 
 // export const API_HOST = import.meta.env.VITE_API_HOST;
@@ -86,7 +89,7 @@ export const cardsForProjets = [
     goal: 50500,
   },
   {
-    id: 123,
+    id: 5,
     image: imageThree,
     current_status: 'current',
     title: 'PARKOUR-ПЛОЩАДКА',
@@ -99,7 +102,7 @@ export const cardsForProjets = [
     goal: 650500,
   },
   {
-    id: 456,
+    id: 6,
     image: imageThree,
     current_status: 'current',
     title: 'СКЕЙТ-ПАРК И ЗОНА ОТДЫХА',
@@ -111,7 +114,7 @@ export const cardsForProjets = [
     goal: 980500,
   },
   {
-    id: 789,
+    id: 7,
     image: imageThree,
     current_status: 'current',
     title: 'ПЕРВЫЙ ТУЛЬСКИЙ СКАЛАДРОМ',
@@ -123,7 +126,7 @@ export const cardsForProjets = [
     goal: 780500,
   },
   {
-    id: 111,
+    id: 8,
     image: imageThree,
     current_status: 'current',
     title: 'РАЗГОННЫЕ КОНСТРУКЦИИ',
@@ -135,7 +138,7 @@ export const cardsForProjets = [
     goal: 650000,
   },
   {
-    id: 421,
+    id: 9,
     image: imageThree,
     current_status: 'current',
     title: 'РАМПА',
@@ -148,7 +151,7 @@ export const cardsForProjets = [
     goal: 980400,
   },
   {
-    id: 5,
+    id: 10,
     image: imageProject,
     current_status: 'future',
     title: 'СКЕЙТПАРК',
@@ -158,7 +161,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
   },
   {
-    id: 6,
+    id: 11,
     image: imageProjectTwo,
     current_status: 'future',
     title: 'WORK OUT ПЛОЩАДКА',
@@ -168,7 +171,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
   },
   {
-    id: 7,
+    id: 12,
     image: imageProject,
     current_status: 'future',
     title: 'SCATEBOARDING ПЛОЩАДКА',
@@ -178,9 +181,39 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
   },
   {
-    id: 8,
+    id: 13,
     image: imageProjectTwo,
     current_status: 'future',
+    title: 'SCATEBOARDING ПЛОЩАДКА',
+    location: 'РЯЗАНСКАЯ ОБЛ.',
+    description: 'Планируем поставить рампы, разгонки и перила.',
+    startDate: '24.12.2024',
+    endDate: '24.03.2025',
+  },
+  {
+    id: 14,
+    image: completedProjectOne,
+    current_status: 'done',
+    title: 'SCATEBOARDING ПЛОЩАДКА',
+    location: 'РЯЗАНСКАЯ ОБЛ.',
+    description: 'Планируем поставить рампы, разгонки и перила.',
+    startDate: '24.12.2024',
+    endDate: '24.03.2025',
+  },
+  {
+    id: 15,
+    image: completedProjectTwo,
+    current_status: 'done',
+    title: 'SCATEBOARDING ПЛОЩАДКА',
+    location: 'РЯЗАНСКАЯ ОБЛ.',
+    description: 'Планируем поставить рампы, разгонки и перила.',
+    startDate: '24.12.2024',
+    endDate: '24.03.2025',
+  },
+  {
+    id: 16,
+    image: completedProjectThree,
+    current_status: 'done',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
