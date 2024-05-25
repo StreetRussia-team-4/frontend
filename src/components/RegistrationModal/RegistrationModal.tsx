@@ -183,6 +183,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   text="ПРИСОЕДИНИТЬСЯ"
                   type="submit"
                   className={styles.button}
+                  fontSize={1}
                 />
                 <span className={styles.disclaimer}>
                   Заполняя эту форму, вы соглашаетесь с правами и обязанностями

@@ -165,11 +165,15 @@ input {
   color: #333333;
 }
 
+.button {
+  width: 70%;
+}
+
 .disclaimer {
-  font-size: 14px;
+  width: 75%;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
   text-align: left;
   color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
 }
