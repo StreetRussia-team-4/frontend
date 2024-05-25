@@ -12,10 +12,10 @@ import completedProjectTwo from '@image/completed-two.png';
 import completedProjectThree from '@image/completed-three.png';
 import managerOne from '@image/manager.png';
 import managerTwo from '@image/manager2.png';
-// import managerThree from '@image/manager3.png';
-// import managerFour from '@image/manager4.png';
-// import managerFive from '@image/manager5.png';
-// import managerSix from '@image/manager6.png';
+import managerThree from '@image/manager3.png';
+import managerFour from '@image/manager4.png';
+import managerFive from '@image/manager5.png';
+import managerSix from '@image/manager6.png';
 
 import { Project } from '@/type/type';
 
@@ -321,5 +321,32 @@ export const cardsForTeam = [
     image: managerTwo,
     name: 'Вячеслав Груднев',
     description: 'Заместитель Председателя',
+  },
+  {
+    id: 3,
+    image: managerThree,
+    name: 'Ксения Замерова',
+    description: 'Заместитель Председателя',
+  },
+  {
+    id: 4,
+    image: managerFour,
+    name: 'Анастасия Янченко',
+    description: 'Председатель',
+    location: 'Ставропольский край',
+  },
+  {
+    id: 5,
+    image: managerFive,
+    name: 'Илья Безуглов',
+    description: 'Председатель',
+    location: 'Тульская область',
+  },
+  {
+    id: 6,
+    image: managerSix,
+    name: 'Александр Григорьев',
+    description: 'Председатель',
+    location: 'Томская область',
   },
 ];
