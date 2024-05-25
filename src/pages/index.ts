@@ -9,3 +9,4 @@ export { DocumentsPage } from './DocumentsPage/DocumentsPage';
 export { ProjectDetailPage } from './ProjectDetailPage/ProjectDetailPage';
 export { ProjectsPage } from './ProjectsPage/ProjectsPage';
 export { CurrentProjectsPage } from './CurrentProjectsPage/CurrentProjectsPage';
+export { TeamVideoPage } from './TeamVideoPage/TeamVideoPage';

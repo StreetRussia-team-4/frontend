@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Promo.module.scss';
 import PromoVideo from '@video/promo-video.mp4';
 import playIcon from '@icon/play-circle.svg';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@/ui';
 
 interface PromoProps {
@@ -28,7 +28,9 @@ export const Promo: React.FC<PromoProps> = ({ setRegModalOpen }) => {
             onClick={() => setRegModalOpen(true)}
           />
           <Link className={styles.link} to="#">
-            <span className={styles.aboutTeam}>О команде</span>
+            <NavLink to="./team-video" className={styles.aboutTeam}>
+              О команде
+            </NavLink>
             <img src={playIcon} alt="Иконка Play" className={styles.playIcon} />
           </Link>
         </div>
