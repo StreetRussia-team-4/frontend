@@ -6,6 +6,8 @@ import imageProjectTwo from '@image/image-project2.png';
 import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
+import imageDetailProject from '@image/project-detail-pic.png';
+import { Project } from '@/type/type';
 
 // export const API_HOST = import.meta.env.VITE_API_HOST;
 // export const API_ROUTE = import.meta.env.VITE_API_ROUTE;
@@ -14,6 +16,25 @@ import imageEventThree from '@image/smallImage2.png';
 export const API_HOST = 'http://213.189.221.212';
 export const API_ROUTE = '/api/v1';
 export const API_URL = `${API_HOST}${API_ROUTE}`;
+
+export const projectDetail: Project = {
+  id: 0,
+  current_status: 'current',
+  name: 'PARKOUR—ПЛОЩАДКА',
+  description: `Паркур – спорт, включающий бег, прыжки, элементы скалолазания. Люди, развлекающие себя преодолением препятствий из бетона или дерева, учатся рассчитывать свои силы, развивают координацию движений, крепость тела и духа. Чтобы молодое поколение не бегало по строительным объектам, устанавливаются специальные сооружения по плану паркур площадки.
+  Площадка будет представлять собой конструкцию из металла, дерева, прочного пластика, соединенные между собой хомутами. Скамейки, навесы делаются из влагостойких материалов, не поддающихся погодным явлениям. Схема паркур площадки рассчитана не только с точки зрения удобства, сложности выполнения трюков, но и безопасности, прочности, а также, по возможности, вандалоустойчивости.
+  Для маленьких спортсменов будет предусмотрена детская паркур-площадка. Она  отличаются меньшим размером, наличием большого количества перекладин, поддерживающих элементов, а также яркими расцветками оборудования.`,
+  region: {
+    id: 1,
+    name: 'СМОЛЕНСКАЯ ОБЛ.',
+  },
+  partners: [],
+  preview: imageDetailProject,
+  start_date: '0000-00-00',
+  end_date: '0000-00-00',
+  funds_raised: 0,
+  goal: 0,
+};
 
 export const cardsForProjets = [
   {
@@ -225,7 +246,7 @@ export const cardsForEvents = [
     direction: 'PARKOUR',
   },
   {
-    id: 4,
+    id: 6,
     image: imageEventTwo,
     title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
     location: 'МОСКВА',
@@ -236,7 +257,7 @@ export const cardsForEvents = [
     direction: 'PARKOUR',
   },
   {
-    id: 5,
+    id: 7,
     image: imageEventThree,
     title: 'ФЕСТИВАЛЬ Паркур_fest',
     location: 'ТУЛЬСКАЯ ОБЛ.',

@@ -47,12 +47,14 @@ export const Card: React.FC<CardProps> = ({
           className={styles.image}
           alt={title}
         />
-        <p className={styles.title}>{title}</p>
-        <p className={styles.location}>{location}</p>
-        <p className={styles.description}>{description}</p>
-        <p className={styles.timeframe}>
-          Срок установки: {startDate} - {endDate}
-        </p>
+        <div className={styles.paragrapgs}>
+          <p className={styles.title}>{title}</p>
+          <p className={styles.location}>{location}</p>
+          <p className={styles.description}>{description}</p>
+          <p className={styles.timeframe}>
+            Срок установки: {startDate} - {endDate}
+          </p>
+        </div>
         {showProgressContainer && (
           <div className={styles.progressContainer}>
             <div className={styles.progress}>

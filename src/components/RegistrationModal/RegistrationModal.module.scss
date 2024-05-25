@@ -31,7 +31,65 @@
 
 .form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.personalDataBlock {
+  width: 50%;
+}
+
+.contactBlock {
+  width: 50%;
+}
+
+.passportBlock {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-content: flex-start;
+}
+
+.buttonBlock {
+  width: 50%;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-areas:
+    'fullName fullName'
+    'birthDate city'
+    'region region';
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100%;
+}
+
+.dataGrid input[name='fullName'] {
+  grid-area: fullName;
+}
+
+.dataGrid input[name='birthDate'] {
+  grid-area: birthDate;
+}
+
+.dataGrid input[name='city'] {
+  grid-area: city;
+}
+
+.dataGrid select[name='region'] {
+  grid-area: region;
 }
 
 ::placeholder {
@@ -44,16 +102,45 @@
   padding: 10px;
 }
 
-.fieldGroupRow {
+.fieldSets {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  justify-content: space-between;
+  column-gap: 24px;
 }
 
-.fieldGroupColumn {
+.contactFlex {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  row-gap: 18px;
+  border: none;
+  padding: 0;
+}
+
+.passportFieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+}
+
+.serie {
+  width: 30%;
+}
+
+.number {
+  width: 60%;
+}
+
+.date {
+  max-width: 280px;
+}
+
+.buttonFieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 input {
@@ -69,7 +156,7 @@ input {
 }
 
 .region {
-  min-height: 89px;
+  min-height: 48px;
   font-family: 'Benzin';
   font-size: 16px;
   font-weight: 400;
@@ -79,14 +166,14 @@ input {
 }
 
 .button {
-  width: 400px;
+  width: 70%;
 }
 
 .disclaimer {
-  font-size: 14px;
+  width: 75%;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
   text-align: left;
   color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
 }

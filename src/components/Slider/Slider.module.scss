@@ -1,5 +1,6 @@
-.slickSlider {
-  padding: 10px;
+.slick-slide img {
+  width: 100%;
+  display: block;
 }
 
 .carouselHeader {
@@ -21,7 +22,7 @@
 .buttonsContainer {
   display: flex;
   gap: 16px;
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 
 .arrowLeft,
@@ -38,4 +39,27 @@
 
 .arrowRight {
   background: url('../../assets/icon/arrow-slider-right.svg') no-repeat center;
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
 }

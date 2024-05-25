@@ -35,6 +35,7 @@ export const SliderProjects: React.FC<SliderProjectsProps> = ({
       <CustomSlider
         items={items}
         title={{ text: 'Текущие', url: '/projects/current' }}
+        slidesToShow={3}
       />
     </div>
   );

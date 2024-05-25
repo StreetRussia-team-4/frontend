@@ -1,21 +1,82 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { fetchProjectById } from '@/utils/api';
+import { Project } from '@/type/type'; // Adjust the import path as needed
+import { Button } from '@/ui';
+import styles from './ProjectDetailPage.module.scss';
+import { projectDetail } from '@/utils/constants';
+import Slider from 'react-slick';
 
 export const ProjectDetailPage: React.FC = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
+  const [projectData, setProjectData] = useState<Project | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const slider = React.useRef<Slider | null>(null);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
-  // Fetch project data using the id or pass it through state
-  // For demonstration, assume we have a function fetchProjectById to get project data
-  // const projectData = fetchProjectById(id);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchProjectById(Number(id));
+        setProjectData(data[0]);
+      } catch (err) {
+        console.error('На нашем сервере пока нет данных о проекте:)');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  const displayData = projectData || projectDetail;
+
+  // const images = [displayData.preview].map((item, index) => (
+  //   <div key={index}>
+  //     <img src={item} alt={`Slide ${index}`} className={styles.image} />
+  //   </div>
+  // ));
 
   return (
-    <div>
-      <h1>Project Detail Page</h1>
-      {/* Display project data here */}
-      <p>Project ID: {id}</p>
-      {/* <p>{projectData.title}</p>
-      <p>{projectData.description}</p>
-      <img src={projectData.image} alt={projectData.title} /> */}
+    <div className={styles.page}>
+      <h2>
+        НАШИ <br />
+        ПРОЕКТЫ
+      </h2>
+      <h3>{displayData.name}</h3>
+      <p className={styles.region}>{displayData.region.name}</p>
+      <div className={styles.wrapper}>
+        <Slider ref={slider} {...settings} className={styles.slickSlider}>
+          {/* <img
+            src={displayData.preview}
+            alt={`Slide`}
+            className={styles.image}
+          /> */}
+        </Slider>
+        <img src={displayData.preview} alt={`Slide`} className={styles.image} />
+        <div className={styles.buttonsContainer}>
+          <button
+            onClick={() => slider.current?.slickPrev()}
+            className={styles.arrowLeft}
+          ></button>
+          <button
+            onClick={() => slider.current?.slickNext()}
+            className={styles.arrowRight}
+          ></button>
+        </div>
+      </div>
+      <p className={styles.description}>{displayData.description}</p>
+      <Button text="ПОДДЕРЖАТЬ" type="button" className={styles.button} />
     </div>
   );
 };
