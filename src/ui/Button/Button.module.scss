@@ -1,13 +1,9 @@
-@import '../Typography/typographyMixins';
-
 .button {
-  @include font-benzin-medium(16);
-  line-height: 20px;
-  background-color: #df544d;
-  padding: 25px 40px;
-  border: none;
-  font-size: 24px;
+  font-family: 'Benzin', sans-serif;
   font-weight: 500;
+  background-color: #df544d;
+  padding: 1.5rem 2rem;
+  border: none;
 }
 
 .button:hover {
@@ -16,5 +12,5 @@
 }
 
 .button:active {
-  @include font-benzin-bold(16);
+  font-weight: 700;
 }

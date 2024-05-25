@@ -18,7 +18,6 @@ export const QuestionModal: React.FC<DonationModalProps> = ({
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // handle form submission
   };
 
   if (!isQuestionModalOpen) return null;
@@ -29,47 +28,58 @@ export const QuestionModal: React.FC<DonationModalProps> = ({
         <button className={styles.closeButton} onClick={onClose}>
           &#x2715;
         </button>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Текст сообщения"
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-            required
-            className={styles.inputField}
-          />
-          <div>
-            <input
-              type="text"
-              placeholder="Имя"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              required
-              className={styles.inputField}
-            />
-            <input
-              type="text"
-              placeholder="Фамилия"
-              value={surname}
-              onChange={e => setSurname(e.target.value)}
-              required
-              className={styles.inputField}
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div className={styles.textWrapper}>
+            <p className={styles.title}>Остались вопросы?</p>
+            <p className={styles.subtitle}>ЗАПОЛНИ ФОРМУ И ОТПРАВЛЯЙ</p>
+          </div>
+          <div className={styles.inputsWrapper}>
+            <fieldset className={styles.inputsGrid}>
+              <input
+                type="text"
+                placeholder="Текст сообщения"
+                name="message"
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+                required
+                className={styles.inputMessage}
+              />
+              <input
+                type="text"
+                placeholder="Имя"
+                name="firstName"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                required
+                className={styles.inputField}
+              />
+              <input
+                type="text"
+                placeholder="Фамилия"
+                name="surname"
+                value={surname}
+                onChange={e => setSurname(e.target.value)}
+                required
+                className={styles.inputField}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+                className={styles.inputField}
+              />
+            </fieldset>
+            <Button
+              type="submit"
+              onClick={() => handleSubmit}
+              text="Отправить"
+              className={styles.button}
+              fontSize={1}
             />
           </div>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-            className={styles.inputField}
-          />
-          <Button
-            type="submit"
-            onClick={() => handleSubmit}
-            text="Отправить"
-            className={styles.button}
-          />
         </form>
       </div>
     </div>

@@ -27,7 +27,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
 
   useEffect(() => {
     setCardsForRender(eventsToRender);
-  }, []);
+  }, [eventsToRender]);
 
   const handleFilterLocationClick = () => {
     setShowFilterDirection(false);

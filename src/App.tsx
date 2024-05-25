@@ -138,7 +138,7 @@ function App() {
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
         </Routes>
-        <Footer />
+        <Footer setIsModalOpen={setQuestionModalOpen} />
         <DonationModal
           isDonModalOpen={isDonModalOpen}
           onClose={() => setIsDonModalOpen(false)}

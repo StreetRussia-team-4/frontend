@@ -6,6 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  fontSize?: number;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -13,12 +14,17 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
   type,
+  fontSize = 1.5,
 }) => {
+  const buttonStyle: React.CSSProperties = {
+    fontSize: `${fontSize}rem`,
+  };
   return (
     <button
       type={type}
       onClick={onClick}
       className={`${styles.button} ${className}`}
+      style={buttonStyle}
     >
       {text}
     </button>
