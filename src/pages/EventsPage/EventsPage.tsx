@@ -57,10 +57,12 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     const buttonId = (event.target as HTMLButtonElement).textContent;
+    // Обновляем состояние для фильтрации по региону
     setIsFilterLocationOn(true);
+    setIsFilterDirectionOn(false); // Сбрасываем состояние для фильтрации по направлению
     const filtered = handleLocationFiltering(
       eventsToRender,
-      isFilterLocationOn,
+      true, // Передаем true для фильтрации по региону
       buttonId
     );
     setCardsForRender(filtered);
@@ -85,9 +87,10 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   ) => {
     const buttonId = (event.target as HTMLButtonElement).textContent;
     setIsFilterDirectionOn(true);
+    setIsFilterLocationOn(false); // Сбрасываем состояние для фильтрации по региону
     const filtered = handleDirectionFiltering(
       eventsToRender,
-      isFilterDirectionOn,
+      true, // Передаем true для фильтрации по направлению
       buttonId
     );
     setCardsForRender(filtered);
@@ -106,7 +109,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <li className={styles.item}>
           <button
             id="directions"
-            className={styles.button}
+            className={`${styles.button} ${isFilterDirectionOn ? styles.active : ''}`}
             onClick={handleFilterDirectionClick}
           >
             Направления
@@ -116,7 +119,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <li className={styles.item}>
           <button
             id="locations"
-            className={styles.button}
+            className={`${styles.button} ${isFilterLocationOn ? styles.active : ''}`}
             onClick={handleFilterLocationClick}
           >
             Регион
