@@ -51,4 +51,13 @@ export default defineConfig({
       },
     ],
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://213.189.221.212',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });
