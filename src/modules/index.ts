@@ -8,3 +8,4 @@ export { AboutUsAddress } from './AboutUsAddress';
 export { History } from './History';
 export { Team } from './Team';
 export { Partners } from './Partners';
+export { News } from './News';

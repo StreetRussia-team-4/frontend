@@ -1,9 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// import { News } from '@modules/News';
+// import { CardBlogData } from '@/components';
 
-export const BlogPage: React.FC = () => {
-  return (
-    <section className="blog">
-      <h2>БЛОГ</h2>
-    </section>
-  );
-};
+// interface BlogProps {
+//   newsToRender: CardBlogData[];
+//   newsToRender: CardBlogData[];
+//   interwiewToRender: CardBlogData[];
+//   adviceToRender: CardBlogData[];
+// }
+
+// export const BlogPage: React.FC<BlogProps> = ({
+//   newsToRender, newsToRender, interwiewToRender, adviceToRender
+// }) => {
+//   return (
+//     <section className="blog">
+//       <h2>БЛОГ</h2>
+//       <News cardsToRender={newsToRender} />
+//     </section>
+//   );
+// };

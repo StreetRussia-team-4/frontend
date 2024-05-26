@@ -25,8 +25,28 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isFilterDateOn, setIsFilterDateOn] = useState<boolean>(false);
-
   const [cardsForRender, setCardsForRender] = useState(eventsToRender);
+
+  const today = new Date();
+  const parseDate = (dateString: string) => {
+    const [day, month, year] = dateString.split('.');
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  };
+
+  const upcomingEvents = cardsForRender.filter(card => {
+    const startDate = parseDate(card.startDate);
+    return startDate >= today;
+  });
+
+  const archivedEvents = cardsForRender.filter(card => {
+    if (card.endDate) {
+      const endDate = parseDate(card.endDate);
+      return endDate < today;
+    } else {
+      const startDate = parseDate(card.startDate);
+      return startDate < today;
+    }
+  });
 
   useEffect(() => {
     setCardsForRender(eventsToRender);
@@ -224,18 +244,47 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
       ) : (
         <></>
       )}
-      <ul className={styles.cards}>
-        {cardsForRender.length === 0 ? (
-          <li className={styles.noResults}>
-            Ничего не нашлось. <br /> Но что-то интересное обязательно будет:
-            просто на другую тему, в другое время или в другом городе.
-          </li>
-        ) : (
-          cardsForRender.map(card => (
-            <CardEvent key={card.id} data={card} pageEvents={true} />
-          ))
-        )}
-      </ul>
+      {isFilterDateOn || isFilterLocationOn || isFilterDirectionOn ? (
+        <ul className={styles.cards}>
+          {cardsForRender.length === 0 ? (
+            <li className={styles.noResults}>
+              Ничего не нашлось. <br /> Но что-то интересное обязательно будет:
+              просто на другую тему, в другое время или в другом городе.
+            </li>
+          ) : (
+            cardsForRender.map(card => (
+              <CardEvent key={card.id} data={card} pageEvents={true} />
+            ))
+          )}
+        </ul>
+      ) : (
+        <>
+          <h3 className={styles.subtitle}>СКОРО</h3>
+          <ul className={styles.cards}>
+            {upcomingEvents.length === 0 ? (
+              <li className={styles.noResults}>
+                Запланированные проекты появятся здесь.
+              </li>
+            ) : (
+              upcomingEvents.map(card => (
+                <CardEvent key={card.id} data={card} pageEvents={true} />
+              ))
+            )}
+          </ul>
+          <h3 className={styles.subtitle}>АРХИВ</h3>
+          <ul className={styles.cards}>
+            {archivedEvents.length === 0 ? (
+              <li className={styles.noResults}>
+                Архив проектов появится здесь.
+              </li>
+            ) : (
+              archivedEvents.map(card => (
+                <CardEvent key={card.id} data={card} pageEvents={true} />
+              ))
+            )}
+          </ul>
+        </>
+      )}
     </main>
   );
 };

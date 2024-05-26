@@ -53,3 +53,12 @@ export interface Event {
   end_date: string;
   direction: string;
 }
+
+export type DocumentType = 'официальные' | 'внутренние' | 'внешние';
+
+export interface Document {
+  title: string;
+  type: DocumentType;
+  date: string;
+  downloadLink: string;
+}
