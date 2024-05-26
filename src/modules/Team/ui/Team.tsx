@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
 import styles from './Team.module.scss';
-import { CardTeamData } from '@/components';
-// import { CardTeam } from '@components/index';
+import { CardTeamData, CardTeam } from '@/components';
+
 // import { Button } from '@/ui';
 
 interface TeamProps {
-  managersToRender: CardTeamData[];
+  federalManagersToRender: CardTeamData[];
+  regionalManagersToRender: CardTeamData[];
 }
 
-export const Team: React.FC<TeamProps> = () => {
+export const Team: React.FC<TeamProps> = ({
+  federalManagersToRender,
+  regionalManagersToRender,
+}) => {
   const [showFegeralTeam, setShowFegeralTeam] = useState<boolean>(true);
 
-  const handleButtonClick = () => {
+  const [cardsForRender, setCardsForRender] = useState<CardTeamData[]>(
+    federalManagersToRender
+  );
+
+  // useEffect(() => {
+  //   setCardsForRender(federalManagersToRender);
+  // }, [eventsToRender]);
+
+  const handleRegionalButtonClick = () => {
     setShowFegeralTeam(false);
+    setCardsForRender(regionalManagersToRender);
+  };
+
+  const handleFederalButtonClick = () => {
+    setShowFegeralTeam(true);
+    setCardsForRender(federalManagersToRender);
   };
 
   return (
@@ -20,17 +38,35 @@ export const Team: React.FC<TeamProps> = () => {
       <h3 className={styles.title}>Наша команда</h3>
       <ul className={styles.buttons}>
         <li>
-          <button className={styles.button} onClick={handleButtonClick}>
+          <button
+            className={`${styles.button} ${showFegeralTeam ? styles.buttonActive : ''}`}
+            onClick={handleFederalButtonClick}
+          >
             Федеральная
           </button>
         </li>
         <li>
-          <button className={styles.button} onClick={handleButtonClick}>
+          <button
+            className={`${styles.button} ${showFegeralTeam ? '' : styles.buttonActive}`}
+            onClick={handleRegionalButtonClick}
+          >
             Региональная
           </button>
         </li>
       </ul>
-      {showFegeralTeam ? <ul className={styles.list}></ul> : <></>}
+      {showFegeralTeam ? (
+        <ul className={styles.list}>
+          {cardsForRender.map(card => (
+            <CardTeam key={card.id} data={card} region={showFegeralTeam!} />
+          ))}
+        </ul> //ниже должен быть слайдер с региональными сотрудниками!
+      ) : (
+        <ul className={styles.list}>
+          {cardsForRender.map(card => (
+            <CardTeam key={card.id} data={card} region={showFegeralTeam!} />
+          ))}
+        </ul>
+      )}
     </section>
   );
 };

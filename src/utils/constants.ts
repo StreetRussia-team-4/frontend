@@ -315,24 +315,27 @@ export const cardsForEvents = [
   },
 ];
 
-export const cardsForTeam = [
+export const cardsForRegionTeam = [
   {
     id: 1,
-    image: managerOne,
-    name: 'Валентин Работенко',
+    image: managerFour,
+    name: 'Анастасия Янченко',
     description: 'Председатель',
+    location: 'Ставропольский край',
   },
   {
     id: 2,
-    image: managerTwo,
-    name: 'Вячеслав Груднев',
-    description: 'Заместитель Председателя',
+    image: managerFive,
+    name: 'Илья Безуглов',
+    description: 'Председатель',
+    location: 'Тульская область',
   },
   {
     id: 3,
-    image: managerThree,
-    name: 'Ксения Замерова',
-    description: 'Заместитель Председателя',
+    image: managerSix,
+    name: 'Александр Григорьев',
+    description: 'Председатель',
+    location: 'Томская область',
   },
   {
     id: 4,
@@ -354,5 +357,26 @@ export const cardsForTeam = [
     name: 'Александр Григорьев',
     description: 'Председатель',
     location: 'Томская область',
+  },
+];
+
+export const cardsForFederalTeam = [
+  {
+    id: 1,
+    image: managerOne,
+    name: 'Валентин Работенко',
+    description: 'Председатель',
+  },
+  {
+    id: 2,
+    image: managerTwo,
+    name: 'Вячеслав Груднев',
+    description: 'Заместитель Председателя',
+  },
+  {
+    id: 3,
+    image: managerThree,
+    name: 'Ксения Замерова',
+    description: 'Заместитель Председателя',
   },
 ];
