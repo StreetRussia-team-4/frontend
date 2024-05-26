@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './EventsPage.module.scss';
+import './custom-datepicker-styles.scss';
 import { CardEventData } from '@/components';
 import { CardEvent } from '@components/index';
-// import { Button } from '@/ui';
+import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from 'react-datepicker';
 
 interface EventsProps {
   eventsToRender: CardEventData[];
@@ -17,11 +19,13 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
 
   const [showFilterLocation, setShowFilterLocation] = useState<boolean>(false);
   const [isFilterLocationOn, setIsFilterLocationOn] = useState<boolean>(false);
-  // const [filteredLocationCards, setFilteredLocationCards] = useState([]);
   const [showFilterDirection, setShowFilterDirection] =
     useState<boolean>(false);
   const [isFilterDirectionOn, setIsFilterDirectionOn] =
     useState<boolean>(false);
+  const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [isFilterDateOn, setIsFilterDateOn] = useState<boolean>(false);
 
   const [cardsForRender, setCardsForRender] = useState(eventsToRender);
 
@@ -32,15 +36,45 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const handleFilterLocationClick = () => {
     setIsFilterLocationOn(!isFilterLocationOn);
     setIsFilterDirectionOn(false);
+    setIsFilterDateOn(false);
     setShowFilterDirection(false);
     setShowFilterLocation(!showFilterLocation);
+    setShowDatePicker(false);
   };
 
   const handleFilterDirectionClick = () => {
     setIsFilterDirectionOn(!isFilterDirectionOn);
     setIsFilterLocationOn(false);
+    setIsFilterDateOn(false);
     setShowFilterLocation(false);
     setShowFilterDirection(!showFilterDirection);
+    setShowDatePicker(false);
+  };
+
+  const handleDateClick = () => {
+    setIsFilterDateOn(!isFilterDateOn);
+    setShowDatePicker(!showDatePicker);
+    setIsFilterDirectionOn(false);
+    setIsFilterLocationOn(false);
+    setShowFilterLocation(false);
+    setShowFilterDirection(false);
+  };
+
+  //фильтр по дате
+  const handleDateChange = (date: Date | null) => {
+    setSelectedDate(date);
+    console.log('selectedDate: ', selectedDate);
+    setShowDatePicker(false);
+    if (date) {
+      const filtered = eventsToRender.filter(card => {
+        const eventDate = new Date(card.startDate);
+        return eventDate.toDateString() === date.toDateString();
+      });
+      console.log('filtered: ', filtered);
+      setCardsForRender(filtered);
+    } else {
+      setCardsForRender(eventsToRender);
+    }
   };
 
   //фильтр по региону
@@ -101,16 +135,21 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     setCardsForRender(filtered);
   };
 
-  console.log('isFilterLocationOn: ', isFilterLocationOn);
-
   return (
     <main className={styles.events}>
       <h2 className={styles.title}>СОБЫТИЯ</h2>
       <ul className={styles.list}>
         <li className={styles.item}>
-          <button id="date" className={styles.button}>
+          <button
+            id="date"
+            className={`${styles.button} ${isFilterDateOn ? styles.buttonActive : ''}`}
+            onClick={handleDateClick}
+          >
             Дата
-            <div id="arrowDate" className={styles.arrow} />
+            <div
+              id="arrowDate"
+              className={`${styles.arrow} ${isFilterDateOn ? styles.arrowActive : ''}`}
+            />
           </button>
         </li>
         <li className={styles.item}>
@@ -140,6 +179,16 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
           </button>
         </li>
       </ul>
+      {showDatePicker && (
+        <div className={styles.datePickerWrapper}>
+          <DatePicker
+            selected={selectedDate}
+            onChange={handleDateChange}
+            inline
+            calendarClassName={styles.DatePicker}
+          />
+        </div>
+      )}
       {showFilterLocation ? (
         <ul className={styles.filter}>
           {uniqueLocations.map(location => (
