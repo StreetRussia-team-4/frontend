@@ -25,6 +25,9 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isFilterDateOn, setIsFilterDateOn] = useState<boolean>(false);
+  const [activeFilterButton, setActiveFilterButton] = useState<string | null>(
+    null
+  );
   const [cardsForRender, setCardsForRender] = useState(eventsToRender);
 
   const today = new Date();
@@ -120,6 +123,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   ) => {
     const buttonId = (event.target as HTMLButtonElement).textContent;
     // Обновляем состояние для фильтрации по региону
+    setActiveFilterButton(buttonId);
     setIsFilterLocationOn(true);
     setIsFilterDirectionOn(false); // Сбрасываем состояние для фильтрации по направлению
     const filtered = handleLocationFiltering(
@@ -147,13 +151,14 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const handleDirectionClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    const buttonId = (event.target as HTMLButtonElement).textContent;
+    const buttonDirection = (event.target as HTMLButtonElement).textContent;
+    setActiveFilterButton(buttonDirection);
     setIsFilterDirectionOn(true);
     setIsFilterLocationOn(false); // Сбрасываем состояние для фильтрации по региону
     const filtered = handleDirectionFiltering(
       eventsToRender,
       true, // Передаем true для фильтрации по направлению
-      buttonId
+      buttonDirection
     );
     setCardsForRender(filtered);
   };
@@ -217,7 +222,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
           {uniqueLocations.map(location => (
             <li key={locations.indexOf(location)}>
               <button
-                className={styles.filterButton}
+                className={`${styles.filterButton} ${activeFilterButton === location ? styles.filterButtonActive : ''}`}
                 onClick={handleLocationClick}
               >
                 {location}
@@ -233,7 +238,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
           {uniqueDirections.map(direction => (
             <li key={directions.indexOf(direction)}>
               <button
-                className={styles.filterButton}
+                className={`${styles.filterButton} ${activeFilterButton === direction ? styles.filterButtonActive : ''}`}
                 onClick={handleDirectionClick}
               >
                 {direction}
