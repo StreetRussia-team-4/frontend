@@ -13,7 +13,7 @@ export const AboutUsPage: React.FC = () => {
       </h3>
       <div className={styles.background}></div>
       <History />
-      <Team />
+       <Team managersToRender={[]} />
       <AboutUsAddress />
     </main>
   );
