@@ -78,7 +78,8 @@
 
   ![React DayPicker](https://img.shields.io/badge/react--daypicker-%23404d59?style=for-the-badge&logo=react&logoColor=blue)
 
-- **Axios**: для выполнения HTTP-запросов. Проста в использовании и позволяет легко общаться с сервером, отправлять и получать данные.
+- **Axios**: для выполнения HTTP-запросов. Проста в использовании и позволяет легко общаться с сервером,
+   отправлять и получать данные.
   ![Axios](https://img.shields.io/badge/axios-%23404d59?style=for-the-badge&logo=axios&logoColor=blue)
 
 ### Шрифты
