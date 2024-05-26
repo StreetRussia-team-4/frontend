@@ -6,11 +6,14 @@
   min-height: 456px;
   position: relative;
   display: flex;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .link {
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 .link:hover .image {

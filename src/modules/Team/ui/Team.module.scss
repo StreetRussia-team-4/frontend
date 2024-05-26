@@ -46,6 +46,32 @@
   margin: 80px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 24px;
 }
 
+.listSlider {
+  padding: 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin: 0 0 20px;
+}
+
+.arrowLeft,
+.arrowRight {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border: none;
+}
+
+.arrowLeft {
+  background: url('../../../assets/icon/arrow-slider-left.svg') no-repeat center;
+}
+
+.arrowRight {
+  background: url('../../../assets/icon/arrow-slider-right.svg') no-repeat
+    center;
+}
