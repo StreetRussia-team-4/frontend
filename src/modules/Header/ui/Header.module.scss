@@ -1,37 +1,38 @@
 .header {
-    padding: 26px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    column-gap: 160px;
-    justify-content: center;
-    background-color: #FCFCFC;
+  padding: 26px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 160px;
+  justify-content: center;
+  background-color: #fcfcfc;
 }
 
 .logo {
-    max-height: 48px;
-    opacity: 1;
-    transition: opacity 0.4s linear;
+  max-height: 48px;
+  opacity: 1;
+  transition: opacity 0.4s linear;
 }
 
 .logo:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .image {
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    column-gap: 4px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  position: relative;
+  min-width: 180px;
 }
 
 .navigation:hover > .sublinks {
-    visibility: visible;
+  visibility: visible;
 }
 
 .navigation:hover > .arrow {
@@ -39,55 +40,55 @@
 }
 
 .links {
-    column-gap: 32px;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  column-gap: 32px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .link {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 12px;
-    white-space: nowrap;
-    z-index: 10;
-    transition: font-weight 0.4s linear;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: font-weight 0.4s linear;
 }
 
 .link:hover {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .sublinks {
-    row-gap: 12px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 43px 0 0;
-    list-style-type: none;
-    position: absolute;
-    top: 0;
-    z-index: 5;
-    visibility: hidden;
-    transition: visibility 0.4s linear;
+  row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 43px 0 0;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  visibility: hidden;
+  transition: visibility 0.4s linear;
 }
 
 .sublink {
-    padding: 4px 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 12px;
-    white-space: nowrap;
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 12px;
+  white-space: nowrap;
 }
 
 .arrow {
-    min-height: 24px;
-    min-width: 24px;
-    background-image: url('@icon/arrow.svg');
-    transition: transform 0.4s ease-in-out;
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('@icon/arrow.svg');
+  transition: transform 0.4s ease-in-out;
 }
