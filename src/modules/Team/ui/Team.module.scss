@@ -1,9 +1,44 @@
 .team {
   margin: 0 100px;
-  background-color: aqua;
 }
 
 .title {
   margin: 0 0 32px;
   padding: 8px 12px;
 }
+
+.buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 40px;
+}
+
+.button {
+  padding: 10px 26px;
+  background-color: inherit;
+  color: black;
+  font-family: 'Benzin';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 18px;
+  border: solid 1px black;
+}
+
+.buttonActive {
+  padding: 10px 22px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+}
+

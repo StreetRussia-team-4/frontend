@@ -20,8 +20,8 @@ export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {
   const { id, image, name, description, location } = data;
 
   return (
-    <li>
-      <a className={styles.card} href={`${baseUrl}${id}`}>
+    <li className={styles.card}>
+      <a className={styles.link} href={`${baseUrl}${id}`}>
         <img
           className={styles.image}
           src={typeof image === 'string' ? image : image.src}
@@ -33,6 +33,7 @@ export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {
             className={styles.position}
           >{`${description}${region! ? '' : `, ${location}`}`}</p>
         </div>
+        <p className={styles.more}>Подробнее</p>
       </a>
     </li>
   );

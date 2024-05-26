@@ -9,7 +9,7 @@ import { CardData, Event, Project } from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
-import { CurrentProjectsPage, HomePage } from './pages';
+import { CurrentProjectsPage, HomePage, TeamVideoPage } from './pages';
 import { EventsPage } from './pages';
 import { DirectionsPage } from './pages';
 import { ProjectsPage } from './pages';
@@ -21,6 +21,7 @@ import { DocumentsPage } from './pages';
 import { ProjectDetailPage } from './pages';
 
 import {
+  CardTeamData,
   CardEventData,
   DonationModal,
   QuestionModal,
@@ -28,7 +29,12 @@ import {
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
-import { cardsForEvents, cardsForProjets } from './utils/constants';
+import {
+  cardsForEvents,
+  cardsForProjets,
+  cardsForFederalTeam,
+  cardsForRegionTeam,
+} from './utils/constants';
 
 function App() {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
@@ -93,6 +99,10 @@ function App() {
     console.error('Ошибка загрузки данных:', error);
   }
 
+  const federalManagersToRender: CardTeamData[] = cardsForFederalTeam;
+
+  const regionalManagersToRender: CardTeamData[] = cardsForRegionTeam;
+
   return (
     <>
       <Router>
@@ -131,12 +141,24 @@ function App() {
               />
             }
           />
-          <Route path="/projects/:id" element={<ProjectDetailPage />} />
+          <Route
+            path="/projects/:id"
+            element={<ProjectDetailPage setModalopen={setIsDonModalOpen} />}
+          />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route
+            path="/about-us"
+            element={
+              <AboutUsPage
+                federalManagersToRender={federalManagersToRender}
+                regionalManagersToRender={regionalManagersToRender}
+              />
+            }
+          />
           <Route path="/addresses" element={<AddressesPage />} />
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
+          <Route path="/team-video" element={<TeamVideoPage />} />
         </Routes>
         <Footer setIsModalOpen={setQuestionModalOpen} />
         <DonationModal
