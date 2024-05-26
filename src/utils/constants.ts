@@ -355,3 +355,18 @@ export const cardsForTeam = [
     location: 'Томская область',
   },
 ];
+
+export const documents = [
+  {
+    title: 'Протокол 1 от 5.10.2021 - учредительное собрание',
+    type: 'внутренние',
+    date: '05.10.2021',
+    downloadLink: '#',
+  },
+  {
+    title: 'Манифест Ценностей Организации',
+    type: 'внутренние',
+    date: '01.05.2023',
+    downloadLink: '#',
+  },
+];
