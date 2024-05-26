@@ -1,6 +1,7 @@
 # О проекте
 
-Проект представляет собой MVP-версию раздела корпоративного портала, который предлагает функционал для индивидуального плана развития сотрудника (ИПР).
+![Улицы России](src/assets/icon/logo.svg)
+Этот проект представляет собой SPA (Single Page Application) для сайта Общественной Организации "Улицы России". Приложение разработано с использованием TypeScript, React и Vite.js.
 
 # О команде
 
@@ -50,6 +51,7 @@
   <img src="https://img.shields.io/badge/NPM-%23404d59?style=for-the-badge&logo=npm&logoColor=red" alt="NPM Badge" />
   <img src="https://img.shields.io/badge/figma-%23404d59.svg?style=for-the-badge&logo=figma&logoColor=purple" alt="Figma Badge" />
   <img src="https://img.shields.io/badge/vscode-%23404d59?style=for-the-badge&logo=visual-studio-code&logoColor=blue" alt="VScode Badge" />
+  <img src="https://img.shields.io/badge/WebStorm-%23404d59?style=for-the-badge&logo=webstorm&logoColor=blue" alt="WebStorm Badge" />
   <img src="https://img.shields.io/badge/jest-%23404d59?style=for-the-badge&logo=jest&logoColor=white" alt="Jest Badge" />
   <img src="https://img.shields.io/badge/husky-%23404d59?style=for-the-badge&logo=git&logoColor=green" alt="Husky Badge" />
   <img src="https://img.shields.io/badge/stylelint-%23404d59?style=for-the-badge&logo=stylelint&logoColor=pink" alt="Stylelint Badge" />
@@ -82,6 +84,18 @@
 ---
 
 В нашем проекте мы использовали стильный и современный шрифт **Benzin**. Этот шрифт помогает придать приложению уникальный и профессиональный вид. Можно найти [здесь](https://bestfonts.pro/font/benzin).👌
+
+### Стиль и Шарм с Sass и Миксинами
+
+---
+
+В нашем проекте мы используем Sass вместе с уникальными миксинами, такими как `font-benzin-bold`, `font-benzin-medium` и `font-benzin-regular`. Kод становится чище, эффективнее и приобретает личность. Мы постоянно работаем над расширением нашей коллекции миксинов!🪄
+
+<details><summary>Пример миксина</summary>
+
+![mixin-explained](src/assets/image/mixins-explained.jpg)
+
+</details>
 
 # Установка
 
