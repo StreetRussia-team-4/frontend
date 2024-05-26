@@ -1,12 +1,14 @@
 # О проекте
 
-![Улицы России](src/assets/icon/logo.svg)
+![Улицы России](src/assets/icon/logoFooter.svg)
+
+
 Этот проект представляет собой SPA (Single Page Application) для сайта Общественной Организации "Улицы России". Приложение разработано с использованием TypeScript, React и Vite.js.
 
 # О команде
 
-- Ольга Аверьянова - [@Olga_Averianova47](https://t.me/Olga_Averianova47)
-- Елизавета Журавлева - [@zhuuravel](https://t.me/zhuuravel)
+- [Ольга Аверьянова](https://github.com/OlgaOlgar47) - [@Olga_Averianova47](https://t.me/Olga_Averianova47)
+- [Елизавета Журавлева](https://github.com/orgs/StreetRussia-team-4/people/Zhuuravel) - [@zhuuravel](https://t.me/zhuuravel)
 
 # Ссылка на проект
 
