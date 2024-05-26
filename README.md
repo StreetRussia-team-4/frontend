@@ -1,2 +1,110 @@
-# React + TypeScript + Vite
-Фронтенд 
+# О проекте
+
+Проект представляет собой MVP-версию раздела корпоративного портала, который предлагает функционал для индивидуального плана развития сотрудника (ИПР).
+
+# О команде
+
+- Ольга Аверьянова - [@Olga_Averianova47](https://t.me/Olga_Averianova47)
+- Елизавета Журавлева - [@zhuuravel](https://t.me/zhuuravel)
+
+# Ссылка на проект
+
+Мы настроили автоматическое развертывание нашего проекта на GitHub Pages при каждом пуше в ветку main. 💪🏻 В процессе используется CI для проверки кода и его сборки, после чего он загружается и публикуется на GitHub Pages. Теперь наш сайт всегда актуален и обновляется автоматически! 🚀
+
+Посмотреть проект можно по этой ссылке 👉 [клик](https://streetrussia-team-4.github.io/frontend/)
+
+# Стек технологий
+
+<p align="left">
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
+  </a>
+  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
+  </a>
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
+  </a>
+  <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
+  </a>
+<a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
+  <img src="https://www.vectorlogo.zone/logos/sass-lang/sass-lang-icon.svg" alt="sass" width="40" height="40"/>
+</a>
+</p>
+
+### Инструменты разработчика
+
+---
+
+<div id="general" style="display: inline">
+  <img src="https://img.shields.io/badge/git-%23404d59.svg?style=for-the-badge&logo=git&logoColor=red" alt="Git Badge" />
+  <img src="https://img.shields.io/badge/ESLint-%23404d59?style=for-the-badge&logo=eslint&logoColor=violet" alt="ESLint Badge" />
+  <img src="https://img.shields.io/badge/babel-%23404d59?style=for-the-badge&logo=babel&logoColor=yellow" alt="Babel Badge" />
+  <img src="https://img.shields.io/badge/NPM-%23404d59?style=for-the-badge&logo=npm&logoColor=red" alt="NPM Badge" />
+  <img src="https://img.shields.io/badge/figma-%23404d59.svg?style=for-the-badge&logo=figma&logoColor=purple" alt="Figma Badge" />
+  <img src="https://img.shields.io/badge/vscode-%23404d59?style=for-the-badge&logo=visual-studio-code&logoColor=blue" alt="VScode Badge" />
+  <img src="https://img.shields.io/badge/jest-%23404d59?style=for-the-badge&logo=jest&logoColor=white" alt="Jest Badge" />
+  <img src="https://img.shields.io/badge/husky-%23404d59?style=for-the-badge&logo=git&logoColor=green" alt="Husky Badge" />
+  <img src="https://img.shields.io/badge/stylelint-%23404d59?style=for-the-badge&logo=stylelint&logoColor=pink" alt="Stylelint Badge" />
+  <img src="https://img.shields.io/badge/github%20actions-%23404d59?style=for-the-badge&logo=github-actions&logoColor=blue" alt="GitHub Actions Badge" />
+</div>
+
+### Сторонние библиотеки
+
+---
+
+Для разработки нашего проекта мы использовали несколько сторонних библиотек, которые значительно упростили нам жизнь:
+
+- **React Player**: для встраивания и управления видео и аудио контентом. Очень удобно для воспроизведения медиафайлов прямо в приложении.
+
+  - ![React Player](https://img.shields.io/badge/react--player-%23404d59?style=for-the-badge&logo=react&logoColor=blue)
+
+- **React Slick**: для красивых и адаптивных слайдеров/каруселей. Идеально подходит для показа изображений, и других контентных элементов.
+
+  - ![React Slick](https://img.shields.io/badge/react--slick-%23404d59?style=for-the-badge&logo=react&logoColor=blue)
+
+- **React DayPicker**: для работы с выбором дат. Позволяет легко добавлять календарные элементы в ваш проект.
+
+  - ![React DayPicker](https://img.shields.io/badge/react--daypicker-%23404d59?style=for-the-badge&logo=react&logoColor=blue)
+
+- **Axios**: для выполнения HTTP-запросов. Проста в использовании и позволяет легко общаться с сервером, отправлять и получать данные.
+  - ![Axios](https://img.shields.io/badge/axios-%23404d59?style=for-the-badge&logo=axios&logoColor=blue)
+
+### Шрифты
+
+---
+
+В нашем проекте мы использовали стильный и современный шрифт **Benzin**. Этот шрифт помогает придать приложению уникальный и профессиональный вид. Можно найти [здесь](https://bestfonts.pro/font/benzin).👌
+
+# Установка
+
+- `git clone git@github.com:StreetRussia-team-4/frontend.git` - клонируйте репозиторий;
+
+- `cd frontend` - перейдите в директорию проекта;
+
+- `npm install` - yстановите зависимости;
+
+- `npm run dev` - проект запустится на порте `http://localhost:5173`;🔥
+
+# Архив с кодом репозитория из main
+
+[Ссылка на архив с кодом репозитория из main](https://disk.yandex.com/d/piisShH2oeiotQ)
+
+# Архив со скриншотами
+
+[Ссылка на архив со скриншотами](https://disk.yandex.com/d/4WJ7-AvosFhitQ)
+
+# Вид приложения
+
+<details><summary> Скриншот интерфейса приложения</summary>
+
+![Alt текст](src/assets/image/image.png)
+
+</details>
