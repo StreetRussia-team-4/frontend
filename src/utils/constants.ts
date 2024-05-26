@@ -20,6 +20,8 @@ import managerThree from '@image/manager3.png';
 import managerFour from '@image/manager4.png';
 import managerFive from '@image/manager5.png';
 import managerSix from '@image/manager6.png';
+import managerSeven from '@image/manager7.png';
+import managerEight from '@image/manager8.png';
 
 import { Project } from '@/type/type';
 
@@ -321,6 +323,7 @@ export const cardsForRegionTeam = [
     name: 'Анастасия Янченко',
     description: 'Председатель',
     location: 'Ставропольский край',
+    link: 'https://vk.com/n.gladunova',
   },
   {
     id: 2,
@@ -328,6 +331,7 @@ export const cardsForRegionTeam = [
     name: 'Илья Безуглов',
     description: 'Председатель',
     location: 'Тульская область',
+    link: 'https://vk.com/deadtracer',
   },
   {
     id: 3,
@@ -335,27 +339,23 @@ export const cardsForRegionTeam = [
     name: 'Александр Григорьев',
     description: 'Председатель',
     location: 'Томская область',
+    link: 'https://vk.com/takteek',
   },
   {
     id: 4,
-    image: managerFour,
-    name: 'Анастасия Янченко',
+    image: managerSeven,
+    name: 'Алла Жукова',
     description: 'Председатель',
-    location: 'Ставропольский край',
+    location: 'Ростовская область',
+    link: 'https://vk.com/raraavis69',
   },
   {
     id: 5,
-    image: managerFive,
-    name: 'Илья Безуглов',
+    image: managerEight,
+    name: 'Мария Коробейникова',
     description: 'Председатель',
-    location: 'Тульская область',
-  },
-  {
-    id: 6,
-    image: managerSix,
-    name: 'Александр Григорьев',
-    description: 'Председатель',
-    location: 'Томская область',
+    location: 'Ямало-Ненецкий автономный округ',
+    link: 'https://vk.com/korobeynikovamaria',
   },
 ];
 
@@ -380,17 +380,20 @@ export const cardsForFederalTeam = [
     image: managerOne,
     name: 'Валентин Работенко',
     description: 'Председатель',
+    link: 'https://vk.com/rvorigin',
   },
   {
     id: 2,
     image: managerTwo,
     name: 'Вячеслав Груднев',
     description: 'Заместитель Председателя',
+    link: 'https://vk.com/v.grudnev',
   },
   {
     id: 3,
     image: managerThree,
     name: 'Ксения Замерова',
     description: 'Заместитель Председателя',
+    link: 'https://vk.com/kszamerova',
   },
 ];
