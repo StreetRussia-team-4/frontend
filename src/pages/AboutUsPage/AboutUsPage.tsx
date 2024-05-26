@@ -3,6 +3,7 @@ import styles from './AboutUsPage.module.scss';
 import { AboutUsAddress } from '@modules/AboutUsAddress';
 import { History } from '@modules/History';
 import { Team } from '@modules/Team';
+import { Partners } from '@modules/Partners';
 import { CardTeamData } from '@/components';
 
 interface TeamProps {
@@ -26,6 +27,7 @@ export const AboutUsPage: React.FC<TeamProps> = ({
         federalManagersToRender={federalManagersToRender}
         regionalManagersToRender={regionalManagersToRender}
       />
+      <Partners />
       <AboutUsAddress />
     </main>
   );
