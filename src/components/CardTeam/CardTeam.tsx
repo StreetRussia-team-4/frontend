@@ -20,7 +20,7 @@ export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {
 
   return (
     <li className={styles.card}>
-      <a className={styles.link} href={link}>
+      <a className={styles.link} href={link} target="_blank" rel="noreferrer">
         <img
           className={styles.image}
           src={typeof image === 'string' ? image : image.src}

@@ -79,7 +79,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
           <div className={styles.agreement}>
             Заполнив эту форму, вы принимаете
           </div>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#" target="_blank" rel="noreferrer">
             договор-оферту
           </a>
         </form>
