@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from './EventsPage.module.scss';
-import './custom-datepicker-styles.scss';
 import { CardEventData } from '@/components';
 import { CardEvent } from '@components/index';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -63,14 +62,19 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   //фильтр по дате
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
-    console.log('selectedDate: ', selectedDate);
-    setShowDatePicker(false);
     if (date) {
       const filtered = eventsToRender.filter(card => {
-        const eventDate = new Date(card.startDate);
+        // Разбиваем строку даты на компоненты (день, месяц, год)
+        const [day, month, year] = card.startDate.split('.');
+        // Создаем объект Date с правильными компонентами
+        const eventDate = new Date(
+          Number(year),
+          Number(month) - 1,
+          Number(day)
+        );
+        // Сравниваем даты
         return eventDate.toDateString() === date.toDateString();
       });
-      console.log('filtered: ', filtered);
       setCardsForRender(filtered);
     } else {
       setCardsForRender(eventsToRender);
@@ -95,7 +99,6 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     const buttonId = (event.target as HTMLButtonElement).textContent;
-    console.log('allooo: ', buttonId);
     // Обновляем состояние для фильтрации по региону
     setIsFilterLocationOn(true);
     setIsFilterDirectionOn(false); // Сбрасываем состояние для фильтрации по направлению
@@ -183,7 +186,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <div className={styles.datePickerWrapper}>
           <DatePicker
             selected={selectedDate}
-            onChange={handleDateChange}
+            onChange={selectedDate => handleDateChange(selectedDate)}
             inline
             calendarClassName={styles.DatePicker}
           />
@@ -222,9 +225,16 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         <></>
       )}
       <ul className={styles.cards}>
-        {cardsForRender.map(card => (
-          <CardEvent key={card.id} data={card} pageEvents={true} />
-        ))}
+        {cardsForRender.length === 0 ? (
+          <li className={styles.noResults}>
+            Ничего не нашлось. <br /> Но что-то интересное обязательно будет:
+            просто на другую тему, в другое время или в другом городе.
+          </li>
+        ) : (
+          cardsForRender.map(card => (
+            <CardEvent key={card.id} data={card} pageEvents={true} />
+          ))
+        )}
       </ul>
     </main>
   );
