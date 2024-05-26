@@ -51,5 +51,5 @@ export interface Event {
   preview: string;
   start_date: string;
   end_date: string;
-  direction: string; //добавила для фильтра событий
+  direction: string;
 }

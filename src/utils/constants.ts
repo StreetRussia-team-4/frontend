@@ -1,8 +1,12 @@
-import imageOne from '@image/eventOne.png';
-import imageTwo from '@image/eventTwo.png';
-import imageThree from '@image/eventThree.png';
-import imageProject from '@image/image-project.png';
-import imageProjectTwo from '@image/image-project2.png';
+import project1 from '@image/project1.png';
+import project2 from '@image/project2.png';
+import project3 from '@image/project3.png';
+import project4 from '@image/project4.png';
+import project5 from '@image/project5.png';
+import project6 from '@image/project6.png';
+import project7 from '@image/project7.png';
+import project8 from '@image/project8.png';
+
 import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
@@ -27,6 +31,8 @@ export const API_HOST = 'http://213.189.221.212';
 export const API_ROUTE = '/api/v1';
 export const API_URL = `${API_HOST}${API_ROUTE}`;
 
+export const teamVideo_URL = 'https://youtu.be/Ks0eHBSNFwA?si=CipNTAfpXajOKZw0';
+
 export const projectDetail: Project = {
   id: 0,
   current_status: 'current',
@@ -49,55 +55,55 @@ export const projectDetail: Project = {
 export const cardsForProjets = [
   {
     id: 1,
-    image: imageOne,
+    image: project1,
     current_status: 'current',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.01.2024',
     endDate: '24.03.2025',
-    fundsRaised: 6000,
-    goal: 38000,
+    fundsRaised: 320000,
+    goal: 780000,
   },
   {
     id: 2,
-    image: imageTwo,
+    image: project2,
     current_status: 'current',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
-    startDate: '24.12.2024',
-    endDate: '24.03.2025',
-    fundsRaised: 16000,
-    goal: 100000,
+    title: 'PARCOUR-ПЛОЩАДКА',
+    location: 'СМОЛЕНСКАЯ ОБЛ.',
+    description: 'Будем устанавливать шары, угловые рельсы, пирамиды, полосы.',
+    startDate: '01.05.2024',
+    endDate: '01.06.2025',
+    fundsRaised: 240100,
+    goal: 650000,
   },
   {
     id: 3,
-    image: imageThree,
+    image: project3,
     current_status: 'current',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
+    title: 'ПЛОЩАДКА ДЛЯ BMX',
+    location: 'ТАМБОВСКАЯ ОБЛ.',
+    description: 'Поставим вулкан, спайны, вертволл, хипы, волл райд.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    fundsRaised: 20000,
-    goal: 50400,
+    fundsRaised: 120500,
+    goal: 980500,
   },
   {
     id: 4,
-    image: imageThree,
+    image: project4,
     current_status: 'current',
-    title: 'SCATEBOARDING ПЛОЩАДКА',
-    location: 'РЯЗАНСКАЯ ОБЛ.',
-    description: 'Планируем поставить рампы, разгонки и перила.',
+    title: 'ПЛОЩАДКА ДЛЯ BMX',
+    location: 'ТАМБОВСКАЯ ОБЛ.',
+    description: 'Поставим вулкан, спайны, вертволл, хипы, волл райд.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
-    fundsRaised: 40000,
-    goal: 50500,
+    fundsRaised: 120500,
+    goal: 980500,
   },
   {
     id: 5,
-    image: imageThree,
+    image: project5,
     current_status: 'current',
     title: 'PARKOUR-ПЛОЩАДКА',
     location: 'РЕСПУБЛИКА КОМИ',
@@ -105,12 +111,12 @@ export const cardsForProjets = [
       'Устанавливаем коробки, пирамиды, скамейки, стены, платформы, полосы, брусы-балансиры',
     startDate: '01.05.2024',
     endDate: '01.06.2025',
-    fundsRaised: 240000,
+    fundsRaised: 240080,
     goal: 650500,
   },
   {
     id: 6,
-    image: imageThree,
+    image: project6,
     current_status: 'current',
     title: 'СКЕЙТ-ПАРК И ЗОНА ОТДЫХА',
     location: 'ВЛАДИМИРСКАЯ ОБЛ.',
@@ -122,7 +128,7 @@ export const cardsForProjets = [
   },
   {
     id: 7,
-    image: imageThree,
+    image: project7,
     current_status: 'current',
     title: 'ПЕРВЫЙ ТУЛЬСКИЙ СКАЛАДРОМ',
     location: 'ТУЛЬСКАЯ ОБЛ.',
@@ -134,7 +140,7 @@ export const cardsForProjets = [
   },
   {
     id: 8,
-    image: imageThree,
+    image: project8,
     current_status: 'current',
     title: 'РАЗГОННЫЕ КОНСТРУКЦИИ',
     location: 'САРАТОВСКАЯ ОБЛ.',
@@ -146,7 +152,7 @@ export const cardsForProjets = [
   },
   {
     id: 9,
-    image: imageThree,
+    image: project8,
     current_status: 'current',
     title: 'РАМПА',
     location: 'МОСКВА',
@@ -159,7 +165,7 @@ export const cardsForProjets = [
   },
   {
     id: 10,
-    image: imageProject,
+    image: project7,
     current_status: 'future',
     title: 'СКЕЙТПАРК',
     location: 'ПЕРМСКИЙ КРАЙ',
@@ -169,7 +175,7 @@ export const cardsForProjets = [
   },
   {
     id: 11,
-    image: imageProjectTwo,
+    image: project5,
     current_status: 'future',
     title: 'WORK OUT ПЛОЩАДКА',
     location: 'ТВЕРСКАЯ ОБЛ.',
@@ -179,7 +185,7 @@ export const cardsForProjets = [
   },
   {
     id: 12,
-    image: imageProject,
+    image: project3,
     current_status: 'future',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
@@ -189,7 +195,7 @@ export const cardsForProjets = [
   },
   {
     id: 13,
-    image: imageProjectTwo,
+    image: managerSix,
     current_status: 'future',
     title: 'SCATEBOARDING ПЛОЩАДКА',
     location: 'РЯЗАНСКАЯ ОБЛ.',
