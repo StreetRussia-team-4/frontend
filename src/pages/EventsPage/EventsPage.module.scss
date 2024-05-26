@@ -21,8 +21,8 @@
 }
 
 .item {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .button {
@@ -39,7 +39,13 @@
   font-size: 24px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out ;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.button:active {
+  font-weight: 700;
 }
 
 .button:hover {
@@ -47,24 +53,64 @@
   color: white;
 }
 
-.button:hover .arrow {
-  background-image: url('@icon/arrowWhite.svg');
-  rotate: 180deg;
-}
-
-.activeButton {
-  font-weight: 700;
-}
-
-.activeArrow {
-  rotate: 0deg;
+.buttonActive {
+  background-color: black;
+  color: white;
 }
 
 .arrow {
   min-height: 24px;
   min-width: 24px;
   background-image: url('@icon/arrowBlack.svg');
-  transition: background-image 0.4s ease-in-out, transform 0.2s ease-in-out;
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button {
+  display: flex;
+  column-gap: 5px;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 1px black;
+  align-items: center;
+  color: black;
+  font-family: 'Benzin';
+  line-height: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.buttonActive {
+  background-color: black;
+  color: white;
+}
+
+.arrow {
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('@icon/arrowBlack.svg');
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button:hover .arrow {
+  background-image: url('@icon/arrow-white-down.svg');
+}
+
+.buttonActive .arrow {
+  background-image: url('@icon/arrowWhite.svg');
+}
+
+.buttonActive:hover .arrow {
+  background-image: url('@icon/arrowWhite.svg');
 }
 
 .cards {
@@ -84,7 +130,7 @@
   display: flex;
   column-gap: 36px;
   row-gap: 28px;
-  background-color: #E8E3E3;
+  background-color: #e8e3e3;
 }
 
 .filterButton {
@@ -97,18 +143,23 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
-  transition: font-weight 0.2s ease-in-out ;
+  transition: font-weight 0.2s ease-in-out;
 }
 
 .filterButton:hover {
   font-weight: 500;
 }
 
-.filterButtonActive {
-  padding: 13px 40px;
-  background-color: black;
-  color: white;
-  line-height: 18px;
-  font-size: 24px;
-  font-weight: 700;
+.DatePicker {
+  width: 242px;
+  height: 270px;
+  margin: 28px 0 0;
+}
+
+.noResults {
+  grid-column-end: span 3;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
 }

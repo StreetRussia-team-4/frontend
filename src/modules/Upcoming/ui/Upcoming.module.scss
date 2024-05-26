@@ -1,95 +1,93 @@
 .upcoming {
-    max-width: 1240px;
-    margin: 200px auto;
+  max-width: 1240px;
+  margin: 200px auto;
 }
 
 .title {
-    margin: 0 0 120px;
-    padding: 0;
-    font-size: 80px;
-    line-height: 108px;
-    text-align: center;
-  }
+  margin: 0 0 120px;
+  padding: 0;
+  font-size: 80px;
+  line-height: 108px;
+  text-align: center;
+}
 
-  .events {
-    display: flex;
-    column-gap: 28px;
-    min-height: 638px;
-    max-width: 1135px;
-  }
+.events {
+  display: flex;
+  column-gap: 28px;
+  min-height: 638px;
+  max-width: 1135px;
+}
 
-  .card {
-    border: 1px solid black;
-    display: flex;
-    column-gap: 28px;
-    max-height: 638px;
-  }
+.card {
+  border: 1px solid black;
+  display: flex;
+  column-gap: 28px;
+}
 
-  .image {
-    object-fit: cover;
-    max-width: 394px;
-    height: 100%;
-  }
+.image {
+  object-fit: cover;
+  max-width: 394px;
+  height: 100%;
+}
 
-  .image_small {
-    object-fit: cover;
-    max-width: 291px;
-    min-height: 126px;
-  }
+.image_small {
+  object-fit: cover;
+  max-width: 291px;
+  min-height: 126px;
+}
 
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    min-width: 390px;
-    font-size: 12px;
-    row-gap: 12px;
-  }
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 390px;
+  font-size: 12px;
+  row-gap: 12px;
+}
 
-  .date {
-    padding: 10px;
-    font-size: 12px;
-  }
+.date {
+  padding: 10px;
+  font-size: 12px;
+}
 
-  .subtitle {
-    padding: 21px 10px;
-    font-weight: 400;
-    font-size: 24px;
-    margin: 0;
-  }
+.subtitle {
+  padding: 21px 10px;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+}
 
-  .subtitle_small {
-    padding: 10px;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 0;
-  }
+.subtitle_small {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
 
-  .text {
-    padding: 10px;
-    font-size: 16px;
-  }
+.text {
+  padding: 10px;
+  font-size: 16px;
+}
 
-  .link {
-    padding: 10px;
-    font-size: 12px;
-    text-decoration: none;
-    color: black;
-  }
+.link {
+  padding: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
 
-  .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .el {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    row-gap: 4px;
-  }
-
+.el {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}

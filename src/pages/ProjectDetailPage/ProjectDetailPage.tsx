@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchProjectById } from '@/utils/api';
-import { Project } from '@/type/type'; // Adjust the import path as needed
+import { Project } from '@/type/type';
 import { Button } from '@/ui';
 import styles from './ProjectDetailPage.module.scss';
 import { projectDetail } from '@/utils/constants';
 import Slider from 'react-slick';
 
-export const ProjectDetailPage: React.FC = () => {
+interface ProjectDEtaolPageProps {
+  setModalopen: (isModalOpen: boolean) => void;
+}
+
+export const ProjectDetailPage: React.FC<ProjectDEtaolPageProps> = ({
+  setModalopen,
+}) => {
   const { id } = useParams<{ id: string }>();
   const [projectData, setProjectData] = useState<Project | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,7 +32,7 @@ export const ProjectDetailPage: React.FC = () => {
         const data = await fetchProjectById(Number(id));
         setProjectData(data[0]);
       } catch (err) {
-        console.error('На нашем сервере пока нет данных о проекте:)');
+        console.error('На нашем сервере пока нет деталей этого проекта:)');
       } finally {
         setLoading(false);
       }
@@ -41,12 +47,6 @@ export const ProjectDetailPage: React.FC = () => {
 
   const displayData = projectData || projectDetail;
 
-  // const images = [displayData.preview].map((item, index) => (
-  //   <div key={index}>
-  //     <img src={item} alt={`Slide ${index}`} className={styles.image} />
-  //   </div>
-  // ));
-
   return (
     <div className={styles.page}>
       <h2>
@@ -56,13 +56,11 @@ export const ProjectDetailPage: React.FC = () => {
       <h3>{displayData.name}</h3>
       <p className={styles.region}>{displayData.region.name}</p>
       <div className={styles.wrapper}>
-        <Slider ref={slider} {...settings} className={styles.slickSlider}>
-          {/* <img
-            src={displayData.preview}
-            alt={`Slide`}
-            className={styles.image}
-          /> */}
-        </Slider>
+        <Slider
+          ref={slider}
+          {...settings}
+          className={styles.slickSlider}
+        ></Slider>
         <img src={displayData.preview} alt={`Slide`} className={styles.image} />
         <div className={styles.buttonsContainer}>
           <button
@@ -76,7 +74,12 @@ export const ProjectDetailPage: React.FC = () => {
         </div>
       </div>
       <p className={styles.description}>{displayData.description}</p>
-      <Button text="ПОДДЕРЖАТЬ" type="button" className={styles.button} />
+      <Button
+        text="ПОДДЕРЖАТЬ"
+        type="button"
+        className={styles.button}
+        onClick={() => setModalopen(true)}
+      />
     </div>
   );
 };

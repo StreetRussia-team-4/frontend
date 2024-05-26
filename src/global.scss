@@ -38,3 +38,18 @@ h2 {
 h3 {
   @include H3-responsive();
 }
+
+.react-datepicker {
+  font-family: 'Benzin', sans-serif;
+}
+
+.react-datepicker__header {
+  font-family: 'Benzin', sans-serif;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day,
+.react-datepicker__day-name,
+.react-datepicker__time-name {
+  font-family: 'Benzin', sans-serif;
+}
