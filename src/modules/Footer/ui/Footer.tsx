@@ -19,7 +19,6 @@ export const Footer: React.FC<FooterProps> = ({ setIsModalOpen }) => {
     <footer className={styles.footer}>
       <div className={styles.questions}>
         <div className={styles.logo}>
-          {/* Ваш логотип */}
           <img src={logo} alt="Логотип" />
         </div>
         <div>
@@ -68,7 +67,6 @@ export const Footer: React.FC<FooterProps> = ({ setIsModalOpen }) => {
               <NavLink to="/documents" className={styles.doc}>
                 Все документы
               </NavLink>
-              {/* или сделать a href="#"? */}
             </li>
             <li>
               <NavLink to="/documents" className={styles.doc}>

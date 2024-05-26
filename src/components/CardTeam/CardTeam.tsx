@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './CardTeam.module.scss';
 
-const baseUrl = 'https://vk.com/';
-
 export interface CardTeamProps {
   data: CardTeamData;
   region: boolean;
@@ -14,14 +12,15 @@ export interface CardTeamData {
   name: string;
   description: string;
   location?: string;
+  link: string;
 }
 
 export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {
-  const { id, image, name, description, location } = data;
+  const { image, name, description, location, link } = data;
 
   return (
-    <li>
-      <a className={styles.card} href={`${baseUrl}${id}`}>
+    <li className={styles.card}>
+      <a className={styles.link} href={link}>
         <img
           className={styles.image}
           src={typeof image === 'string' ? image : image.src}
@@ -33,6 +32,7 @@ export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {
             className={styles.position}
           >{`${description}${region! ? '' : `, ${location}`}`}</p>
         </div>
+        <p className={styles.more}>Подробнее</p>
       </a>
     </li>
   );

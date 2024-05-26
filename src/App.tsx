@@ -21,6 +21,7 @@ import { DocumentsPage } from './pages';
 import { ProjectDetailPage } from './pages';
 
 import {
+  CardTeamData,
   CardEventData,
   DonationModal,
   QuestionModal,
@@ -28,7 +29,12 @@ import {
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
-import { cardsForEvents, cardsForProjets } from './utils/constants';
+import {
+  cardsForEvents,
+  cardsForProjets,
+  cardsForFederalTeam,
+  cardsForRegionTeam,
+} from './utils/constants';
 
 function App() {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
@@ -93,6 +99,10 @@ function App() {
     console.error('Ошибка загрузки данных:', error);
   }
 
+  const federalManagersToRender: CardTeamData[] = cardsForFederalTeam;
+
+  const regionalManagersToRender: CardTeamData[] = cardsForRegionTeam;
+
   return (
     <>
       <Router>
@@ -136,7 +146,15 @@ function App() {
             element={<ProjectDetailPage setModalopen={setIsDonModalOpen} />}
           />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route
+            path="/about-us"
+            element={
+              <AboutUsPage
+                federalManagersToRender={federalManagersToRender}
+                regionalManagersToRender={regionalManagersToRender}
+              />
+            }
+          />
           <Route path="/addresses" element={<AddressesPage />} />
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
