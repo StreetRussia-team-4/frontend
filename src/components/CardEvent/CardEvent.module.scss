@@ -39,7 +39,7 @@
   transition: filter 0.3s ease;
 }
 
-.image:hover {
+.linkEvents:hover .image {
   filter: grayscale(0%);
 }
 

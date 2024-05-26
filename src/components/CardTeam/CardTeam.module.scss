@@ -1,0 +1,74 @@
+.card {
+  border: solid 1px black;
+  height: 100%;
+  max-width: 396px;
+  min-height: 456px;
+  position: relative;
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover .image {
+  filter: grayscale(0%);
+}
+
+.link:hover .more {
+  text-decoration: underline;
+}
+
+.link:active .more {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.image {
+  object-position: center;
+  object-fit: cover;
+  max-height: 267px;
+  width: 100%;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.name {
+  padding: 10px 0;
+  margin: 0 0 12px 12px;
+  font-size: 20px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-left: 12px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.logo {
+  background-image: url('../../assets/icon/vkTeam.svg');
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.position {
+  padding: 7px 0;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 250px;
+}
+
+.more {
+  font-size: 20px;
+  line-height: 15px;
+  padding: 18.5px 0 18.5px 12px;
+  position: absolute;
+  bottom: 0;
+}
