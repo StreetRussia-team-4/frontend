@@ -28,6 +28,7 @@ import {
   ScrollToTopButton,
   CardBlogData,
   ScrollToTop,
+  CardAddressPlaygroundData,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -40,6 +41,7 @@ import {
   cardsForArticle,
   cardsForInterview,
   cardsForAdvice,
+  playgroundAddresses,
 } from './assets/mocks/constants';
 
 export const App = () => {
@@ -113,6 +115,8 @@ export const App = () => {
   const adviceToRender: CardBlogData[] = cardsForAdvice;
   const articleToRender: CardBlogData[] = cardsForArticle;
 
+  const addressesToRender: CardAddressPlaygroundData[] = playgroundAddresses;
+
   return (
     <>
       <Router>
@@ -177,7 +181,10 @@ export const App = () => {
               />
             }
           />
-          <Route path="/addresses" element={<AddressesPage />} />
+          <Route
+            path="/addresses"
+            element={<AddressesPage addressToRender={addressesToRender} />}
+          />
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
           <Route path="/team-video" element={<TeamVideoPage />} />

@@ -3,7 +3,7 @@ export { EventsPage } from './EventsPage';
 export { DirectionsPage } from './DirectionsPage';
 export { BlogPage } from './BlogPage';
 export { AboutUsPage } from './AboutUsPage';
-export { AddressesPage } from './AddressesPage/AddressesPage';
+export { AddressesPage } from './AddressesPage/ui/AddressesPage';
 export { DepartmentsPage } from './DepartmentsPage/';
 export { DocumentsPage } from './DocumentsPage/';
 export { ProjectDetailPage } from './ProjectDetailPage/';
