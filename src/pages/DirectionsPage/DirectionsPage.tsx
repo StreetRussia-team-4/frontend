@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DirectionsPage.module.scss';
 import { DirectionDetails } from '@/modules';
-import { directions } from '@/utils/constants/directions/constants';
+import { directions } from '@/assets/mocks/directions/constants';
 import type { Direction } from '@/type/type';
 
 export const DirectionsPage: React.FC = () => {

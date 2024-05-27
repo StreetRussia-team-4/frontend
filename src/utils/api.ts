@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_URL } from '@/utils/constants';
+import { API_URL } from '@/assets/mocks/constants';
 import { Project, Event } from '../type/type';
 
 export const fetchProjects = async (): Promise<Project[]> => {

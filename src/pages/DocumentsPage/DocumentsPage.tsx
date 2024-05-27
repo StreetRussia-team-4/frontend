@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { documents } from '@/utils/constants';
+import { documents } from '@/assets/mocks/constants';
 import type { DocumentType } from '@/type/type';
 import DowloadIcon from '@icon/download.svg';
 import styles from './DocumentsPage.module.scss';
