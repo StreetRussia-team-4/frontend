@@ -13,9 +13,12 @@ export const News: React.FC<BlogProps> = ({ cardsToRender }) => {
       <div className={styles.columns}>
         <ul className={styles.list}>
           {cardsToRender.slice(0, 2).map(card => (
-            <CardBlog key={card.id} data={cardsToRender} />
+            <CardBlog key={card.id} data={card} size="small" />
           ))}
         </ul>
+        {cardsToRender.slice(2, 3).map(card => (
+          <CardBlog key={card.id} data={card} />
+        ))}
       </div>
     </section>
   );

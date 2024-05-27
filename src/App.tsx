@@ -26,6 +26,7 @@ import {
   DonationModal,
   QuestionModal,
   ScrollToTopButton,
+  CardBlogData,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -34,6 +35,10 @@ import {
   cardsForProjets,
   cardsForFederalTeam,
   cardsForRegionTeam,
+  cardsForNews,
+  cardsForArticle,
+  cardsForInterview,
+  cardsForAdvice,
 } from './utils/constants';
 
 export const App = () => {
@@ -100,8 +105,12 @@ export const App = () => {
   }
 
   const federalManagersToRender: CardTeamData[] = cardsForFederalTeam;
-
   const regionalManagersToRender: CardTeamData[] = cardsForRegionTeam;
+
+  const newsToRender: CardBlogData[] = cardsForNews;
+  const interwiewToRender: CardBlogData[] = cardsForInterview;
+  const adviceToRender: CardBlogData[] = cardsForAdvice;
+  const articleToRender: CardBlogData[] = cardsForArticle;
 
   return (
     <>
@@ -149,9 +158,10 @@ export const App = () => {
             path="/blog"
             element={
               <BlogPage
-                newsToRender={}
-                interwiewToRender={}
-                adviceToRender={}
+                newsToRender={newsToRender}
+                interwiewToRender={interwiewToRender}
+                adviceToRender={adviceToRender}
+                articleToRender={articleToRender}
               />
             }
           />
