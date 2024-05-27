@@ -12,8 +12,8 @@ export const DonationModal: React.FC<DonationModalProps> = ({
   isDonModalOpen,
 }) => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(1000);
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
 
   const handleAmountClick = (amount: number) => {
     setSelectedAmount(amount);

@@ -3,8 +3,7 @@ import arrowUp from '@icon/arrow-up.svg';
 import styles from './ScrollToTopButton.module.scss';
 
 export const ScrollToTopButton: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  console.log('isVisible: ', isVisible);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const toggleVisibility = () => {

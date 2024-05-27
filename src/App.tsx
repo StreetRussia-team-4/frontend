@@ -45,8 +45,8 @@ import {
 } from './assets/mocks/constants';
 
 export const App = () => {
-  const [isDonModalOpen, setIsDonModalOpen] = useState(false);
-  const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
+  const [isDonModalOpen, setIsDonModalOpen] = useState<boolean>(false);
+  const [isQuestionModalOpen, setQuestionModalOpen] = useState<boolean>(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
