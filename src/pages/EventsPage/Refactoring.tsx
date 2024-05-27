@@ -9,7 +9,9 @@ interface EventsProps {
   eventsToRender: CardEventData[];
 }
 
-const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
+export const EventsPageRefactoring: React.FC<EventsProps> = ({
+  eventsToRender,
+}) => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isFilterDateOn, setIsFilterDateOn] = useState<boolean>(false);
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
@@ -196,5 +198,3 @@ const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     </main>
   );
 };
-
-export default EventsPage;
