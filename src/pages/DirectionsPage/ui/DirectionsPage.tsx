@@ -6,7 +6,7 @@ import type { Direction } from '@/type/type';
 
 export const DirectionsPage: React.FC = () => {
   const [selectedDirection, setSelectedDirection] =
-    React.useState('STREET ART');
+    React.useState<string>('STREET ART');
 
   const findDirection = (title: string): Direction | undefined => {
     return directions.find(dir => dir.title === title);

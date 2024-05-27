@@ -11,10 +11,10 @@ export const QuestionModal: React.FC<DonationModalProps> = ({
   onClose,
   isQuestionModalOpen,
 }) => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [surname, setSurname] = useState<string>('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
