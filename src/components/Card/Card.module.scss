@@ -5,6 +5,17 @@
   margin-left: 25px;
   margin-right: 5px;
   min-height: 430px;
+  position: relative;
+}
+
+.partner {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+  padding: 6px;
+  max-width: 119px;
+  background-color: white;
 }
 
 .navLink {
