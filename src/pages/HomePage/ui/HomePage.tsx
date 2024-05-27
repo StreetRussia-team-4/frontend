@@ -15,7 +15,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   projectsToRender,
   eventsToRender,
 }) => {
-  const [isRegModalOpen, setRegModalOpen] = useState(false);
+  const [isRegModalOpen, setRegModalOpen] = useState<boolean>(false);
   const currentProjects = projectsToRender.filter(
     project => project.current_status === 'current'
   );

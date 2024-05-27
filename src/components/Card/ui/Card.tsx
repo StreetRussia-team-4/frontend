@@ -85,7 +85,7 @@ export const Card: React.FC<CardProps> = ({
             text="ПОДДЕРЖАТЬ"
             className={styles.button}
             onClick={handleSupportClick}
-          ></Button>
+          />
         )}
         <NavLink to={`/projects/${id}`} className={styles.buttonLearnMore}>
           Узнать больше

@@ -6,6 +6,7 @@ type TProps = {
   redirectPath: string;
 };
 
+//для будущей регистрации пользователей
 export const ProtectedRoutes: FC<TProps> = ({
   isAuthorised,
   redirectPath = './',
