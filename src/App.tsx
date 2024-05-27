@@ -26,6 +26,7 @@ import {
   DonationModal,
   QuestionModal,
   ScrollToTopButton,
+  CardBlogData,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -34,6 +35,10 @@ import {
   cardsForProjets,
   cardsForFederalTeam,
   cardsForRegionTeam,
+  cardsForNews,
+  cardsForArticle,
+  cardsForInterview,
+  cardsForAdvice,
 } from './utils/constants';
 
 function App() {
@@ -100,8 +105,12 @@ function App() {
   }
 
   const federalManagersToRender: CardTeamData[] = cardsForFederalTeam;
-
   const regionalManagersToRender: CardTeamData[] = cardsForRegionTeam;
+
+  const newsToRender: CardBlogData[] = cardsForNews;
+  const interwiewToRender: CardBlogData[] = cardsForInterview;
+  const adviceToRender: CardBlogData[] = cardsForAdvice;
+  const articleToRender: CardBlogData[] = cardsForArticle;
 
   return (
     <>
@@ -145,7 +154,17 @@ function App() {
             path="/projects/:id"
             element={<ProjectDetailPage setModalopen={setIsDonModalOpen} />}
           />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route
+            path="/blog"
+            element={
+              <BlogPage
+                newsToRender={newsToRender}
+                interwiewToRender={interwiewToRender}
+                adviceToRender={adviceToRender}
+                articleToRender={articleToRender}
+              />
+            }
+          />
           <Route
             path="/about-us"
             element={
