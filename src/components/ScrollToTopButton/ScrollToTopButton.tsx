@@ -4,6 +4,7 @@ import styles from './ScrollToTopButton.module.scss';
 
 export const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  console.log('isVisible: ', isVisible);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -15,6 +16,7 @@ export const ScrollToTopButton: React.FC = () => {
     };
 
     window.addEventListener('scroll', toggleVisibility);
+    console.log('scroll: эээ');
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };

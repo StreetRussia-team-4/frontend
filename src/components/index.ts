@@ -1,4 +1,5 @@
 export { ScrollToTopButton } from './ScrollToTopButton/ScrollToTopButton';
+export { ScrollToTop } from './ScrollToTop/ScrollToTop';
 export { Card } from './Card/Card';
 export { DonationModal } from './DonationModal/DonationModal';
 export { RegistrationModal } from './RegistrationModal/RegistrationModal';
