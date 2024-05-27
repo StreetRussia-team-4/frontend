@@ -1,8 +1,7 @@
 .header {
   z-index: 7;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   padding: 26px 0;
   width: 100%;
   display: flex;
