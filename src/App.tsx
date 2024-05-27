@@ -36,7 +36,7 @@ import {
   cardsForRegionTeam,
 } from './utils/constants';
 
-function App() {
+export const App = () => {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
   const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -145,7 +145,16 @@ function App() {
             path="/projects/:id"
             element={<ProjectDetailPage setModalopen={setIsDonModalOpen} />}
           />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route
+            path="/blog"
+            element={
+              <BlogPage
+                newsToRender={}
+                interwiewToRender={}
+                adviceToRender={}
+              />
+            }
+          />
           <Route
             path="/about-us"
             element={
@@ -173,6 +182,4 @@ function App() {
       </Router>
     </>
   );
-}
-
-export default App;
+};
