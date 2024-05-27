@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  padding: 8px 0;
+  align-items: center;
+  column-gap: 20px;
+  max-width: 937px;
+}
+
+.icon {
+  background-image: url('@icon/address.svg');
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.address {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-weight: 400;
+}

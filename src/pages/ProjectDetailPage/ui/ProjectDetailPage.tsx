@@ -7,11 +7,11 @@ import styles from './ProjectDetailPage.module.scss';
 import { projectDetail } from '@/assets/mocks/constants';
 import Slider from 'react-slick';
 
-interface ProjectDEtaolPageProps {
+interface ProjectDetailPageProps {
   setModalopen: (isModalOpen: boolean) => void;
 }
 
-export const ProjectDetailPage: React.FC<ProjectDEtaolPageProps> = ({
+export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
   setModalopen,
 }) => {
   const { id } = useParams<{ id: string }>();
