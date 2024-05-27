@@ -27,6 +27,7 @@ import {
   QuestionModal,
   ScrollToTopButton,
   CardBlogData,
+  ScrollToTop,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -41,7 +42,7 @@ import {
   cardsForAdvice,
 } from './utils/constants';
 
-function App() {
+export const App = () => {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
   const [isQuestionModalOpen, setQuestionModalOpen] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -116,6 +117,8 @@ function App() {
     <>
       <Router>
         <Header />
+        <ScrollToTop />
+        <ScrollToTopButton />
         <Routes>
           <Route
             path="/"
@@ -188,10 +191,7 @@ function App() {
           onClose={() => setQuestionModalOpen(false)}
           isQuestionModalOpen={isQuestionModalOpen}
         />
-        <ScrollToTopButton />
       </Router>
     </>
   );
-}
-
-export default App;
+};

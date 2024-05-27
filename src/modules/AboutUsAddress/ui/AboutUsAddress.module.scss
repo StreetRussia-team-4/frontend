@@ -10,7 +10,7 @@
 
 .subtitle {
   padding: 8px 12px;
-  margin: 0 0 80px;
+  margin: 120px 0 80px;
   line-height: 80px;
 }
 
@@ -43,7 +43,7 @@
   min-height: 40px;
   min-width: 40px;
   object-fit: cover;
-  background-image: url('../../assets/icon/address.svg');
+  background-image: url('@icon/address.svg');
 }
 
 .button {
