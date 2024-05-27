@@ -1,7 +1,6 @@
-import React from 'react';
 import ReactPlayer from 'react-player/youtube';
 import styles from './TeamVideoPage.module.scss';
-import { teamVideo_URL } from '@/utils/constants';
+import { teamVideo_URL } from '@/assets/mocks/constants';
 
 export const TeamVideoPage: React.FC = () => {
   return (

@@ -40,7 +40,7 @@ import {
   cardsForArticle,
   cardsForInterview,
   cardsForAdvice,
-} from './utils/constants';
+} from './assets/mocks/constants';
 
 export const App = () => {
   const [isDonModalOpen, setIsDonModalOpen] = useState(false);
