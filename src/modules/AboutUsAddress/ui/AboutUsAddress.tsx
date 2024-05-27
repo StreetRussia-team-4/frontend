@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './AboutUsAddress.module.scss';
+import { NavLink } from 'react-router-dom';
 
 export const AboutUsAddress: React.FC = () => {
   return (
@@ -32,7 +33,9 @@ export const AboutUsAddress: React.FC = () => {
               <p className={styles.text}>Г. КРАСНОГОРСК, ЖИЛОЙ КОМПЛЕКС АРТ</p>
             </li>
           </ul>
-          <button className={styles.button}>СМОТРЕТЬ ВСЕ АДРЕСА</button>
+          <NavLink to="/addresses" className={styles.button}>
+            СМОТРЕТЬ ВСЕ АДРЕСА
+          </NavLink>
         </div>
       </div>
     </section>

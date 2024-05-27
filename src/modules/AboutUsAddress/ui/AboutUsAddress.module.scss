@@ -47,13 +47,14 @@
 }
 
 .button {
+  display: flex;
   text-decoration: none;
   font-family: 'benzin';
   font-size: 24px;
   font-weight: 500;
   line-height: 18px;
   color: black;
-  min-width: 400px;
+  max-width: 500px;
   min-height: 68px;
   border: solid 1px black;
   padding: 25px 40px;
