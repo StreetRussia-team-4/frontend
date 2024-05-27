@@ -12,11 +12,12 @@
 
 .modal {
   width: 100%;
-  max-width: 60vw;
-  max-height: 60vh;
+  max-width: 90vw;
+  max-height: 80vh;
   background: #d9d9d9;
   padding: 80px 100px;
   position: relative;
+  overflow-y: auto;
 }
 
 .closeButton {
@@ -176,4 +177,46 @@ input {
   text-align: left;
   color: #000;
   opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 60px 40px;
+  }
+
+  .fieldSets {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+
+  .personalDataBlock,
+  .contactBlock,
+  .passportBlock,
+  .buttonBlock {
+    width: 48%;
+  }
+
+  .dataGrid {
+    grid-template-areas:
+      'fullName fullName'
+      'birthDate city'
+      'region region';
+  }
+
+  .button {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    padding: 80px 60px;
+  }
+
+  .personalDataBlock,
+  .contactBlock,
+  .passportBlock,
+  .buttonBlock {
+    width: 50%;
+  }
 }
