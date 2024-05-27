@@ -16,8 +16,6 @@ export const CurrentProjectsPage: React.FC<CurrentProjectsProps> = ({
     project => project.current_status === 'current'
   );
 
-  console.log('currentProjects: ', currentProjects);
-
   return (
     <div className={styles.currentProjects}>
       <h2>

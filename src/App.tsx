@@ -27,6 +27,7 @@ import {
   QuestionModal,
   ScrollToTopButton,
   CardBlogData,
+  ScrollToTop,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -116,6 +117,8 @@ export const App = () => {
     <>
       <Router>
         <Header />
+        <ScrollToTop />
+        <ScrollToTopButton />
         <Routes>
           <Route
             path="/"
@@ -188,7 +191,6 @@ export const App = () => {
           onClose={() => setQuestionModalOpen(false)}
           isQuestionModalOpen={isQuestionModalOpen}
         />
-        <ScrollToTopButton />
       </Router>
     </>
   );
