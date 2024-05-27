@@ -1,4 +1,5 @@
 .card {
+  cursor: pointer;
   border: solid 1px black;
   height: 100%;
   max-width: 396px;
@@ -12,6 +13,7 @@
 .link {
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 .link:hover .image {

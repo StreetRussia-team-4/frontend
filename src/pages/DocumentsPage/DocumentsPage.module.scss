@@ -1,31 +1,23 @@
+@import '../../ui//Typography/typographyMixins';
+
 .container {
-  padding: 20px;
+  width: 100%;
+  padding: 100px 180px;
 }
 
 .title {
+  margin-top: 0;
   text-align: center;
 }
 
-nav {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-
-  button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-
-    &.active {
-      background-color: #ccc;
-    }
-  }
-}
-
 .navmenu {
+  width: 100%;
   font-family: 'Benzin';
   background-color: #e8e3e3;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100px;
+  margin: 32px 0 60px;
 }
 
 .arrow {
@@ -39,6 +31,8 @@ nav {
   line-height: 36px;
   font-size: 24px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
   background-color: black;
   color: white;
   display: flex;
@@ -47,17 +41,51 @@ nav {
   padding: 25px 65px;
 }
 
+.item {
+  @include font-benzin-medium(24px);
+  line-height: 36px;
+  border: none;
+  background-color: transparent;
+  padding: 11px 40px;
+}
+
+.itemActive {
+  background-color: #0d0b13;
+  color: white;
+  height: 40%;
+  align-self: center;
+}
+
+.columnTitle {
+  @include font-benzin-bold(24px);
+  line-height: 36px;
+  text-align: left;
+}
+
+.string {
+  @include font-benzin-medium(20px);
+  line-height: 32px;
+}
+
+tbody {
+  margin-bottom: 20px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-
   th,
   td {
     padding: 10px;
-    border: 1px solid #ddd;
   }
+}
 
-  th {
-    background-color: #f5f5f5;
-  }
+.link {
+  color: #0d0b13;
+}
+
+.linkGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

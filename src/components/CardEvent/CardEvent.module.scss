@@ -1,4 +1,5 @@
 .item {
+  cursor: pointer;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -194,4 +195,5 @@
   display: flex;
   flex-direction: column;
   row-gap: 4px;
+  max-height: 321px;
 }
