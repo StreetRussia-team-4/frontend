@@ -16,6 +16,7 @@
 }
 
 .button {
+  cursor: pointer;
   padding: 10px 26px;
   background-color: inherit;
   color: black;
@@ -24,6 +25,12 @@
   font-weight: 500;
   line-height: 18px;
   border: solid 1px black;
+  transition: color linear 0.2s, background-color linear 0.2s;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
 }
 
 .buttonActive {

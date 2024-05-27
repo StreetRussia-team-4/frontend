@@ -1,4 +1,53 @@
+.partners {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title {
   margin-top: 200px;
 }
 
+.types {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 292px);
+  column-gap: 24px;
+}
+
+.subtitle {
+  margin: 0 0 60px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-wrap: wrap;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.link {
+  cursor: pointer;
+  transition: opacity linear 0.2s; 
+}
+
+.link:hover {
+  opacity: 0.6; 
+}
+
+.image {
+  min-height: 84px;
+  max-width: 292px;
+}

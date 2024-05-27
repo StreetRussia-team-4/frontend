@@ -20,75 +20,162 @@ export const Partners: React.FC = () => {
         ПАРТНЕРЫ
       </h2>
       <ul className={styles.types}>
-        <li className={styles.type}>
+        <li>
           <h4 className={styles.subtitle}>Генеральные партнеры</h4>
           <ul className={styles.list}>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://президентскиегранты.рф/">
-                <img src={partnerOne} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://президентскиегранты.рф/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerOne}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://fadm.gov.ru/">
-                <img src={partnerTwo} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://fadm.gov.ru/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerTwo}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
           </ul>
         </li>
-        <li className={styles.type}>
+        <li>
           <h4 className={styles.subtitle}>Стратегические партнеры</h4>
           <ul className={styles.list}>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://ssca.ru/">
-                <img src={partnerThree} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://ssca.ru/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerThree}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://ncfu.ru/">
-                <img src={partnerFour} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://ncfu.ru/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerFour}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
           </ul>
         </li>
-        <li className={styles.type}>
+        <li>
           <h4 className={styles.subtitle}>Организационные партнеры</h4>
           <ul className={styles.list}>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://fondpotanin.ru/">
-                <img src={partnerFive} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://fondpotanin.ru/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerFive}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://offbeats.ru/">
-                <img src={partnerSix} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://offbeats.ru/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerSix}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
           </ul>
         </li>
-        <li className={styles.type}>
+        <li>
           <h4 className={styles.subtitle}>Региональные партнеры</h4>
           <ul className={styles.list}>
-            <li className={styles.element}>
+            <li>
               <a
                 className={styles.link}
                 href="https://instagram.com/trudom_centr/"
+                target="_blank"
+                rel="noreferrer"
               >
-                <img src={partnerSeven} alt="логотип партнера" />
+                <img
+                  className={styles.image}
+                  src={partnerSeven}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://vk.com/workoutudm/">
-                <img src={partnerEight} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://vk.com/workoutudm/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerEight}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://vk.com/centerproryv/">
-                <img src={partnerNine} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://vk.com/centerproryv/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerNine}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
-            <li className={styles.element}>
-              <a className={styles.link} href="https://vk.com/pskovworkout/">
-                <img src={partnerTen} alt="логотип партнера" />
+            <li>
+              <a
+                className={styles.link}
+                href="https://vk.com/pskovworkout/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.image}
+                  src={partnerTen}
+                  alt="логотип партнера"
+                />
               </a>
             </li>
           </ul>

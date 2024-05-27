@@ -5,7 +5,7 @@
   align-items: center;
   column-gap: 160px;
   justify-content: center;
-  background-color: #fcfcfc;
+  background-color: #FCFCFC;
 }
 
 .logo {
@@ -35,12 +35,13 @@
 }
 
 .navigation:hover > .arrow {
-  transform: rotate(-180deg);
+transform: rotate(-180deg);
 }
 
 .links {
   column-gap: 32px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 70px 158px 165px 133px 133px 85px;
   margin: 0;
   padding: 0;
   list-style-type: none;
