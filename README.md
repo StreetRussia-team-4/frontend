@@ -164,6 +164,6 @@
 
 <details><summary> Скриншот интерфейса приложения</summary>
 
-![Alt текст](src/assets/image/image.png)
+![](src/assets/image/screenshot.jpg)
 
 </details>
