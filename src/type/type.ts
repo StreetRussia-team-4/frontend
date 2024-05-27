@@ -62,3 +62,11 @@ export interface Document {
   date: string;
   downloadLink: string;
 }
+
+export interface Direction {
+  title: string;
+  subtitle: string;
+  paragraphs: string[];
+  images: string[];
+  videoUrl: string;
+}

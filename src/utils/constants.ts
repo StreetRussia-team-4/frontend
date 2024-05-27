@@ -34,6 +34,9 @@ import advice from '@image/advice.png';
 import adviceTwo from '@image/advice2.png';
 import adviceThree from '@image/advice3.png';
 
+// import PicOne from '@image/street-art--pic.png';
+// import PicTwo from '@image/street--art-pic2.png';
+
 import { Project } from '@/type/type';
 
 // export const API_HOST = import.meta.env.VITE_API_HOST;
@@ -496,3 +499,13 @@ export const cardsForAdvice = [
     author: 'Павел Лысогор',
   },
 ];
+
+export const streetArt = {
+  subtitle: 'STREET ART',
+  paragraphs: [
+    'Стрит-арт - это разновидность современного уличного искусства. Вплоть широкого заблуждения, что граффити является единственным проявлением стрит-арта. Однако, это не так, граффити является лишь одним из видов уличного искусства, но далеко не единственным.',
+    'Разделение на стили можно наблюдать в основном среди граффити: writing, bombing, tagging, bubble-letters, throw-up, character, wild-style, 3D-style. Стрит-арт своеобразный способ выразить себя и свое творчество, а также самоутвердиться в обществе.',
+  ],
+  images: ['@image/street-art--pic.png', '@image/street--art-pic2.png'],
+  videoUrl: 'https://www.youtube.com/watch?v=WZR_pnSyt5A',
+};
