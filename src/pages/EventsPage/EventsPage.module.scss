@@ -123,10 +123,12 @@
 }
 
 .filter {
+  max-width: 1240px;
   margin: 28px 0 16px;
   padding: 32px 27px;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   column-gap: 36px;
   row-gap: 28px;
   background-color: #e8e3e3;
@@ -138,9 +140,8 @@
   border: none;
   color: black;
   font-family: 'Benzin';
-  line-height: 12px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
   transition: font-weight 0.2s ease-in-out;
 }
