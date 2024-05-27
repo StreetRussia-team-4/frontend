@@ -9,7 +9,7 @@
 .background {
   opacity: 0.5;
   min-height: 800px;
-  background-image: url('../../assets/image/imageAbout.png');
+  background-image: url('@image/imageAbout.png');
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }

@@ -39,6 +39,9 @@ import interviewThree from '@image/interview3.png';
 import advice from '@image/advice.png';
 import adviceTwo from '@image/advice2.png';
 import adviceThree from '@image/advice3.png';
+import partnerLogo from '@icon/partner3.svg';
+import partnerLogoTwo from '@icon/partner9.svg';
+import partnerLogoThree from '@icon/partner4.svg';
 
 // import PicOne from '@image/street-art--pic.png';
 // import PicTwo from '@image/street--art-pic2.png';
@@ -86,6 +89,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
     fundsRaised: 320000,
     goal: 780000,
+    partnerLogo: partnerLogo,
   },
   {
     id: 2,
@@ -110,6 +114,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
     fundsRaised: 120500,
     goal: 980500,
+    partnerLogo: partnerLogo,
   },
   {
     id: 4,
@@ -122,6 +127,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
     fundsRaised: 120500,
     goal: 980500,
+    partnerLogo: partnerLogo,
   },
   {
     id: 5,
@@ -135,6 +141,7 @@ export const cardsForProjets = [
     endDate: '01.06.2025',
     fundsRaised: 240080,
     goal: 650500,
+    partnerLogo: partnerLogo,
   },
   {
     id: 6,
@@ -147,6 +154,7 @@ export const cardsForProjets = [
     endDate: '01.06.2025',
     fundsRaised: 120000,
     goal: 980500,
+    partnerLogo: partnerLogoThree,
   },
   {
     id: 7,
@@ -159,6 +167,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
     fundsRaised: 320040,
     goal: 780500,
+    partnerLogo: partnerLogo,
   },
   {
     id: 8,
@@ -184,6 +193,7 @@ export const cardsForProjets = [
     endDate: '24.03.2025',
     fundsRaised: 120030,
     goal: 980400,
+    partnerLogo: partnerLogo,
   },
   {
     id: 10,
@@ -204,6 +214,7 @@ export const cardsForProjets = [
     description: 'Планируем поставить змейку, брусья, турники, перекладины.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
+    partnerLogo: partnerLogoTwo,
   },
   {
     id: 12,
@@ -234,6 +245,7 @@ export const cardsForProjets = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
+    partnerLogo: partnerLogo,
   },
   {
     id: 15,
@@ -244,6 +256,7 @@ export const cardsForProjets = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
+    partnerLogo: partnerLogo,
   },
   {
     id: 16,
@@ -254,6 +267,7 @@ export const cardsForProjets = [
     description: 'Планируем поставить рампы, разгонки и перила.',
     startDate: '24.12.2024',
     endDate: '24.03.2025',
+    partnerLogo: partnerLogo,
   },
 ];
 

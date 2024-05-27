@@ -9,6 +9,7 @@ export interface CardData {
   endDate: string;
   fundsRaised?: number;
   goal?: number;
+  partnerLogo?: string | HTMLImageElement;
 }
 
 export interface Partner {

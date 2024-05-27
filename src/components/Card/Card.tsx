@@ -27,6 +27,7 @@ export const Card: React.FC<CardProps> = ({
     endDate,
     fundsRaised,
     goal,
+    partnerLogo,
   } = data;
 
   const progress = fundsRaised && goal ? (fundsRaised / goal) * 100 : 0;
@@ -42,6 +43,11 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className={styles.card}>
       <NavLink to={`/projects/${id}`} className={styles.navLink}>
+        {typeof partnerLogo === 'string' ? (
+          <img src={partnerLogo} className={styles.partner} alt={title} />
+        ) : (
+          <></>
+        )}
         <img
           src={typeof image === 'string' ? image : image.src}
           className={styles.image}

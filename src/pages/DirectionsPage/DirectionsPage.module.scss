@@ -11,7 +11,7 @@
 .background {
   opacity: 0.5;
   min-height: 800px;
-  background-image: url('../../assets/image/imageDirections.png');
+  background-image: url('@image/imageDirections.png');
   background-size: cover;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
