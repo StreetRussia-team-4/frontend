@@ -9,3 +9,4 @@ export { History } from './History';
 export { Team } from './Team';
 export { Partners } from './Partners';
 export { News } from './News';
+export { DirectionDetails } from './DirectionDetails';

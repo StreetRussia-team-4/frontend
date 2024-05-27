@@ -6,7 +6,6 @@ import project5 from '@image/project5.png';
 import project6 from '@image/project6.png';
 import project7 from '@image/project7.png';
 import project8 from '@image/project8.png';
-
 import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
@@ -22,6 +21,21 @@ import managerFive from '@image/manager5.png';
 import managerSix from '@image/manager6.png';
 import managerSeven from '@image/manager7.png';
 import managerEight from '@image/manager8.png';
+import news from '@image/new.png';
+import newsTwo from '@image/new2.png';
+import newsThree from '@image/new3.png';
+import article from '@image/article.png';
+import articleTwo from '@image/article2.png';
+import articleThree from '@image/article3.png';
+import interview from '@image/interview.png';
+import interviewTwo from '@image/interview2.png';
+import interviewThree from '@image/interview3.png';
+import advice from '@image/advice.png';
+import adviceTwo from '@image/advice2.png';
+import adviceThree from '@image/advice3.png';
+
+// import PicOne from '@image/street-art--pic.png';
+// import PicTwo from '@image/street--art-pic2.png';
 
 import { Project } from '@/type/type';
 
@@ -397,3 +411,101 @@ export const cardsForFederalTeam = [
     link: 'https://vk.com/kszamerova',
   },
 ];
+
+export const cardsForNews = [
+  {
+    id: 1,
+    image: news,
+    title:
+      'ВОЛЖАНЕ РАЗРИСОВЫВАЛИ СТЕНЫ ГРАФФИТИ И ПОКАЗЫВАЛИ «КАРТИНЫ НЕ ДЛЯ ВСЕХ»',
+    author: 'Марина Чарова',
+  },
+  {
+    id: 1,
+    image: newsTwo,
+    title: 'ПЕРВЫЙ ФЕСТИВАЛЬ УЛИЧНОЙ КУЛЬТУРЫ ВО ВЛАДИВОСТОКЕ',
+    author: 'Рауль Генрих',
+  },
+  {
+    id: 1,
+    image: newsThree,
+    title: 'ФЕСТИВАЛЬ УЛИЧНЫХ КУЛЬТУР В СТАВРОПОЛЕ',
+    author: 'Павел Лысогор',
+  },
+];
+
+export const cardsForArticle = [
+  {
+    id: 1,
+    image: article,
+    title:
+      'ВОЛЖАНЕ РАЗРИСОВЫВАЛИ СТЕНЫ ГРАФФИТИ И ПОКАЗЫВАЛИ «КАРТИНЫ НЕ ДЛЯ ВСЕХ»',
+    author: 'Марина Чарова',
+  },
+  {
+    id: 1,
+    image: articleTwo,
+    title: 'ПЕРВЫЙ ФЕСТИВАЛЬ УЛИЧНОЙ КУЛЬТУРЫ ВО ВЛАДИВОСТОКЕ',
+    author: 'Рауль Генрих',
+  },
+  {
+    id: 1,
+    image: articleThree,
+    title: 'ФЕСТИВАЛЬ УЛИЧНЫХ КУЛЬТУР В СТАВРОПОЛЕ',
+    author: 'Павел Лысогор',
+  },
+];
+
+export const cardsForInterview = [
+  {
+    id: 1,
+    image: interview,
+    title:
+      'ВОЛЖАНЕ РАЗРИСОВЫВАЛИ СТЕНЫ ГРАФФИТИ И ПОКАЗЫВАЛИ «КАРТИНЫ НЕ ДЛЯ ВСЕХ»',
+    author: 'Марина Чарова',
+  },
+  {
+    id: 1,
+    image: interviewTwo,
+    title: 'ПЕРВЫЙ ФЕСТИВАЛЬ УЛИЧНОЙ КУЛЬТУРЫ ВО ВЛАДИВОСТОКЕ',
+    author: 'Рауль Генрих',
+  },
+  {
+    id: 1,
+    image: interviewThree,
+    title: 'ФЕСТИВАЛЬ УЛИЧНЫХ КУЛЬТУР В СТАВРОПОЛЕ',
+    author: 'Павел Лысогор',
+  },
+];
+
+export const cardsForAdvice = [
+  {
+    id: 1,
+    image: advice,
+    title:
+      'ВОЛЖАНЕ РАЗРИСОВЫВАЛИ СТЕНЫ ГРАФФИТИ И ПОКАЗЫВАЛИ «КАРТИНЫ НЕ ДЛЯ ВСЕХ»',
+    author: 'Марина Чарова',
+  },
+  {
+    id: 1,
+    image: adviceTwo,
+    title: 'ПЕРВЫЙ ФЕСТИВАЛЬ УЛИЧНОЙ КУЛЬТУРЫ ВО ВЛАДИВОСТОКЕ',
+    author: 'Рауль Генрих',
+  },
+  {
+    id: 1,
+    image: adviceThree,
+    title: 'ФЕСТИВАЛЬ УЛИЧНЫХ КУЛЬТУР В СТАВРОПОЛЕ',
+    author: 'Павел Лысогор',
+  },
+];
+
+export const streetArt = {
+  subtitle: 'STREET ART',
+  paragraphs: [
+    'Стрит-арт - это разновидность современного уличного искусства. Вплоть широкого заблуждения, что граффити является единственным проявлением стрит-арта. Однако, это не так, граффити является лишь одним из видов уличного искусства, но далеко не единственным.',
+    'Разделение на стили можно наблюдать в основном среди граффити: writing, bombing, tagging, bubble-letters, throw-up, character, wild-style, 3D-style. Стрит-арт своеобразный способ выразить себя и свое творчество, а также самоутвердиться в обществе.',
+  ],
+  images: ['@image/street-art--pic.png', '@image/street--art-pic2.png'],
+  videoUrl: 'https://www.youtube.com/watch?v=WZR_pnSyt5A',
+};

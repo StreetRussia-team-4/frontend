@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { documents } from '@/utils/constants';
 import type { DocumentType } from '@/type/type';
+import DowloadIcon from '@icon/download.svg';
 import styles from './DocumentsPage.module.scss';
 
 export const DocumentsPage: React.FC = () => {
@@ -30,7 +31,7 @@ export const DocumentsPage: React.FC = () => {
           <button
             key={item}
             onClick={() => setSelectedType(item)}
-            className={selectedType === item ? 'active' : ''}
+            className={`${styles.item} ${selectedType === item ? styles.itemActive : ''}`}
           >
             {item}
           </button>
@@ -39,20 +40,27 @@ export const DocumentsPage: React.FC = () => {
       <table>
         <thead>
           <tr>
-            <th>Название</th>
-            <th>Тип документа</th>
-            <th>Дата документа</th>
-            <th>Ссылка для скачивания</th>
+            <th className={styles.columnTitle}>Название</th>
+            <th className={styles.columnTitle}>Тип документа</th>
+            <th className={styles.columnTitle}>Дата документа</th>
+            <th className={styles.columnTitle}>Ссылка для скачивания</th>
           </tr>
         </thead>
         <tbody>
           {filteredDocuments.map(doc => (
             <tr key={doc.title}>
-              <td>{doc.title}</td>
-              <td>{doc.type}</td>
-              <td>{doc.date}</td>
-              <td>
-                <a href={doc.downloadLink}>скачать</a>
+              <td className={styles.string}>{doc.title}</td>
+              <td className={styles.string}>{doc.type}</td>
+              <td className={styles.string}>{doc.date}</td>
+              <td className={`${styles.string} ${styles.linkGroup}`}>
+                <img
+                  src={DowloadIcon}
+                  alt="скачать"
+                  className={styles.downloadLink}
+                />
+                <a href={doc.downloadLink} className={styles.link}>
+                  скачать
+                </a>
               </td>
             </tr>
           ))}

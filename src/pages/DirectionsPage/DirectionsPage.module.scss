@@ -1,0 +1,85 @@
+@import '@/ui/Typography/typographyMixins';
+
+.directions {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 180px;
+  width: 100%;
+  position: relative;
+}
+
+.background {
+  opacity: 0.5;
+  min-height: 800px;
+  background-image: url('../../assets/image/imageDirections.png');
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  text-transform: uppercase;
+}
+
+.background:hover {
+  filter: grayscale(0%);
+}
+
+.title {
+  hyphens: manual;
+  max-width: 1207px;
+  margin: 0;
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 1207px / 2);
+}
+
+.directionsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subtitle {
+  @include font-benzin-medium(20px);
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.navButton {
+  @include font-benzin-medium(24px);
+  display: inline-block;
+  line-height: 36px;
+  padding: 12px 40px;
+  text-align: center;
+  border: none;
+  background: none;
+  align-self: center;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background: #0d0b13;
+  color: white;
+}
+
+.navButtonSelected {
+  background: #0d0b13;
+  color: white;
+}
+
+.paragraph {
+  @include font-benzin-regular(16px);
+  line-height: 24px;
+  margin: 0 0 20px;
+}
+
+.images {
+  display: flex;
+  gap: 24px;
+  max-width: 200px;
+}
