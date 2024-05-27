@@ -6,6 +6,10 @@ import project5 from '@image/project5.png';
 import project6 from '@image/project6.png';
 import project7 from '@image/project7.png';
 import project8 from '@image/project8.png';
+import streetCall from '@image/street-call-event.png';
+import breakingEvent from '@image/breaking-event.png';
+import microfonEvent from '@image/microfon-event.png';
+import imageEventBig from '@image/events-big-image.png';
 import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
@@ -256,7 +260,7 @@ export const cardsForProjets = [
 export const cardsForEvents = [
   {
     id: 1,
-    image: imageEvent,
+    image: imageEventBig,
     title: 'BLACK MOVES VOL.19',
     location: 'РЯЗАНСКАЯ ОБЛ.',
     description:
@@ -309,18 +313,18 @@ export const cardsForEvents = [
 
   {
     id: 4,
-    image: imageEventTwo,
-    title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
-    location: 'МОСКВА',
+    image: streetCall,
+    title: 'ВЫЗОВ УЛИЦ',
+    location: 'ПЕРМСКИЙ КРАЙ',
     description:
-      'Молодёжный Центр проводит в Электростали открытый фестиваль граффити #FлакON. Будут учавствовать художники восточного Подмосковья, которые украсят 12 полотен подготовленных конструктивах.',
+      'Пройдут первые на всю историю Пермского края соревнования по BMX! Это будет захватывающее зрелище, где участники покажут своё мастерство и бесстрашие. Приходите и поддержите спортсменов, вы точно не пожалеете! Победители получат  денежные призы.',
     startDate: '14.08.2024',
     endDate: '04.09.2024',
     direction: 'STREET ART',
   },
   {
     id: 5,
-    image: imageEventThree,
+    image: imageEvent,
     title: 'ФЕСТИВАЛЬ Паркур_fest',
     location: 'ТУЛЬСКАЯ ОБЛ.',
     description:
@@ -331,25 +335,25 @@ export const cardsForEvents = [
   },
   {
     id: 6,
-    image: imageEventTwo,
-    title: 'ФЕСТИВАЛЬ ГРАФФИТИ #FЛАКON',
-    location: 'МОСКВА',
+    image: microfonEvent,
+    title: 'МИКРОФОН 1.0',
+    location: 'САРАТОВСКАЯ ОБЛ.',
     description:
-      'Молодёжный Центр проводит в Электростали открытый фестиваль граффити #FлакON. Будут учавствовать художники восточного Подмосковья, которые украсят 12 полотен подготовленных конструктивах.',
+      'На ежегодном фестивале электронной музыки пройдет соревнование по реп-баттлам. Участники покажут свои навыки в речитативе, импровизации и подаче материала. Судьи будут оценивать технику исполнения, оригинальность текстов и общую энергетику выступления. Ждем вам и ваших друзей.',
     startDate: '14.08.2024',
     endDate: '04.09.2024',
     direction: 'PARKOUR',
   },
   {
     id: 7,
-    image: imageEventThree,
-    title: 'ФЕСТИВАЛЬ Паркур_fest',
-    location: 'ТУЛЬСКАЯ ОБЛ.',
+    image: breakingEvent,
+    title: 'ФТСАРР БРЕЙКИНГ',
+    location: 'ВЛАДИМИРСКАЯ ОБЛ.',
     description:
-      'В эту субботу своим двери откроет площадка «Экстрим» в Тульской обл. К открытию Фестиваля в зоне «Экстрим» будет выстроена полноценная полоса препятствий, ведь именно здесь два дня подряд будут соревноваться лучшие трейсеры нашей страны.',
+      'Состоятся соревнования по брейк-дансу! Это будет яркое и энергичное событие, где участники продемонстрируют своё мастерство и талант. Приходите поддержать танцоров и насладиться их выступлениями! К участию допускаются дети и взрослые! Не стесняйтесь-проявите себя!',
     startDate: '02.07.2024',
     endDate: '04.07.2024',
-    direction: 'PARKOUR',
+    direction: 'BREAKING',
   },
 ];
 
