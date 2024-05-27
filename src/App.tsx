@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './vendor/benzin/benzin.css';
+import './assets/fonts/benzin/benzin.css';
 
 import './global.scss';
 
