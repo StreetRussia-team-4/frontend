@@ -4,7 +4,7 @@ import { fetchProjectById } from '@/utils/api';
 import { Project } from '@/type/type';
 import { Button } from '@/ui';
 import styles from './ProjectDetailPage.module.scss';
-import { projectDetail } from '@/utils/constants';
+import { projectDetail } from '@/assets/mocks/constants';
 import Slider from 'react-slick';
 
 interface ProjectDEtaolPageProps {
