@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Partners.module.scss';
-import partnerOne from '../../../assets/icon/partner.svg';
-import partnerTwo from '../../../assets/icon/partner2.svg';
-import partnerThree from '../../../assets/icon/partner3.svg';
-import partnerFour from '../../../assets/icon/partner4.svg';
-import partnerFive from '../../../assets/icon/partner5.svg';
-import partnerSix from '../../../assets/icon/partner6.svg';
-import partnerSeven from '../../../assets/icon/partner7.svg';
-import partnerEight from '../../../assets/icon/partner8.svg';
-import partnerNine from '../../../assets/icon/partner9.svg';
-import partnerTen from '../../../assets/icon/partner10.svg';
+import partnerOne from '@icon/partner.svg';
+import partnerTwo from '@icon/partner2.svg';
+import partnerThree from '@icon/partner3.svg';
+import partnerFour from '@icon/partner4.svg';
+import partnerFive from '@icon/partner5.svg';
+import partnerSix from '@icon/partner6.svg';
+import partnerSeven from '@icon/partner7.svg';
+import partnerEight from '@icon/partner8.svg';
+import partnerNine from '@icon/partner9.svg';
+import partnerTen from '@icon/partner10.svg';
 
 export const Partners: React.FC = () => {
   return (
