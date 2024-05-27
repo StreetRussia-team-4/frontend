@@ -87,15 +87,12 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     setSelectedDate(date);
     if (date) {
       const filtered = eventsToRender.filter(card => {
-        // Разбиваем строку даты на компоненты (день, месяц, год)
         const [day, month, year] = card.startDate.split('.');
-        // Создаем объект Date с правильными компонентами
         const eventDate = new Date(
           Number(year),
           Number(month) - 1,
           Number(day)
         );
-        // Сравниваем даты
         return eventDate.toDateString() === date.toDateString();
       });
       setCardsForRender(filtered);
@@ -121,15 +118,14 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   const handleLocationClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    const buttonId = (event.target as HTMLButtonElement).textContent;
-    // Обновляем состояние для фильтрации по региону
-    setActiveFilterButton(buttonId);
+    const buttonLocation = (event.target as HTMLButtonElement).textContent;
+    setActiveFilterButton(buttonLocation);
     setIsFilterLocationOn(true);
-    setIsFilterDirectionOn(false); // Сбрасываем состояние для фильтрации по направлению
+    setIsFilterDirectionOn(false);
     const filtered = handleLocationFiltering(
       eventsToRender,
-      true, // Передаем true для фильтрации по региону
-      buttonId
+      true,
+      buttonLocation
     );
     setCardsForRender(filtered);
   };
@@ -154,10 +150,10 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
     const buttonDirection = (event.target as HTMLButtonElement).textContent;
     setActiveFilterButton(buttonDirection);
     setIsFilterDirectionOn(true);
-    setIsFilterLocationOn(false); // Сбрасываем состояние для фильтрации по региону
+    setIsFilterLocationOn(false);
     const filtered = handleDirectionFiltering(
       eventsToRender,
-      true, // Передаем true для фильтрации по направлению
+      true,
       buttonDirection
     );
     setCardsForRender(filtered);
