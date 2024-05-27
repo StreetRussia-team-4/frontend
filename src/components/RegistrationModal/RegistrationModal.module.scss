@@ -12,12 +12,11 @@
 
 .modal {
   width: 100%;
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 70vw;
+  max-height: 60vh;
   background: #d9d9d9;
   padding: 80px 100px;
   position: relative;
-  overflow-y: auto;
 }
 
 .closeButton {
@@ -205,6 +204,7 @@ input {
 
   .button {
     width: 70%;
+    font-size: 0.5rem;
   }
 }
 
