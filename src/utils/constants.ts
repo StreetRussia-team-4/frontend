@@ -9,6 +9,8 @@ import project8 from '@image/project8.png';
 import imageEvent from '@image/image.png';
 import imageEventTwo from '@image/smallImage.png';
 import imageEventThree from '@image/smallImage2.png';
+import eventMoscow from '@image/evnt-moscow.png';
+import eventMoscow2 from '@image/event-moscow2.png';
 import imageDetailProject from '@image/project-detail-pic.png';
 import completedProjectOne from '@image/completed-one.png';
 import completedProjectTwo from '@image/completed-two.png';
@@ -280,10 +282,31 @@ export const cardsForEvents = [
     location: 'ТУЛЬСКАЯ ОБЛ.',
     description:
       'В эту субботу своим двери откроет площадка «Экстрим» в Тульской обл. К открытию Фестиваля в зоне «Экстрим» будет выстроена полноценная полоса препятствий, ведь именно здесь два дня подряд будут соревноваться лучшие трейсеры нашей страны.',
-    startDate: '02.07.2024',
+    startDate: '30.05.2024',
     endDate: '04.07.2024',
     direction: 'PARKOUR',
   },
+  {
+    id: 31,
+    image: eventMoscow2,
+    title: 'GRAND MOSCOW SKATE TOUR',
+    location: 'МОСКВА',
+    description:
+      'В Парке Горького впервые пройдет Grand Skate Tour 2024 – мероприятие, воплощающее олимпийский дух и объединяющее скейтбордистов всего мира.',
+    startDate: '23.06.2024',
+    direction: 'PARKOUR',
+  },
+  {
+    id: 32,
+    image: eventMoscow,
+    title: 'WORK OUT KIDS',
+    location: 'МОСКВА',
+    description:
+      'Это будет увлекательное и полезное мероприятие, где каждый сможет проявить свою силу, гибкость и выносливость. Мы подготовили интересные задания и конкурсы, которые помогут вам улучшить свои навыки и весело провести время. Приходите и покажите всё, на что способны!',
+    startDate: '30.07.2024',
+    direction: 'PARKOUR',
+  },
+
   {
     id: 4,
     image: imageEventTwo,
