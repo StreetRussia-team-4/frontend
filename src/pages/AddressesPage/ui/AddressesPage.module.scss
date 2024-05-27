@@ -1,0 +1,159 @@
+.addresses {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map {
+  border: none;
+  margin-bottom: 100px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 40px;
+  list-style-type: none;
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: flex;
+  column-gap: 5px;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 1px black;
+  align-items: center;
+  color: black;
+  font-family: 'Benzin';
+  line-height: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.button:active {
+  font-weight: 700;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.arrow {
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('@icon/arrowBlack.svg');
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button {
+  display: flex;
+  column-gap: 5px;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 1px black;
+  align-items: center;
+  color: black;
+  font-family: 'Benzin';
+  line-height: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.buttonActive {
+  background-color: black;
+  color: white;
+}
+
+.arrow {
+  min-height: 24px;
+  min-width: 24px;
+  background-image: url('@icon/arrowBlack.svg');
+  transition: background-image 0.4s ease-in-out;
+}
+
+.button:hover .arrow {
+  background-image: url('@icon/arrow-white-down.svg');
+}
+
+.buttonActive .arrow {
+  background-image: url('@icon/arrowWhite.svg');
+}
+
+.buttonActive:hover .arrow {
+  background-image: url('@icon/arrowWhite.svg');
+}
+
+.cards {
+  list-style-type: none;
+  margin: 64px auto 200px;
+  display: grid;
+  padding: 0;
+  column-gap: 24px;
+  row-gap: 84px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.filter {
+  max-width: 1240px;
+  margin: 28px 0 16px;
+  padding: 32px 27px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  row-gap: 28px;
+  background-color: #e8e3e3;
+}
+
+.filterButton {
+  padding: 16px 40px;
+  background-color: inherit;
+  border: none;
+  color: black;
+  font-family: 'Benzin';
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: font-weight 0.2s ease-in-out;
+}
+
+.filterButton:hover {
+  font-weight: 500;
+}
+
+.filterButtonActive {
+  background-color: black;
+  color: white;
+}
+
+.cards {
+  margin: 60px 0 202px;
+  padding: 8px 0 8px 28px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
