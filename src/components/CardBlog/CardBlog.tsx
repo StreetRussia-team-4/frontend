@@ -15,13 +15,10 @@
 //   author: string;
 // }
 
-// export const CardBlog: React.FC<CardBlogProps> = ({
-//   data,
-//   size,
-// }) => {
+// export const CardBlog: React.FC<CardBlogProps> = ({ data, size }) => {
 //   const { id, image, title, author } = data;
 
-//   return (size === 'small' ? (
+//   return size === 'small' ? (
 //     <li className={styles.card}>
 //       <img
 //         className={styles.image}
@@ -45,5 +42,9 @@
 //         Читать
 //       </a>
 //     </div>
-//   ));
+//   );
 // };
+
+export const CardBlog: React.FC = () => {
+  return <></>;
+};
