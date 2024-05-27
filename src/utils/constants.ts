@@ -22,6 +22,8 @@ import managerFive from '@image/manager5.png';
 import managerSix from '@image/manager6.png';
 import managerSeven from '@image/manager7.png';
 import managerEight from '@image/manager8.png';
+// import PicOne from '@image/street-art--pic.png';
+// import PicTwo from '@image/street--art-pic2.png';
 
 import { Project } from '@/type/type';
 
@@ -397,3 +399,13 @@ export const cardsForFederalTeam = [
     link: 'https://vk.com/kszamerova',
   },
 ];
+
+export const streetArt = {
+  subtitle: 'STREET ART',
+  paragraphs: [
+    'Стрит-арт - это разновидность современного уличного искусства. Вплоть широкого заблуждения, что граффити является единственным проявлением стрит-арта. Однако, это не так, граффити является лишь одним из видов уличного искусства, но далеко не единственным.',
+    'Разделение на стили можно наблюдать в основном среди граффити: writing, bombing, tagging, bubble-letters, throw-up, character, wild-style, 3D-style. Стрит-арт своеобразный способ выразить себя и свое творчество, а также самоутвердиться в обществе.',
+  ],
+  images: ['@image/street-art--pic.png', '@image/street--art-pic2.png'],
+  videoUrl: 'https://www.youtube.com/watch?v=WZR_pnSyt5A',
+};
