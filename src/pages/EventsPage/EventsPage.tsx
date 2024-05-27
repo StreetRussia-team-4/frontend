@@ -52,8 +52,14 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
   });
 
   useEffect(() => {
-    setCardsForRender(eventsToRender);
-  }, [eventsToRender]);
+    function restoreInitialCards() {
+      if (!isFilterDateOn && !isFilterLocationOn && !isFilterDirectionOn) {
+        setCardsForRender(eventsToRender);
+      }
+    }
+
+    restoreInitialCards();
+  }, [eventsToRender, isFilterDateOn, isFilterLocationOn, isFilterDirectionOn]);
 
   const handleFilterLocationClick = () => {
     setIsFilterLocationOn(!isFilterLocationOn);
@@ -245,7 +251,7 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
       ) : (
         <></>
       )}
-      {isFilterDateOn || isFilterLocationOn || isFilterDirectionOn ? (
+      {isFilterDateOn ? (
         <ul className={styles.cards}>
           {cardsForRender.length === 0 ? (
             <li className={styles.noResults}>
@@ -260,30 +266,61 @@ export const EventsPage: React.FC<EventsProps> = ({ eventsToRender }) => {
         </ul>
       ) : (
         <>
-          <h3 className={styles.subtitle}>СКОРО</h3>
-          <ul className={styles.cards}>
-            {upcomingEvents.length === 0 ? (
-              <li className={styles.noResults}>
-                Запланированные проекты появятся здесь.
-              </li>
-            ) : (
-              upcomingEvents.map(card => (
-                <CardEvent key={card.id} data={card} pageEvents={true} />
-              ))
-            )}
-          </ul>
-          <h3 className={styles.subtitle}>АРХИВ</h3>
-          <ul className={styles.cards}>
-            {archivedEvents.length === 0 ? (
-              <li className={styles.noResults}>
-                Архив проектов появится здесь.
-              </li>
-            ) : (
-              archivedEvents.map(card => (
-                <CardEvent key={card.id} data={card} pageEvents={true} />
-              ))
-            )}
-          </ul>
+          {isFilterLocationOn || isFilterDirectionOn ? (
+            <>
+              <h3 className={styles.subtitle}>СКОРО</h3>
+              <ul className={styles.cards}>
+                {upcomingEvents.length === 0 ? (
+                  <li className={styles.noResults}>
+                    Запланированные проекты появятся здесь.
+                  </li>
+                ) : (
+                  upcomingEvents.map(card => (
+                    <CardEvent key={card.id} data={card} pageEvents={true} />
+                  ))
+                )}
+              </ul>
+              <h3 className={styles.subtitle}>АРХИВ</h3>
+              <ul className={styles.cards}>
+                {archivedEvents.length === 0 ? (
+                  <li className={styles.noResults}>
+                    Архив проектов появится здесь.
+                  </li>
+                ) : (
+                  archivedEvents.map(card => (
+                    <CardEvent key={card.id} data={card} pageEvents={true} />
+                  ))
+                )}
+              </ul>
+            </>
+          ) : (
+            <>
+              <h3 className={styles.subtitle}>СКОРО</h3>
+              <ul className={styles.cards}>
+                {upcomingEvents.length === 0 ? (
+                  <li className={styles.noResults}>
+                    Запланированные проекты появятся здесь.
+                  </li>
+                ) : (
+                  upcomingEvents.map(card => (
+                    <CardEvent key={card.id} data={card} pageEvents={true} />
+                  ))
+                )}
+              </ul>
+              <h3 className={styles.subtitle}>АРХИВ</h3>
+              <ul className={styles.cards}>
+                {archivedEvents.length === 0 ? (
+                  <li className={styles.noResults}>
+                    Архив проектов появится здесь.
+                  </li>
+                ) : (
+                  archivedEvents.map(card => (
+                    <CardEvent key={card.id} data={card} pageEvents={true} />
+                  ))
+                )}
+              </ul>
+            </>
+          )}
         </>
       )}
     </main>
