@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -28,8 +29,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    parser: 'typescript',
   },
-  plugins: ['@typescript-eslint', 'react', 'react-refresh'],
+  plugins: ['@typescript-eslint', 'react', 'react-refresh', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'no-var': 'error',
