@@ -1,6 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './RegistrationModal.module.scss';
-import { Button } from '@/ui';
 
 interface RegistrationModalProps {
   isRegModalOpen: boolean;
@@ -51,7 +50,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
+    //Handle form submission
     console.log('Form data submitted:', formData);
   };
 
@@ -81,6 +80,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   type="date"
                   name="birthDate"
                   value={formData.birthDate}
+                  className={styles.dateInput}
                   onChange={handleChange}
                   required
                 />
@@ -92,6 +92,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   onChange={handleChange}
                   required
                 />
+                <label className={styles.labelSelect}>Город</label>
                 <select
                   name="region"
                   value={formData.region}
@@ -179,15 +180,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   onChange={handleChange}
                   required
                 />
-                <Button
-                  text="ПРИСОЕДИНИТЬСЯ"
-                  type="submit"
-                  className={styles.button}
-                  fontSize={1}
-                />
+                <button type="submit" className={styles.button}>
+                  ПРИСОЕДИНИТЬСЯ
+                </button>
                 <span className={styles.disclaimer}>
-                  Заполняя эту форму, вы соглашаетесь с правами и обязанностями
-                  участника ООО УКС Улицы России
+                  ЗАПОЛНИВ ЭТУ ФОРМУ, ВЫ СОГЛАШАЕТЕСЬ С ПРАВАМИ И ОБЯЗАННОСТЯМИ
+                  УЧАСТНИКА ООО УКС УЛИЦЫ РОССИИ
                 </span>
               </div>
             </fieldset>
