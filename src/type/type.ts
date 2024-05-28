@@ -104,3 +104,22 @@ export interface CardAddressPlaygroundData {
   region: string;
   address: string;
 }
+
+// Определение общего типа Discipline
+interface Discipline {
+  id: number;
+  name: string;
+}
+
+interface Content {
+  id: number;
+  name: string;
+  description: string;
+  pub_date: string;
+  source_link: string;
+  discipline: Discipline;
+}
+export type Article = Content;
+export type Film = Content;
+export type Interview = Content;
+export type News = Content;
