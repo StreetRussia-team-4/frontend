@@ -1,6 +1,6 @@
 import React from 'react';
-// import type { CardData } from '@components/index';
-import { Card, CardData, CustomSlider } from '@components/index';
+import { Card, CustomSlider } from '@components/index';
+import type { CardData } from '@/type/type';
 import styles from './UpcomingProjects.module.scss';
 
 interface UpcomingProjectsProps {

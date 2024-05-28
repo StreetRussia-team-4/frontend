@@ -1,3 +1,6 @@
+import streetart1 from '@image/streetart1.png';
+import streetart2 from '@image/streetart2.png';
+
 export const directions = [
   {
     title: 'PARKOUR',
@@ -15,7 +18,7 @@ export const directions = [
   },
   {
     title: 'FREERUN',
-    subtitle: 'FREERUN SUBTITLE',
+    subtitle: 'FREERUN',
     paragraphs: ['FREERUN PARAGRAPH 1', 'FREERUN PARAGRAPH 2'],
     images: ['@image/freerun-pic1.png', '@image/freerun-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=freerun',
@@ -29,45 +32,45 @@ export const directions = [
   },
   {
     title: 'TRICKING',
-    subtitle: 'TRICKING SUBTITLE',
+    subtitle: 'TRICKING',
     paragraphs: ['TRICKING PARAGRAPH 1', 'TRICKING PARAGRAPH 2'],
     images: ['@image/tricking-pic1.png', '@image/tricking-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=tricking',
   },
   {
     title: 'BREAKING',
-    subtitle: 'BREAKING SUBTITLE',
+    subtitle: 'BREAKING',
     paragraphs: ['BREAKING PARAGRAPH 1', 'BREAKING PARAGRAPH 2'],
     images: ['@image/breaking-pic1.png', '@image/breaking-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=breaking',
   },
   {
     title: 'STREET ART',
-    subtitle: 'STREET ART SUBTITLE',
+    subtitle: 'STREET ART',
     paragraphs: [
       'Стрит-арт - это разновидность современного уличного искусства. Вплоть широкого заблуждения, что граффити является единственным проявлением стрит-арта. Однако, это не так, граффити является лишь одним из видов уличного искусства, но далеко не единственным.',
       'Разделение на стили можно наблюдать в основном среди граффити: writing, bombing, tagging, bubble-letters, throw-up, character, wild-style, 3D-style. Стрит-арт своеобразный способ выразить себя и свое творчество, а также самоутвердиться в обществе.',
     ],
-    images: ['@image/street-art--pic.png', '@image/street--art-pic2.png'],
+    images: [streetart1, streetart2],
     videoUrl: 'https://www.youtube.com/watch?v=WZR_pnSyt5A',
   },
   {
     title: 'RAP',
-    subtitle: 'RAP SUBTITLE',
+    subtitle: 'RAP',
     paragraphs: ['RAP PARAGRAPH 1', 'RAP PARAGRAPH 2'],
     images: ['@image/rap-pic1.png', '@image/rap-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=rap',
   },
   {
     title: 'BMX',
-    subtitle: 'BMX SUBTITLE',
+    subtitle: 'BMX',
     paragraphs: ['BMX PARAGRAPH 1', 'BMX PARAGRAPH 2'],
     images: ['@image/bmx-pic1.png', '@image/bmx-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=bmx',
   },
   {
     title: 'SKATEBOARDING',
-    subtitle: 'SKATEBOARDING SUBTITLE',
+    subtitle: 'SKATEBOARDING',
     paragraphs: ['SKATEBOARDING PARAGRAPH 1', 'SKATEBOARDING PARAGRAPH 2'],
     images: ['@image/skateboarding-pic1.png', '@image/skateboarding-pic2.png'],
     videoUrl: 'https://www.youtube.com/watch?v=skateboarding',
