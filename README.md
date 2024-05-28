@@ -157,7 +157,7 @@
 ### Архив со скриншотами
 
 
-[Ссылка на архив со скриншотами](https://disk.yandex.ru/client/disk/street-russia-screenshots)
+[Ссылка на архив со скриншотами](https://disk.yandex.com/d/IjEYuv-kehKKLw))
 
 ### Вид приложения
 
