@@ -63,8 +63,6 @@ export const App = () => {
           fetchProjects(),
           fetchEvents(),
         ]);
-        console.log('projects:', projectsData);
-        console.log('events:', eventsData);
         setProjects(projectsData);
         setEvents(eventsData);
       } catch (error) {
