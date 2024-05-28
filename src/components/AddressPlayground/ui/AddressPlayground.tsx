@@ -1,14 +1,9 @@
 import React from 'react';
 import styles from './AddressPlayground.module.scss';
+import type { CardAddressPlaygroundData } from '@/type/type';
 
 export interface CardAddressPlaygroundProps {
   data: CardAddressPlaygroundData;
-}
-
-export interface CardAddressPlaygroundData {
-  id: number;
-  region: string;
-  address: string;
 }
 
 export const CardAddressPlayground: React.FC<CardAddressPlaygroundProps> = ({
