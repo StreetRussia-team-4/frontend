@@ -43,14 +43,7 @@ import partnerLogo from '@icon/partner3.svg';
 import partnerLogoTwo from '@icon/partner9.svg';
 import partnerLogoThree from '@icon/partner4.svg';
 
-// import PicOne from '@image/street-art--pic.png';
-// import PicTwo from '@image/street--art-pic2.png';
-
 import { Project } from '@/type/type';
-
-// export const API_HOST = import.meta.env.VITE_API_HOST;
-// export const API_ROUTE = import.meta.env.VITE_API_ROUTE;
-// export const API_URL = `${API_HOST}${API_ROUTE}`;
 
 export const API_HOST = 'http://213.189.221.212';
 export const API_ROUTE = '/api/v1';

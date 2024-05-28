@@ -16,10 +16,6 @@ export const fetchProjects = async (): Promise<Project[]> => {
   return fetchData<Project[]>(`${API_URL}/projects`);
 };
 
-export const fetchProjectById = async (id: number): Promise<Project> => {
-  return fetchData<Project>(`${API_URL}/projects/${id}`);
-};
-
 export const fetchEvents = async (): Promise<Event[]> => {
   return fetchData<Event[]>(`${API_URL}/regional-offices/events/`);
 };

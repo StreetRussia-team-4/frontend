@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Team.module.scss';
-import { CardTeamData, CardTeam } from '@/components';
+import { CardTeamData } from '@/type/type';
 import Slider from 'react-slick';
+import { CardTeam } from '@/components';
+import { settings } from '../config';
 
 interface TeamProps {
   federalManagersToRender: CardTeamData[];
@@ -17,10 +19,6 @@ export const Team: React.FC<TeamProps> = ({
     federalManagersToRender
   );
 
-  // useEffect(() => {
-  //   setCardsForRender(federalManagersToRender);
-  // }, [eventsToRender]);
-
   const handleRegionalButtonClick = () => {
     setShowFegeralTeam(false);
     setCardsForRender(regionalManagersToRender);
@@ -32,14 +30,6 @@ export const Team: React.FC<TeamProps> = ({
   };
 
   const slider = React.useRef<Slider | null>(null);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
 
   const items = regionalManagersToRender.map(card => (
     <CardTeam key={card.id} data={card} region={showFegeralTeam!} />

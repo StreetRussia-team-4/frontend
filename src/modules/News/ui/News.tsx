@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './News.module.scss';
-import { CardBlogData, CardBlog } from '@/components';
+import { CardBlog } from '@/components';
+import type { CardBlogData } from '@/type/type';
 
 interface BlogProps {
   cardsToRender: CardBlogData[];
