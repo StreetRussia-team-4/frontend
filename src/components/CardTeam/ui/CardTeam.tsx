@@ -1,18 +1,10 @@
 import React from 'react';
 import styles from './CardTeam.module.scss';
+import type { CardTeamData } from '@/type/type';
 
 export interface CardTeamProps {
   data: CardTeamData;
   region: boolean;
-}
-
-export interface CardTeamData {
-  id: number;
-  image: string | HTMLImageElement;
-  name: string;
-  description: string;
-  location?: string;
-  link: string;
 }
 
 export const CardTeam: React.FC<CardTeamProps> = ({ data, region }) => {

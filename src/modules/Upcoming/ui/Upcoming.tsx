@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Upcoming.module.scss';
-import type { CardEventData } from '@components/index';
+import type { CardEventData } from '@/type/type';
 import { CardEvent } from '@components/index';
 
 interface CardsEventsProps {
@@ -20,7 +20,7 @@ export const Upcoming: React.FC<CardsEventsProps> = ({
           <CardEvent
             key={card.id}
             data={card}
-            size={'big'}
+            size="big"
             pageEvents={pageEvents}
           />
         ))}
@@ -29,7 +29,7 @@ export const Upcoming: React.FC<CardsEventsProps> = ({
             <CardEvent
               key={card.id}
               data={card}
-              size={'small'}
+              size="small"
               pageEvents={pageEvents}
             />
           ))}
