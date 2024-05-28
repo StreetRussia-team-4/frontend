@@ -159,7 +159,7 @@
 ### Архив со скриншотами
 
 
-[Ссылка на архив со скриншотами](https://disk.yandex.com/d/IjEYuv-kehKKLw))
+[Ссылка на папку со скриншотами](https://disk.yandex.com/d/IjEYuv-kehKKLw))
 
 ### Вид приложения
 
