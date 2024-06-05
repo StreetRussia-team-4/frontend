@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './AddressesPage.module.scss';
-import { CardAddressPlaygroundData } from '@/components';
+import { CardAddressPlaygroundData } from '@/type/type';
 import { CardAddressPlayground } from '@components/index';
 
 interface AddressPlaygroundProps {
@@ -15,6 +15,9 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
 
   const [showFilterLocation, setShowFilterLocation] = useState<boolean>(false);
   const [isFilterLocationOn, setIsFilterLocationOn] = useState<boolean>(false);
+
+  const [isAllLocationOn, setIsAllLocationOn] = useState<boolean>(true);
+
   const [activeFilterButton, setActiveFilterButton] = useState<string | null>(
     null
   );
@@ -22,22 +25,24 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
 
   useEffect(() => {
     function restoreInitialCards() {
-      if (!isFilterLocationOn) {
+      if (!isFilterLocationOn && isAllLocationOn) {
         setCardsForRender(addressToRender);
       }
     }
 
     restoreInitialCards();
-  }, [addressToRender, isFilterLocationOn]);
+  }, [addressToRender, isFilterLocationOn, isAllLocationOn]);
 
   const handleFilterLocationClick = () => {
     setIsFilterLocationOn(!isFilterLocationOn);
+    setIsAllLocationOn(false);
     setShowFilterLocation(!showFilterLocation);
   };
 
   const handleAllLocationClick = () => {
-    setIsFilterLocationOn(!isFilterLocationOn);
-    setShowFilterLocation(!showFilterLocation);
+    setIsFilterLocationOn(false);
+    setIsAllLocationOn(true);
+    setShowFilterLocation(false);
   };
 
   //фильтр по региону
@@ -47,7 +52,9 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
     buttonLocation: string | null
   ) => {
     if (isFilterLocationOn) {
-      const result = cards.filter(card => card.region === buttonLocation);
+      const result = cards.filter(
+        card => card.region.toLocaleUpperCase() === buttonLocation
+      );
       return result;
     } else {
       return cards;
@@ -85,12 +92,12 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
         <ul className={styles.list}>
           <li className={styles.item}>
             <button
-              className={`${styles.button} ${isFilterLocationOn! ? styles.buttonActive : ''}`}
+              className={`${styles.button} ${isAllLocationOn ? styles.buttonActive : ''}`}
               onClick={handleAllLocationClick}
             >
               Все адреса
               <div
-                className={`${styles.arrow} ${isFilterLocationOn! ? styles.arrowActive : ''}`}
+                className={`${styles.arrow} ${isAllLocationOn ? styles.arrowActive : ''}`}
               />
             </button>
           </li>
@@ -111,7 +118,7 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
             {uniqueLocations.map(location => (
               <li key={regions.indexOf(location)}>
                 <button
-                  className={`${styles.filterButton} ${activeFilterButton === location ? styles.filterButtonActive : ''}`}
+                  className={`${styles.filterButton} ${activeFilterButton === location.toLocaleUpperCase() ? styles.filterButtonActive : ''}`}
                   onClick={handleLocationClick}
                 >
                   {location.toLocaleUpperCase()}

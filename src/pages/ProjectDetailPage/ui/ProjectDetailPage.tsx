@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchProjectById } from '@/utils/api';
+import { fetchProjectById } from '../api/api';
 import { Project } from '@/type/type';
 import { Button } from '@/ui';
 import styles from './ProjectDetailPage.module.scss';
@@ -30,7 +30,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
     const fetchData = async () => {
       try {
         const data = await fetchProjectById(Number(id));
-        setProjectData(data[0]);
+        setProjectData(data);
       } catch (err) {
         console.error('На нашем сервере пока нет деталей этого проекта:)');
       } finally {

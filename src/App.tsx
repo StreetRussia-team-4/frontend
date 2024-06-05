@@ -5,7 +5,15 @@ import './assets/fonts/benzin/benzin.css';
 
 import './global.scss';
 
-import { CardData, Event, Project } from './type/type';
+import type {
+  CardBlogData,
+  CardData,
+  Event,
+  Project,
+  CardEventData,
+  CardTeamData,
+  CardAddressPlaygroundData,
+} from './type/type';
 
 import { Header } from '@modules/Header';
 import { Footer } from '@modules/Footer';
@@ -21,14 +29,10 @@ import { DocumentsPage } from './pages';
 import { ProjectDetailPage } from './pages';
 
 import {
-  CardTeamData,
-  CardEventData,
   DonationModal,
   QuestionModal,
   ScrollToTopButton,
-  CardBlogData,
   ScrollToTop,
-  CardAddressPlaygroundData,
 } from './components';
 
 import { fetchProjects, fetchEvents } from './utils/api';
@@ -59,8 +63,6 @@ export const App = () => {
           fetchProjects(),
           fetchEvents(),
         ]);
-        console.log('projects:', projectsData);
-        console.log('events:', eventsData);
         setProjects(projectsData);
         setEvents(eventsData);
       } catch (error) {
@@ -109,12 +111,10 @@ export const App = () => {
 
   const federalManagersToRender: CardTeamData[] = cardsForFederalTeam;
   const regionalManagersToRender: CardTeamData[] = cardsForRegionTeam;
-
   const newsToRender: CardBlogData[] = cardsForNews;
   const interwiewToRender: CardBlogData[] = cardsForInterview;
   const adviceToRender: CardBlogData[] = cardsForAdvice;
   const articleToRender: CardBlogData[] = cardsForArticle;
-
   const addressesToRender: CardAddressPlaygroundData[] = playgroundAddresses;
 
   return (

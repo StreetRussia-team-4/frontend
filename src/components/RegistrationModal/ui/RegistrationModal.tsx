@@ -50,8 +50,6 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //Handle form submission
-    console.log('Form data submitted:', formData);
   };
 
   if (!isRegModalOpen) return null;

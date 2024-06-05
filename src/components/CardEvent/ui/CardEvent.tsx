@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CardEvent.module.scss';
+import type { CardEventData } from '@/type/type';
 
 const baseUrl = 'https://streetrussia-team-4.github.io/frontend/#/events/';
 
@@ -7,17 +8,6 @@ export interface CardEventProps {
   data: CardEventData;
   size?: string;
   pageEvents: boolean;
-}
-
-export interface CardEventData {
-  id: number;
-  image: string | HTMLImageElement; //почему?
-  title: string;
-  location: string;
-  description: string;
-  startDate: string;
-  endDate?: string;
-  direction: string;
 }
 
 export const CardEvent: React.FC<CardEventProps> = ({

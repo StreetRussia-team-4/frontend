@@ -10,8 +10,7 @@ export const DirectionDetails: React.FC<{ direction: Direction }> = ({
 
   return (
     <div className={styles.directionDetails}>
-      <h4 className={styles.subtitle}>STREET ART</h4>
-      <p className={styles.paragraph}>{subtitle}</p>
+      <h4 className={styles.subtitle}>{subtitle}</h4>
       {paragraphs.map((paragraph, index) => (
         <p className={styles.paragraph} key={index}>
           {paragraph}
@@ -19,14 +18,19 @@ export const DirectionDetails: React.FC<{ direction: Direction }> = ({
       ))}
       <div className={styles.images}>
         {images.map((image, index) => (
-          <img key={index} src={image} alt={`Street Art ${index + 1}`} />
+          <img
+            key={index}
+            src={image}
+            alt={`Street Art ${index + 1}`}
+            className={styles.img}
+          />
         ))}
       </div>
       <div className={styles.video}>
         <ReactPlayer
           light
-          width="560"
-          height="315"
+          width="560px"
+          height="315px"
           url={videoUrl}
           controls={false}
         />

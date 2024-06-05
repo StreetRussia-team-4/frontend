@@ -1,18 +1,12 @@
 import React from 'react';
 import styles from './CardBlog.module.scss';
+import type { CardBlogData } from '@/type/type';
 
 const baseUrl = 'https://streetrussia-team-4.github.io/frontend/#/blog/news/';
 
 export interface CardBlogProps {
   data: CardBlogData;
   size?: string;
-}
-
-export interface CardBlogData {
-  id: number;
-  image: string | HTMLImageElement;
-  title: string;
-  author: string;
 }
 
 export const CardBlog: React.FC<CardBlogProps> = ({ data, size }) => {

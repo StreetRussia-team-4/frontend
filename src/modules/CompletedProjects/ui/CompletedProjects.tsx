@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardData, CustomSlider } from '@components/index';
-import styles from './CompletedProjects.module.scss';
+import { Card, CustomSlider } from '@components/index';
+import type { CardData } from '@/type/type';
 
 interface CompletedProjectsProps {
   projectsToRender: CardData[];
@@ -13,7 +13,7 @@ export const CompletedProjects: React.FC<CompletedProjectsProps> = ({
     <Card key={card.id} data={card} />
   ));
   return (
-    <div className={styles.cardList}>
+    <div>
       <CustomSlider
         items={items}
         title={{ text: 'Выполненные', url: '/' }}
