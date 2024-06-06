@@ -16,7 +16,7 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
   const [showFilterLocation, setShowFilterLocation] = useState<boolean>(false);
   const [isFilterLocationOn, setIsFilterLocationOn] = useState<boolean>(false);
 
-  const [isAllLocationOn, setIsAllLocationOn] = useState<boolean>(true);
+  const [isAllLocationOn, setIsAllLocationOn] = useState<boolean>(false);
 
   const [activeFilterButton, setActiveFilterButton] = useState<string | null>(
     null
@@ -41,7 +41,7 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
 
   const handleAllLocationClick = () => {
     setIsFilterLocationOn(false);
-    setIsAllLocationOn(true);
+    setIsAllLocationOn(!isAllLocationOn);
     setShowFilterLocation(false);
   };
 
@@ -88,7 +88,7 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
         width="1240"
         height="580"
       ></iframe>
-      <div>
+      <div className={styles.column}>
         <ul className={styles.list}>
           <li className={styles.item}>
             <button
@@ -129,11 +129,19 @@ export const AddressesPage: React.FC<AddressPlaygroundProps> = ({
         ) : (
           <></>
         )}
-        <ul className={styles.cards}>
-          {cardsForRender.map(card => (
-            <CardAddressPlayground key={card.id} data={card} />
-          ))}
-        </ul>
+        {!isFilterLocationOn && !isAllLocationOn ? (
+          <p className={styles.empty}>
+            ВЫБЕРИТЕ ПОДХОДЯЩИЙ ФИЛЬТР
+            <br />
+            ДЛЯ ОТОБРАЖЕНИЯ АДРЕСОВ ПЛОЩАДОК.
+          </p>
+        ) : (
+          <ul className={styles.cards}>
+            {cardsForRender.map(card => (
+              <CardAddressPlayground key={card.id} data={card} />
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
