@@ -1,6 +1,6 @@
 import React from 'react';
 import { News } from '@modules/News';
-import { CardBlogData } from '@/components';
+import { CardBlogData } from '@/type/type';
 
 interface BlogProps {
   newsToRender: CardBlogData[];
