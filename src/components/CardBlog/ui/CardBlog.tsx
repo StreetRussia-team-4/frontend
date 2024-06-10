@@ -22,7 +22,7 @@ export const CardBlog: React.FC<CardBlogProps> = ({ data, size }) => {
           className={styles.image}
           src={typeof image === 'string' ? image : image.src}
         />
-        <h4 className={styles.subtitle}>{title}</h4>
+        <h4 className={styles.subtitle}>{title.toUpperCase()}</h4>
         <p className={styles.author}>{author}</p>
         <p className={styles.more}>Читать</p>
       </a>
@@ -37,7 +37,7 @@ export const CardBlog: React.FC<CardBlogProps> = ({ data, size }) => {
           className={styles.imageBig}
           src={typeof image === 'string' ? image : image.src}
         />
-        <h4 className={styles.subtitle}>{title}</h4>
+        <h4 className={styles.subtitle}>{title.toUpperCase()}</h4>
         <p className={styles.author}>{author}</p>
         <p className={styles.more}>Читать</p>
       </a>
