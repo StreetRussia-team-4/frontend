@@ -1,0 +1,91 @@
+.card {
+  cursor: pointer;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: solid 1px black;
+}
+
+.image {
+  object-position: center;
+  object-fit: cover;
+  height: 192px;
+  margin-bottom: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .image {
+  filter: grayscale(0%);
+}
+
+.imageBig {
+  object-position: center;
+  object-fit: cover;
+  height: 646px;
+  margin-bottom: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .imageBig {
+  filter: grayscale(0%);
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  max-width: 608px;
+  position: relative;
+}
+
+.linkSmall {
+  height: 430px;
+}
+
+.linkBig {
+  height: 884px;
+}
+
+.link:hover .more {
+  text-decoration: underline;
+}
+
+.link:active .more {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.link:disabled .more {
+  color: #6a6b63;
+}
+
+.subtitle {
+  max-height: 110px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -1px;
+  margin: 0 10px 8px 10px;
+}
+
+.author {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 10px;
+}
+
+.more {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

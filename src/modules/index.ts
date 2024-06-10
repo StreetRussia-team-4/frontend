@@ -9,4 +9,7 @@ export { History } from './History';
 export { Team } from './Team';
 export { Partners } from './Partners';
 export { News } from './News';
+export { Interview } from './Interview';
+export { Advice } from './Advice';
+export { Article } from './Article';
 export { DirectionDetails } from './DirectionDetails';
